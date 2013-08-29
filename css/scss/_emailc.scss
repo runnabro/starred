@@ -1,0 +1,116 @@
+#emailc {
+	> section {
+		height: 1660px;
+		padding: 20px 0;
+
+		@include  media(tablet) {
+			height: 1390px;
+		}
+
+		@include media(phone) {
+			height: 1640px;
+		}
+
+		@include media(min) {
+			height: 1210px;
+		}
+	}
+
+	.email {
+		margin-bottom: 60px;
+
+		> div {
+			overflow: hidden;
+			position: absolute;
+				left: 50.6%;
+				z-index: $zContent10;
+			@include vendors(user-select, none);
+			width: 49%;
+				max-width: 458px;
+
+			@include media(tablet) {
+				left: 50%;
+			}
+
+			@include media(phone) {
+				height: auto;
+				left: 13%;
+				width: 100%;
+			}
+
+			@include media(min) {
+				width: 85%;
+			}
+
+			> img {
+				height: auto;
+				pointer-events: none;
+				-webkit-transition: -webkit-transform 2s 0s;
+				@include vendors(transition, transform 2s 0s);
+				width: 100%;
+			}
+		}
+
+		@include media(tablet) {
+			height: 405px;
+		}
+
+		@include media(phone) {
+			height: 529px;
+		}
+
+		@include media(min) {
+			height: 314px;
+		}
+	}
+
+	.email:first-child.in > div > img,
+	.email:first-child.inning > div > img {
+		@include vendors(transform,translate3d(0, -43%, 0));
+	}
+
+	.email:last-child.in > div > img,
+	.email:last-child.inning > div > img {
+		@include vendors(transform,translate3d(0, -30%, 0));
+	}
+
+	.email:first-child {
+		> div {
+			@include vendors(border-radius, 10px 10px 0 0);
+			height: 82.2%;
+			top: 12%;
+
+			@include media(phone) {
+				height: 82.2%;
+			}
+		}
+	}
+
+	.email:last-child {
+		> div {
+			height: 83.2%;
+			top: 15.5%;
+		}
+	}
+}
+	.touch .email > div::-webkit-scrollbar {
+		display: none;
+	}
+
+.touch #emailc {
+	> section {
+		height: 1360px;
+
+		@include  media(tablet) {
+			height: 1090px;
+		}
+
+		@include media(phone) {
+			height: 1340px;
+		}
+
+		@include media(min) {
+			height: 910px;
+		}
+	}
+}

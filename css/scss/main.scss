@@ -1,0 +1,83 @@
+/* mixins */
+@mixin modernizr($test) {
+	html.#{$test} & {
+		@content;
+	}
+}
+@mixin vendors($name, $argument) {
+	-moz-#{$name}: $argument;
+	-ms-#{$name}: $argument;
+	-webkit-#{$name}: $argument;
+	#{$name}: $argument;
+}
+@mixin webkitGpu() {
+	-webkit-transform: rotateZ(0deg);
+	-webkit-backface-visibility: hidden;
+}
+@mixin transform($x: 0, $y: 0, $z: 0) {
+	-ms-transform: translate3d($x, $y, $z) scale3d(1,1,1);
+	-webkit-transform: translate3d($x, $y, $z) scale3d(1,1,1);
+	transform: translate3d($x, $y, $z) scale3d(1,1,1);
+
+	-webkit-backface-visibility: hidden;
+	-webkit-transform-style: preserve-3d;
+
+	@include modernizr(no-csstransforms3d) {
+		-ms-transform: translate($x, $y);
+		-webkit-transform: translate($x, $y);
+		transform: translate($x, $y);
+	}
+}
+
+@mixin resetTransform(){
+	-ms-transform: translate3d(0,0,0) scale3d(1,1,1);
+	-webkit-transform: translate3d(0,0,0) scale3d(1,1,1);
+	transform: translate3d(0,0,0) scale3d(1,1,1);
+
+	-webkit-backface-visibility: hidden;
+	-webkit-transform-style: preserve-3d;
+};
+
+/* responsive mixins */
+@mixin media($point) {
+	@if $point == desktop {
+		@media (min-width: 1441px) { @content; }
+	}
+	@else if $point == laptop {
+		@media (max-width: 1440px) { @content; }
+	}
+	@else if $point == tablet {
+		@media (max-width: 1024px) { @content; }
+	}
+	@else if $point == phone {
+		@media (max-width: 767px)  { @content; }
+	}
+	@else if $point == min {
+		@media (max-width: 580px)  { @content; }
+	}
+}
+
+/* declarations */
+$zHeader: 99;
+	/* 1-10 reserved for content */
+	$zContent1: 1;
+	$zContent: 5;
+	$zContent10: 10;
+
+	/* responsive containers for figures */
+	$tablet-container: 720px;
+	$phone-container: 540px;
+	$min-container: 322px;
+
+/*
+@import '_normalize';
+@import '_animations';
+@import '_global';
+@import '_header';
+@import '_each';
+@import '_footer';
+
+@import '_wywh';*/
+@import '_stylepro';
+@import '_emailc';
+@import '_ucsf';

@@ -1,0 +1,96 @@
+header {
+	@include vendors(transition,opacity 500ms);
+	background: #fff;
+	height: 0;
+	position: relative;
+		top: 170px;
+		z-index: $zHeader;
+	width: 100%;
+
+	nav {
+		//@include vendors(animation, opacity-in 1s linear);
+		background: #fff;
+		height: 75px;
+		margin: 0 auto;
+		width: 100%;
+		white-space: nowrap;
+
+		ul {
+			margin: 0 auto;
+			padding: 0;
+			width: 270px;
+
+			> .hatch {
+				background-position: 0% 0%;
+			}
+
+			> .pulse {
+				background-position: 33.33% 0%;
+			}
+
+			> .bounce {
+				background-position: 66.66% 0%;
+			}
+
+			> .tossing {
+				background-position: 100% 0%;
+			}
+
+			> li {
+				background-image: url('img/nav.svg');
+				background-repeat: no-repeat;
+				cursor: pointer;
+				display: inline-block;
+				height: 75px;
+				margin: 0 5px;
+				width: 60px;
+
+				> div {
+					@include vendors(border-radius, 10px);
+					height: 10px;
+					margin: 0 auto;
+					position: relative;
+						top: 55px;
+					@include vendors(transition, background 0.25s);
+					width: 10px;
+				}
+			}
+
+			> li:first-child {
+				margin: 0 5px 0 0;
+			}
+
+			> li:last-child {
+				margin: 0 0 0 5px;
+			}
+
+			> li:hover {
+				div {
+					background: #D7D7D7;
+					border-bottom: 2px solid #A2A1A1;
+				}
+			}
+
+			> .active,
+			> .active:hover {
+				div {
+					background: #D7D7D7;
+					border-bottom: 2px solid #A2A1A1;
+				}
+			}
+		}
+	}
+}
+	header.in {
+		opacity: 0.6;
+		position: fixed;
+			top: 0;
+	}
+		header.in:hover {
+			opacity: 1;
+		}
+
+	.touch header {
+		position: fixed;
+			top: 0;
+	}

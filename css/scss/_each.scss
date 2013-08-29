@@ -1,0 +1,298 @@
+figure {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	margin: 0 auto;
+	position: relative;
+	z-index: $zContent;
+}
+
+.monitor {
+	$height: 786px;
+	$width: 960px;
+
+	background-image: url('img/monitor.svg');
+	background-size: 200%;
+	height: $height;
+	width: $width;
+
+	@include media(laptop) {
+	}
+
+	@include media(tablet) {
+		height: ($height*$tablet-container)/$width;
+		width: $tablet-container;
+	}
+
+	@include media(phone) {
+		height: ($height*$phone-container)/$width;
+		width: $phone-container;
+	}
+
+	@include media(min) {
+		height: ($height*$min-container)/$width;
+		width: $min-container;
+	}
+
+	> div {
+		$height: 500px;
+		$width: 886px;
+
+		height: $height;
+		margin: 0 auto;
+		overflow: hidden;
+		position: relative;
+			top: 5%;
+		@include vendors(user-select, none);
+		width: $width;
+
+		@include media(laptop) {
+		}
+
+		@include media(tablet) {
+			$adjusted-width: 664px;
+
+			height: ($height*$adjusted-width)/$width;
+			width: $adjusted-width;
+		}
+
+		@include media(phone) {
+			$adjusted-width: 498px;
+
+			height: ($height*$adjusted-width)/$width;
+			width: $adjusted-width;
+		}
+
+		@include media(min) {
+			$adjusted-width: 300px;
+
+			height: ($height*$adjusted-width)/$width;
+			width: $adjusted-width;
+		}
+
+		> img:first-child {
+			height: auto;
+			pointer-events: none;
+			@include transform(0, 0, 0);
+			width: 100%;
+		}
+	}
+}
+	figure.in > div,
+	figure.out > div {
+		cursor: pointer;
+	}
+
+.tablet-container {
+	float: left;
+	position: relative;
+	width: 600px;
+
+	@include media(phone) {
+		width: 460px;
+	}
+	@include media(min) {
+		width: 280px;
+	}
+
+	> figure {
+		background-image: url('img/tablet.svg');
+		height: 400px;
+		width: 600px;
+
+		@include media(phone) {
+			height: (400px*460px)/600px;
+			width: 460px;
+		}
+		@include media(min) {
+			height: (((400px*460px)/600px)*280px)/460px;
+			width: 280px;
+		}
+	}
+
+	> .tablet-guides {
+		background-image: url('img/tablet-guides.svg');
+	}
+}
+
+.phone-container {
+	float: right;
+	position: relative;
+	width: 210px;
+
+	@include media(tablet) {
+		z-index: $zContent10;
+	}
+	@include media(phone) {
+		width: 160px;
+	}
+	@include media(min) {
+		width: 100px;
+	}
+
+	> figure {
+		background-image: url('img/phone.svg');
+		height: 400px;
+		width: 210px;
+
+		@include media(phone) {
+			height: (400px*160px)/210px;
+			width: 160px;
+		}
+		@include media(min) {
+			height: (((400px*160px)/210px)*100px)/160px;
+			width: 100px;
+		}
+	}
+}
+
+.tablet-container,
+.phone-container {
+	> div {
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: 100%;
+	}
+
+	> img {
+		pointer-events: none;
+		@include vendors(user-select, none);
+	}
+}
+
+.browser {
+	background-image: url('img/browser-1.svg');
+	background-position: top center;
+	height: 544px;
+	width: 462px;
+
+	@include media(tablet) {
+		height: (544px*340px)/462px;
+		width: 340px;
+	}
+
+	@include media(min) {
+		height: (((544px*340px)/462px)*320px)/340px;
+		width: 320px;
+	}
+
+	> div {
+		$height: 522px;
+		$width: 458px;
+
+		height: $height;
+		margin: 0 auto;
+		overflow: hidden;
+		position: relative;
+			top: 3.5%;
+		@include vendors(user-select, none);
+		width: $width;
+
+		@include media(tablet) {
+			$adjusted-width: 337px;
+
+			height: (($height*$adjusted-width)/$width)-(1px);
+			width: $adjusted-width;
+		}
+
+		@include media(min) {
+			$adjusted-width: 318px;
+
+			height: (($height*$adjusted-width)/$width)-(1px);
+			width: $adjusted-width;
+		}
+
+		> img {
+			@include vendors(border-radius, 0 0 4px 4px);
+			@include transform(0, 0, 0);
+			pointer-events: none;
+
+			@include media(tablet) {
+				height: auto;
+				width: 100%;
+			}
+		}
+	}
+}
+
+.email {
+	background-image: url('img/email.png');
+	background-repeat: no-repeat;
+	background-size: 157.3%;
+	height: 540px;
+	@include vendors(user-select, none);
+	width: 100%;
+
+	@include media(phone) {
+		background-image: url('img/email@2x.png');
+		background-size: 274%;
+	}
+}
+	.email.sparrow {
+		background-position: 0 0;
+
+		@include media(phone) {
+			background-position: 100% 0;
+		}
+	}
+	.email.windows {
+		background-position: 0 100%;
+
+		@include media(phone) {
+			background-position: 100% 100%;
+		}
+	}
+
+.shirt {
+	background-image: url('img/shirt.svg');
+	height: 700px;
+	width: 800px;
+}
+
+.cursor {
+	display: block;
+	margin: 0 auto;
+	pointer-events: none;
+	position: relative;
+		z-index: $zContent;
+	@include transform(0, 0, 0);
+	-webkit-transition: -webkit-transform 1s 1s;
+	@include vendors(transition, transform 1s 1s);
+}
+
+/* arrow nav */
+.arrow {
+	background-image: url('img/icons-sprited.svg');
+	background-position: 0 50%;
+	background-repeat: no-repeat;
+	display: block;
+	height: 70px;
+	margin: 0 auto;
+	opacity: 1;
+	position: absolute;
+		right: 0;
+		bottom: 20px;
+		left: 0;
+		z-index: $zContent10;
+	@include vendors(transition, 1s opacity);
+	width: 70px;
+
+	@include media(min) {
+		background-size: 300%;
+		height: 35px;
+		width: 35px;
+	}
+}
+	/* arrow facing up */
+	.in .arrow,
+	.outing .arrow {
+		background-position: -70px 50%;
+		@include media(min) {
+			background-position: -35px 50%;
+		}
+	}
+
+	/* monitor */
+	.transitionless > div > img {
+		@include vendors(transition, all 0s 0.25s !important);
+	}

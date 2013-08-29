@@ -1,0 +1,446 @@
+#wywh > section {
+	padding: 20px 0;
+
+	.monitor {
+		@include vendors(animation, big-entrance 750ms ease-out 1s forwards);
+		background-position: 0% 50%;
+		opacity: 0;
+		@include vendors(transform, translate3d(-30%, 30%, 0) rotate(6deg) scale(0.3));
+
+		> div {
+			z-index: $zContent10;
+
+			> img {
+				-webkit-transition: -webkit-transform 3.5s 0s;
+				@include vendors(transition, transform 3.5s 0s);
+			}
+
+			> div {
+				height: 292px;
+				margin: 0 auto;
+				overflow: hidden;
+				position: relative;
+						z-index: $zContent;
+				@include transform(0,0,0);
+				-webkit-transition: -webkit-transform 2s 0s;
+				@include vendors(transition, transform 2s 0s);
+				width: 300px;
+
+				> img {
+					display: block;
+					height: auto;
+					width: 200%;
+				}
+
+				@include media(tablet) {
+					height: (292px*200px)/300px;
+					width: 200px;
+				}
+
+				@include media(phone) {
+					height: (((292px*200px)/300px)*160px)/200px;
+					width: 160px;
+				}
+
+				@include media(min) {
+					height: (((((292px*200px)/300px)*160px)/200px)*80px)/160px;
+					width: 80px;
+				}
+			}
+		}
+	}
+
+	.inning > div,
+	.in > div {
+		> img {
+			@include transform(0, -65%, 0);
+		}
+
+		> div {
+			pointer-events: none;
+			@include transform(0, -419%, 0);
+			-webkit-transition: -webkit-transform 2s 2s;
+			@include vendors(transition, transform 2s 2s);
+
+			@include media(tablet) {
+				@include transform(0, -457%, 0);
+			}
+
+			@include media(phone) {
+				@include transform(0, -434%, 0);
+			}
+
+			@include media(min) {
+				@include transform(0, -506%, 0);
+			}
+		}
+	}
+}
+	.no-csstransforms3d #wywh > section .monitor {
+		opacity: 1;
+	}
+
+#responsive {
+	height: 1200px;
+	overflow-y: hidden;
+
+	@include media(phone) {
+		height: 950px;
+	}
+	@include media(min) {
+		height: 600px;
+	}
+
+	.tablet-container {
+		> img {
+			display: block;
+			height: 1250px;
+			margin: 0 auto;
+			position: relative;
+				//top: -292px;
+				top: -380px;
+				left: 1px;
+			width: 480px;
+
+			@include media(phone) {
+				height: (1250px*368px)/480px;
+				//top: -366px;
+				top: -292px;
+				width: 368px;
+			}
+			@include media(min) {
+				height: (((1250px*366px)/480px)*224px)/366px;
+				top: -176px;
+				width: 224px;
+			}
+		}
+	}
+
+	.phone-container {
+		@include media(tablet) {
+			top: -1612px;
+		}
+		@include media(phone) {
+			top: -1254px;
+		}
+		@include media(min) {
+			top: -768px;
+		}
+
+		> img {
+			display: block;
+			height: 917px;
+			margin: 0 auto;
+			position: relative;
+				top: -360px;
+			width: 176px;
+
+			@include media(phone) {
+				height: (904px*132px)/174px;
+				top: -272px;
+				width: 132px;
+			}
+			@include media(min) {
+				height: (((904px*132px)/174px)*82px)/132px;
+				top: -170px;
+				width: 82px;
+			}
+		}
+	}
+}
+
+#contact {
+	border-top: 1px solid #96D7E5;
+	height: 540px;
+
+	@include media(phone) {
+		height: 500px;
+	}
+
+	@include media(min) {
+		height: 340px;
+	}
+
+	.guides {
+		@include vendors(user-select, none);
+	}
+}
+
+#contact,
+#legal-privacy {
+	background: url('img/bg-grid.svg');
+	//height: 500px;
+	overflow: hidden;
+	position: relative;
+	padding: 0;
+
+	@include media(phone) {
+	//	height: 480px;
+	}
+
+	@include media(min) {
+	//	height: 320px;
+	}
+
+	.guides,
+	.figure {
+		float: left;
+		position: relative;
+	}
+
+	.guides {
+		top: 15%;
+		width: 35%;
+
+		img {
+			display: block;
+			margin-left: -50px;
+			pointer-events: none;
+			position: relative;
+				top: 0;
+				left: 50%;
+				z-index: $zContent10;
+			width: 400px;
+
+			@include media(tablet) {
+				width: 350px;
+			}
+
+			@include media(phone) {
+				width: 310px;
+			}
+
+			@include media(min) {
+				width: 190px;
+			}
+		}
+
+		@include media(min) {
+			top: 22%;
+		}
+	}
+
+	.figure {
+		width: 65%;
+
+		figure {
+			background-image: url('img/wywh/wywh-desktop-2.png');
+			background-position: 0 50%;
+			background-repeat: no-repeat;
+			display: block;
+			height: 388px;
+			margin: 0 auto;
+			position: relative;
+				z-index: $zContent1;
+			@include transform(0, 150%, 0);
+			-webkit-transition: background-position 0s 1.85s, -webkit-transform 1s;
+			transition: background-position 0s 1.85s, transform 1s;
+			width: 400px;
+
+			@include media(phone) {
+				background-size: 200%;
+				height: 340px;
+				margin-top: 4%;
+				width: 100%;
+			}
+			@include media(min) {
+				background-size: 200%;
+				height: 200px;
+				margin-top: 15%;
+			}
+
+			> div {
+				background: rgba(255,255,255,0.75);
+				height: 100%;
+				@include vendors(transition, opacity 1s 2s);
+				opacity: 0;
+				position: absolute;
+				width: 100%;
+
+				> img {
+					display: block;
+					margin-right: auto;
+					margin-left: auto;
+					opacity: 0;
+					pointer-events: none;
+				}
+
+				> img:first-child {
+					animation: spin 1s infinite linear, delayed-opacity 3.5s 1;
+					-webkit-animation: spin 1s infinite linear, delayed-opacity 3.5s 1;
+					display: none;
+					margin-top: 140px;
+
+					@include media(min) {
+						margin-top: 70px;
+					}
+				}
+
+				> img:last-child {
+					margin-top: -80px;
+
+					@include media(phone) {
+						$width: 340px;
+						height: (100px*$width)/400px;
+						width: $width;
+					}
+					@include media(min) {
+						$width: 200px;
+						height: (100px*$width)/400px;
+						width: $width;
+					}
+				}
+			}
+		}
+
+		> .cursor {
+			display: block;
+			margin: 0 auto;
+			position: relative;
+				z-index: $zContent;
+			@include transform(0, -500px, 0);
+			-webkit-transition: -webkit-transform 1s 1s;
+			@include vendors(transition, transform 1s 1s);
+		}
+	}
+}
+	.no-pointerevents #contact .guides img {
+		z-index: 0;
+	}
+
+#contact.in {
+	figure {
+		background-position: 100% 50%;
+		background-size: 200%;
+		@include transform(0, 15%, 0);
+	}
+
+	figure {
+
+		> div {
+			opacity: 1;
+
+			> img:first-child {
+				display: block;
+			}
+
+			> img:last-child {
+				opacity: 1;
+				@include vendors(transition, opacity 1s 3.5s);
+			}
+		}
+	}
+
+	.cursor {
+		@include transform(0, 10px, 0);
+	}
+}
+
+#legal-privacy {
+	height: 920px;
+
+	@include media(tablet) {
+		height: 940px;
+	}
+
+	@include media(phone) {
+		height: 840px;
+	}
+
+	@include media(min) {
+		height: 720px;
+	}
+
+	.tablet-container {
+		float: none;
+		margin: 0 auto;
+		top: 2%;
+
+		> div {
+			background-image: url('img/wywh/wywh-legal-privacy.jpg');
+			height: 360px;
+			margin: 0 auto;
+			position: relative;
+				top: -380px;
+				left: 1px;
+			width: 480px;
+
+			@include media(phone) {
+				height: (360px*368px)/480px;
+				top: -291px;
+				width: 368px;
+			}
+			@include media(min) {
+				height: (((360px*368px)/480px)*224px)/366px;
+				top: -178px;
+				width: 224px;
+			}
+
+			> div {
+				background: rgba(0,0,0,0);
+				height: 100%;
+				overflow: hidden;
+				@include vendors(transition,background 0.75s 2.5s);
+				width: 100%;
+
+				> img {
+					display: block;
+					margin: 0 auto;
+					opacity: 0;
+					@include vendors(transition,opacity 0.75s 2.5s);
+					width: 360px;
+
+					@include media(phone) {
+						height: auto;
+						width: 300px;
+					}
+					@include media(min) {
+						width: 170px;
+					}
+				}
+			}
+		}
+
+		> .cursor {
+			@include transform(0, 0, 0);
+		}
+	}
+}
+	.touch #legal-privacy {
+		height: 620px;
+
+		@include media(tablet) {
+			height: 640px;
+		}
+
+		@include media(phone) {
+			height: 540px;
+		}
+
+		@include media(min) {
+			height: 320px;
+		}
+	}
+
+#legal-privacy.in {
+	.cursor {
+		@include transform(0, -520px, 0);
+
+		@include media(phone) {
+			@include transform(0, -400px, 0);
+		}
+		@include media(min) {
+			@include transform(0, -245px, 0);
+		}
+	}
+
+	.tablet-container > figure {
+		~ div > div {
+			background: rgba(0,0,0,0.75);
+
+			> img {
+				opacity: 1;
+			}
+		}
+	}
+}
