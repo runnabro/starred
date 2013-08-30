@@ -2,10 +2,7 @@
 	padding: 20px 0;
 
 	.monitor {
-		@include vendors(animation, big-entrance 750ms ease-out 1s forwards);
 		background-position: 0% 50%;
-		opacity: 0;
-		@include vendors(transform, translate3d(-30%, 30%, 0) rotate(6deg) scale(0.3));
 
 		> div {
 			z-index: $zContent10;
@@ -76,9 +73,6 @@
 		}
 	}
 }
-	.no-csstransforms3d #wywh > section .monitor {
-		opacity: 1;
-	}
 
 #responsive {
 	height: 1200px;

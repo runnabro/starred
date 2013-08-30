@@ -33,6 +33,7 @@ body {
 			@include swipe();
 			height: 3486px;
 			overflow: hidden;
+			opacity: 0;
 			position: relative;
 			@include vendors(transition,opacity 0.3s);
 			width: 400%;
