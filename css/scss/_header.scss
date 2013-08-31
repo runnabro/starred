@@ -56,7 +56,6 @@ header {
 					margin: 0 auto;
 					position: relative;
 						top: 55px;
-					@include vendors(transition, background 0.25s);
 					width: 10px;
 				}
 			}

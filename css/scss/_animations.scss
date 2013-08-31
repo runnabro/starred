@@ -58,9 +58,9 @@ nav > ul {
 	100% { opacity:0; }
 }
 
-/* gum */
+/* gum *
 #gum {
-	@include vendors(animation, gum 750ms ease-out 1s forwards);
+	@include vendors(animation, gum 750ms ease-out 1.5s forwards);
 }
 
 @keyframes gum {
@@ -79,7 +79,7 @@ nav > ul {
 	100% {
 		opacity: 1;
 	}
-}
+}*/
 
 /* small-entrance */
 .small-entrance {
