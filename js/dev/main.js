@@ -120,7 +120,9 @@ var scrollInit = function(){
 	var emailTop = $email.offset().top;
 
 	//initial check
-	$gum.addClass('init');
+	if (Modernizr.cssanimations) {
+		$gum.addClass('init');
+	}
 	if (!Modernizr.touch && offset > headerTop) {
 		$header.addClass('in');
 	}
