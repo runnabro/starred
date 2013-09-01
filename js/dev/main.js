@@ -41,7 +41,7 @@ var resetScroller = function resetScroller(){
 //monitor animation//
 /////////////////////
 var monitorAnimation = function monitorAnimation(){
-	var timer;
+	var timer = 0;
 	$figure
 		.children('div')
 		.on('click',function(){
@@ -50,14 +50,16 @@ var monitorAnimation = function monitorAnimation(){
 
 			$thisFigure.removeClass('transitionless');
 
-			switch ($this.closest('.each')[0].id) {
-				case 'wywh':
-					timer = 3500;
-					break;
-				case 'stylepro':
-				case 'emailc':
-					timer = 2000;
-					break;
+			if (Modernizr.csstransitions) {
+				switch ($this.closest('.each')[0].id) {
+					case 'wywh':
+						timer = 3500;
+						break;
+					case 'stylepro':
+					case 'emailc':
+						timer = 2000;
+						break;
+				}
 			}
 
 			if ($thisFigure.hasClass('out')) {

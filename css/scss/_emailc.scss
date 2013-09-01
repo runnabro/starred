@@ -66,12 +66,12 @@
 
 	.email:first-child.in > div > img,
 	.email:first-child.inning > div > img {
-		@include vendors(transform,translate3d(0, -43%, 0));
+		@include transform(0, -43%, 0);
 	}
 
 	.email:last-child.in > div > img,
 	.email:last-child.inning > div > img {
-		@include vendors(transform,translate3d(0, -30%, 0));
+		@include transform(0, -30%, 0);
 	}
 
 	.email:first-child {

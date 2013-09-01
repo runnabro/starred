@@ -82,6 +82,10 @@ figure {
 	figure.out > div {
 		cursor: pointer;
 	}
+	.no-csstransitions .monitor > div,
+	.no-csstransition .email > div {
+		cursor: pointer;
+	}
 
 .tablet-container {
 	float: left;

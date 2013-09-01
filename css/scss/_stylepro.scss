@@ -20,7 +20,7 @@
 
 	.in > div > img,
 	.inning > div > img{
-		@include vendors(transform,translate3d(0, -34.5%, 0));
+		@include transform(0, -34.5%, 0);
 	}
 }
 
