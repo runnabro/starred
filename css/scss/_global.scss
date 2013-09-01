@@ -57,17 +57,9 @@ body {
 				position: relative;
 				width: 25%;
 			}
-
-			img {
-				opacity: 0;
-			}
 		}
 		> #gum.init {
 			opacity: 1;
-
-			img {
-				opacity: 1;
-			}
 		}
 		> #gum.out {
 			opacity: 0;
@@ -87,6 +79,13 @@ body {
 			opacity: 1;
 		}
 	}
+	.touch #gum img {
+		opacity: 0;
+	}
+	.touch #gum.init img {
+		opacity: 1;
+	}
+
 
 .touch {
 	body > #wrapper > #gum {

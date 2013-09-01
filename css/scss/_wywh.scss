@@ -298,6 +298,12 @@
 		}
 	}
 }
+	.touch #gum #contact figure > div > img {
+		opacity: 0;
+	}
+	.touch #gum #contact.in figure > div > img:last-child {
+		opacity: 1;
+	}
 	.no-pointerevents #contact .guides img {
 		z-index: 0;
 	}
@@ -374,14 +380,14 @@
 				background: rgba(0,0,0,0);
 				height: 100%;
 				overflow: hidden;
-				@include vendors(transition,background 0.75s 2.5s);
+				@include vendors(transition,background 1s 2s);
 				width: 100%;
 
 				> img {
 					display: block;
 					margin: 0 auto;
 					opacity: 0;
-					@include vendors(transition,opacity 0.75s 2.5s);
+					@include vendors(transition,opacity 1s 2s);
 					width: 360px;
 
 					@include media(phone) {
@@ -400,6 +406,12 @@
 		}
 	}
 }
+	.touch #gum #legal-privacy .tablet-container img {
+		opacity: 0;
+	}
+	.touch #gum #legal-privacy.in .tablet-container img {
+		opacity: 1;
+	}
 	.touch #legal-privacy {
 		height: 620px;
 
