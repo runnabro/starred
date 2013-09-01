@@ -7,6 +7,7 @@ var current_pane = 0;
 var new_pane;
 var $gum = $('#gum');
 var $header = $('header');
+var headerTop = $('header').offset().top;
 var $headerLi = $header.find('li');
 var $each = $gum.find('.each');
 var $figure = $gum.find('.monitor, .email');
@@ -30,7 +31,6 @@ $(document).on('keydown',function(e){
 	}
 });
 var resetScroller = function resetScroller(){
-	console.log('reset');
 	clearTimeout(timeOut);
 	$figure
 		.addClass('out transitionless')
@@ -108,7 +108,6 @@ if (!Modernizr.touch){
 ///////////////////////
 var scrollInit = function(){
 	var offset = $(document).scrollTop(); //intial value
-	var headerTop = $('header').offset().top;
 
 	var $wywh = $('#wywh');
 	var $wywhContact = $wywh.find('#contact');
@@ -201,9 +200,23 @@ var navInit = function(){
 				break;
 		}
 
+		//hide page & make reset figures instant
 		$gum.addClass('out').removeClass('animate');
 
+		//wait until the page is completely hidden, 0.3s
 		setTimeout(function(){
+			//reset page height
+			resetHeight();
+
+			//reset figures
+			resetScroller();
+
+			//set height to top if header has class in
+			if ($header.hasClass('in')) {
+				document.body.scrollTop = document.documentElement.scrollTop = headerTop + 100;
+			}
+
+			//change to page requested
 			if (Modernizr.csstransforms3d) {
 				$gum.css('transform', 'translate3d('+ percentage +'%,0,0) scale3d(1,1,1)');
 			} else if (Modernizr.csstransforms) {
@@ -212,11 +225,16 @@ var navInit = function(){
 				var px = (($gum.width()*5) / 100) * percentage;
 				$gum.css('left', px+'px');
 			}
-			$gum.removeClass('out');
-		},250);
 
-		resetHeight();
-		resetScroller();
+			//unhide page -- make these slightly slower on touch devices
+			if (Modernizr.touch) {
+				setTimeout(function(){
+					$gum.removeClass('out');
+				},50);
+			} else {
+				$gum.removeClass('out');
+			}
+		},300);
 	});
 }();
 

@@ -71,6 +71,8 @@ body {
 		}
 		> #gum.out {
 			opacity: 0;
+			transition: transform 0s, height 0.3s, opacity 0.3s;
+			-webkit-transition: -webkit-transform 0s, height 0.3s, opacity 0.3s;
 		}
 		> #gum.animate {
 			transition: transform 0.35s, height 1s, opacity 0.3s;
