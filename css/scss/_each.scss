@@ -101,6 +101,7 @@ figure {
 
 	> figure {
 		background-image: url('img/tablet.svg');
+		background-position: 0 0;
 		height: 400px;
 		width: 600px;
 
@@ -115,7 +116,8 @@ figure {
 	}
 
 	> .tablet-guides {
-		background-image: url('img/tablet-guides.svg');
+		background-image: url('img/tablet.svg');
+		background-position: 0 100%;
 	}
 }
 
@@ -213,7 +215,7 @@ figure {
 
 			@include media(tablet) {
 				height: auto;
-				width: 100%;
+				width: 200%;
 			}
 		}
 	}
@@ -226,12 +228,20 @@ figure {
 	height: 540px;
 	@include vendors(user-select, none);
 	width: 100%;
-
-	@include media(phone) {
-		background-image: url('img/email@2x.png');
-		background-size: 274%;
-	}
 }
+	/*
+	@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2) {
+		.email {
+			background-image: url('img/email2x.png');
+			background-size: 274%;
+		}
+	}
+	*/
+	@include media(phone) {
+		.email {
+			background-size: 274%;
+		}
+	}
 	.email.sparrow {
 		background-position: 0 0;
 

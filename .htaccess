@@ -288,7 +288,6 @@ RewriteRule ^(.*)\.[\d]{10}\.(css|js)$ $1.$2 [L]
   # ExpiresByType application/x-font-ttf                "access plus 1 month"
   # ExpiresByType font/opentype                         "access plus 1 month"
   # ExpiresByType image/svg+xml                         "access plus 1 month"
-
 </IfModule>
 
 # ------------------------------------------------------------------------------

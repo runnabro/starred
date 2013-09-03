@@ -57,6 +57,10 @@
 
 	.browser:last-child {
 		float: right;
+
+		img {
+			@include transform(-50%,0,0);
+		}
 	}
 
 	.browser {

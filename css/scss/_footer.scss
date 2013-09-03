@@ -47,7 +47,7 @@ footer {
 			position: relative;
 				top: -8px;
 				right: -1px;
-			@include transform(translate3d(0,0,0));
+			@include transform(0,0,0);
 			@include webkitGpu();
 			@include vendors(transition, width 0.5s);
 
@@ -63,7 +63,7 @@ footer {
 				position: absolute;
 				text-decoration: none;
 				@include vendors(transition, color 0.1s);
-				@include transform(translate3d(0,0,0));
+				@include transform(0,0,0);
 				@include webkitGpu();
 				width: 130px;
 			}
