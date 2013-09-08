@@ -1,3 +1,11 @@
+@include media(min) {
+	.touch {
+		#wywh {
+			min-height: 1600px;
+		}
+	}
+}
+
 #wywh > section {
 	padding: 20px 0;
 
