@@ -132,13 +132,13 @@ article,figure,footer,header,main,nav,section,input,div,ul,li{display:block;-moz
 						<div class="container">
 							<figure class="email sparrow out">
 								<div>
-									<img src="http://img.tonyli.me/emailc/emailc-1.jpg" height="788" width="458" alt="">
+									<img src="http://img.tonyli.me/emailc/emailc-1.png" height="788" width="458" alt="">
 									<a class="arrow"></a>
 								</div>
 							</figure>
 							<figure class="email windows out">
 								<div>
-									<img src="http://img.tonyli.me/emailc/emailc-2.jpg" height="640" width="458" alt="">
+									<img src="http://img.tonyli.me/emailc/emailc-2.png" height="640" width="458" alt="">
 									<a class="arrow"></a>
 								</div>
 							</figure>
