@@ -54,6 +54,32 @@ footer {
 			width: 2px;
 
 			> a {
+				display: inline-block;
+			}
+
+			> #ln,
+			> #ly {
+				float: left;
+				height: 50px;
+				opacity: 0;
+				overflow: hidden;
+				position: relative;
+				width: 35px;
+
+				> img {
+					position: absolute;
+				}
+			}
+
+			> #ln > img {
+				left: 0;
+			}
+
+			> #ly > img {
+				right: 0;
+			}
+
+			> #em {
 				color: rgba(255,255,255,0);
 				font-size: 16px;
 				line-height: 52px;
@@ -76,18 +102,28 @@ footer {
 
 footer.in {
 	cursor: default;
-	width: 190px;
+	width: 270px;
 
 	> div > div {
 		@include vendors(user-select, text);
 	}
 
 	#email {
-		width: 130px;
+		width: 210px;
 
 		> 	a {
-			color: rgba(0,0,0,0.6) !important;
 			pointer-events: all !important;
+			@include vendors(transition, color 0.5s 0.2s);
+		}
+
+		> #ln,
+		> #ly {
+			opacity: 0.6;
+			@include vendors(transition, opacity 0.5s 0.2s);
+		}
+
+		> #em {
+			color: rgba(0,0,0,0.6) !important;
 			@include vendors(transition, color 0.5s 0.2s);
 		}
 	}
