@@ -1,6 +1,7 @@
 var autoprefixer = require('gulp-autoprefixer');
 var debug = require('gulp-debug');
 var del = require('del');
+var fs = require('fs');
 var fileinclude = require('gulp-file-include');
 var ghPages = require('gulp-gh-pages');
 var gulp = require('gulp');
@@ -12,6 +13,10 @@ var rename = require('gulp-rename');
 var runSequence = require('run-sequence');
 var sass = require('gulp-sass');
 var webserver = require('gulp-webserver');
+
+// version css
+var json = JSON.parse(fs.readFileSync('./package.json'));
+var currentVersion = json.version;
 
 // file locations
 var src = 'src/';
@@ -41,7 +46,23 @@ gulp.task('html', function() {
   return gulp.src(htmlDir)
     .pipe(fileinclude({
       prefix: '@@',
-      basepath: src
+      basepath: src,
+      context: {
+        env: ''
+      }
+    }))
+    .pipe(gulp.dest(htmlDist));
+});
+
+// include files
+gulp.task('html:gh', function() {
+  return gulp.src(htmlDir)
+    .pipe(fileinclude({
+      prefix: '@@',
+      basepath: src,
+      context: {
+        env: 'gh'
+      }
     }))
     .pipe(gulp.dest(htmlDist));
 });
@@ -150,7 +171,7 @@ gulp.task('ghPages', function() {
 
 // build and optimize
 gulp.task('build', function(cb) {
-  runSequence('clean', 'html', 'js', ['sass:build', 'images', 'moveMisc', 'minify'], ['inject', 'imagemin'], cb);
+  runSequence('clean', 'html:gh', 'js', ['sass:build', 'images', 'moveMisc', 'minify'], ['inject', 'imagemin'], cb);
 });
 
 // build without optimizing
@@ -161,11 +182,6 @@ gulp.task('build:dev', function(cb) {
 // build and deploy to gh pages
 gulp.task('deploy', function(cb) {
   runSequence('build', 'ghPages', cb);
-});
-
-// dev build and deploy to gh pages
-gulp.task('deploy:dev', function(cb) {
-  runSequence('build:dev', 'ghPages', cb);
 });
 
 // local webserver
