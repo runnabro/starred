@@ -1,0 +1,25 @@
+.hero {
+  margin-top: 90px;
+
+  .emoji {
+    font-size: 36px;
+  }
+
+  .h1 {
+    font-size: 24px;
+    font-weight: $weight-normal;
+    max-width: 420px;
+  }
+}
+
+.section-landing {
+  margin-top: $lg;
+}
+
+.ul-work {
+  list-style: none;
+
+  .a {
+    display: inline-block;
+  }
+}
