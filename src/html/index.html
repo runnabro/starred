@@ -4,48 +4,39 @@
   <head>
     @@include('html/components/head.html')
   <body>
-    <main class="grid-block grid-container col main">
+    <main class="grid-block grid-container col main main-landing">
       <section class="hero section">
-        <h1 class="h1">
+        <h1 class="h1 weight-bold">
           <span class="emoji">👋</span>
           <br>
-          I‘m Tony Li, and I'm a designer from SF.
-          My current challenge is to help dev teams @ <a href="//runnable.com">Runnable.</a>
+          I’m Tony Li.
         </h1>
+        <p class="p">My current challenge is to help dev teams @ <a href="//runnable.com">Runnable</a>, and here’s what I’ve been doing there:
       </section>
-      <section class="grid-block col section section-landing">
-        <h2 class="h2">Work</h2>
+      <section class="grid-block col section">
         <ul class="ul ul-work">
-          <li class="li">
-            <a class="grid-block a" href="">
-              <div class="img"></div>
-              <div class="grid-block col">
-                <h3 class="p weight-strong">Code Snippets</h3>
+          <li class="grid-block li">
+            <a class="grid-block shrink align-center a" href="">
+              <img class="grid-block shrink img" src="images/icon-runnable.svg" height="45" width="45">
+              <div class="grid-block col align-start">
+                <p class="p">Unlimited environments for all.
+                <p class="p weight-bold">runnable.com</p>
+              </div>
+            </a>
+          <li class="grid-block li">
+            <a class="grid-block shrink align-center a" href="">
+              <img class="grid-block shrink img" src="images/icon-code-snippets.svg" height="45" width="45">
+              <div class="grid-block shrink col align-start">
                 <p class="p">Run and share code in the browser.
+                <p class="p weight-bold">code.runnable.com</p>
               </div>
             </a>
-          <li class="li">
-            <a class="grid-block a" href="">
-              <div class="img"></div>
-              <div class="grid-block col">
-                <h3 class="p weight-strong">/docker</h3>
-                <p class="p">Resources for devs new to Docker.
-              </div>
-            </a>
-          <li class="li">
-            <a class="grid-block a" href="">
-              <div class="img"></div>
-              <div class="grid-block col">
-                <h3 class="p weight-strong">Runnable.com</h3>
-                <p class="p">Showcasing our focus and team.
-              </div>
-            </a>
-          <li class="li">
-            <a class="grid-block a" href="">
-              <div class="img"></div>
-              <div class="grid-block col">
-                <h3 class="p weight-strong">Runnable</h3>
-                <p class="p">Running unlimited staging environments.
+          <li class="grid-block li">
+            <a class="grid-block shrink align-center a" href="">
+              <img class="grid-block shrink img" src="images/icon-slash-docker.svg" height="45" width="45">
+              <div class="grid-block col align-start">
+                <p class="p">Docker resources for devs.
+                <p class="p weight-bold">runnable.com/docker</p>
               </div>
             </a>
         </ul>

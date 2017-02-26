@@ -1,25 +1,40 @@
-.hero {
-  margin-top: 90px;
+.main-landing {
+  max-width: 450px;
 
-  .emoji {
-    font-size: 36px;
+  .section + .section {
+    margin-top: $lg;
   }
 
-  .h1 {
-    font-size: 24px;
-    font-weight: $weight-normal;
-    max-width: 420px;
+  .hero {
+
+    .h1,
+    .p {
+      max-width: 360px;
+    }
+
+    .h1 {
+      font-size: 24px;
+
+      .emoji {
+        font-size: 36px;
+      }
+    }
   }
-}
 
-.section-landing {
-  margin-top: $lg;
-}
+  .ul-work {
+    list-style: none;
 
-.ul-work {
-  list-style: none;
+    .li + .li {
+      margin-top: $lg;
+    }
 
-  .a {
-    display: inline-block;
+    .a {
+      color: $black;
+    }
+
+    .img {
+      margin-right: $sm;
+      opacity: .75;
+    }
   }
 }
