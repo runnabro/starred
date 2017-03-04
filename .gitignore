@@ -1,2 +1,10 @@
-
-*.json
+*.dump
+*.iml
+*.log
+*.orig
+*.rdb
+*.sass-cache/
+.DS_Store
+.publish/
+dist/
+node_modules/

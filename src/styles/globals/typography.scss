@@ -1,0 +1,21 @@
+.weight-light {
+  font-weight: $weight-light;
+}
+
+.weight-normal {
+  font-weight: $weight-normal;
+}
+
+.weight-bold {
+  font-weight: $weight-bold;
+}
+
+.monospace {
+  font-family: $monospace;
+}
+
+// links
+a {
+  color: $purple;
+  text-decoration: none;
+}
