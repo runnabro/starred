@@ -7,17 +7,12 @@
 
   .hero {
 
-    .h1,
     .p {
       max-width: 360px;
     }
 
-    .h1 {
-      font-size: 24px;
-
-      .emoji {
-        font-size: 36px;
-      }
+    .emoji {
+      font-size: 36px;
     }
   }
 
