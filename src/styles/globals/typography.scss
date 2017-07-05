@@ -15,7 +15,17 @@
 }
 
 // links
-a {
-  color: $purple;
+.link {
+  border-bottom: 2px solid currentColor;
+  color: currentColor;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: $weight-bold;
+  line-height: 1;
   text-decoration: none;
+
+  &:hover,
+  &:active {
+    opacity: .75;
+  }
 }

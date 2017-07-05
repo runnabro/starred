@@ -1,14 +1,29 @@
 .main-landing {
-  max-width: 450px;
+  padding-bottom: $lg;
+  padding-top: $xl;
+
+  .container {
+    max-width: 450px;
+  }
+
+  .text-container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 360px;
+    width: 100%;
+  }
 
   .section + .section {
     margin-top: $lg;
   }
 
   .hero {
+    padding-bottom: $lg;
+    padding-top: $lg;
 
-    .p {
-      max-width: 360px;
+    .h1 {
+      line-height: 1.1;
+      margin-bottom: $sm;
     }
 
     .emoji {
@@ -16,26 +31,51 @@
     }
   }
 
-  .ul-work {
-    line-height: 1.4;
+  .ol-work {
     list-style: none;
+    margin: 0 auto;
+    max-width: 450px;
 
-    .li + .li {
-      margin-top: $lg;
+    .li {
+      margin: $xl 0;
     }
 
-    .a {
-      color: $black;
+    .p {
+      font-size: 16px;
+      letter-spacing: -.4px;
+      margin-bottom: $sm;
+      margin-top: 6px;
+    }
 
-      &:hover,
-      &:active {
-        color: $purple;
+    .img-wrapper {
+      border-radius: $radius-sm;
+      box-shadow: 0 3px 9px rgba($black,.03);
+      margin-bottom: $lg;
+      overflow: hidden;
+      position: relative;
+
+      &::after {
+        border: 1px solid rgba($black,.03);
+        content: '';
+        height: 100%;
+        position: absolute;
+        width: 100%;
       }
     }
 
     .img {
-      margin-right: $sm;
-      opacity: .75;
+      height: 100%;
+      width: 100%;
+    }
+
+    .btn {
+      border: 1px solid $blue;
+      border-radius: $radius-sm;
+      color: $blue;
+      display: inline-block;
+      font-size: 16px;
+      padding: $xs $sm;
+      text-decoration: none;
     }
   }
 }
