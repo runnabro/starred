@@ -96,5 +96,9 @@
       height: 100%;
       width: 100%;
     }
+
+    .btn + .btn {
+      margin-left: $xs;
+    }
   }
 }
