@@ -25,9 +25,66 @@
       line-height: 1.1;
       margin-bottom: $sm;
     }
+  }
 
-    .emoji {
+  .emoji {
+
+    &:hover::before,
+    &:active::before {
+      animation-play-state: paused;
+    }
+
+    &::before {
+      animation: emoji 1s infinite linear running;
+      content: '👋';
       font-size: 36px;
+    }
+
+    @keyframes emoji {
+      0%,
+      10% {
+        content: '👋';
+      }
+
+      11%,
+      20% {
+        content: '🙌';
+      }
+
+      21%,
+      30% {
+        content: '✌️';
+      }
+
+      31%,
+      40% {
+        content: '🤘';
+      }
+
+      41%,
+      50% {
+        content: '🤝';
+      }
+
+      51%,
+      60% {
+        content: '🤙';
+      }
+
+      61%,
+      70% {
+        content: '👊';
+      }
+
+      71%,
+      80% {
+        content: '🤘';
+      }
+
+      91%,
+      100% {
+        content: '👍';
+      }
     }
   }
 
