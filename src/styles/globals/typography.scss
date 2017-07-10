@@ -16,17 +16,60 @@
 
 // links
 .link {
-  border-bottom: 2px solid currentColor;
   color: currentColor;
   cursor: pointer;
   display: inline-block;
   font-weight: $weight-bold;
   line-height: 1;
+  position: relative;
   text-decoration: none;
+
+  &::after {
+    background: currentColor;
+    background-size: 285% 100%;
+    border-radius: 2px;
+    bottom: -1px;
+    content: '';
+    display: block;
+    height: 2px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    width: 100%;
+  }
 
   &:hover,
   &:active {
-    opacity: .75;
+
+    .span,
+    &::after {
+      animation: rainbow 2s infinite linear;
+      background-image: linear-gradient(135deg,$purple 0%,$blue 12.5%,$green 25%,$orange 37.5%,$red 50%,$purple 62.5%,$blue 75%,$green 87.5%,$orange 100%);
+    }
+
+    .span {
+      -moz-text-fill-color: transparent;
+      -webkit-text-fill-color: transparent;
+      text-fill-color: transparent;
+    }
+  }
+
+  @keyframes rainbow {
+    0% {
+      background-position: 0 0;
+    }
+
+    100% {
+      background-position: 100% 0;
+    }
+  }
+
+  .span {
+    // scss-lint:disable VendorPrefix
+    -webkit-background-clip: text;
+    // scss-lint:enable VendorPrefix
+    background-clip: text;
+    background-size: 285% 100%;
   }
 }
 
