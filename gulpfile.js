@@ -47,23 +47,7 @@ gulp.task('html', function() {
   return gulp.src(htmlDir)
     .pipe(fileinclude({
       prefix: '@@',
-      basepath: src,
-      context: {
-        env: ''
-      }
-    }))
-    .pipe(gulp.dest(htmlDist));
-});
-
-// include files
-gulp.task('html:gh', function() {
-  return gulp.src(htmlDir)
-    .pipe(fileinclude({
-      prefix: '@@',
-      basepath: src,
-      context: {
-        env: 'gh'
-      }
+      basepath: src
     }))
     .pipe(gulp.dest(htmlDist));
 });
@@ -172,7 +156,7 @@ gulp.task('ghPages', function() {
 
 // build and optimize
 gulp.task('build', function(cb) {
-  runSequence('clean', 'html:gh', 'js', ['sass:build', 'images', 'moveMisc', 'minify'], ['inject', 'imagemin'], cb);
+  runSequence('clean', 'html', 'js', ['sass:build', 'images', 'moveMisc', 'minify'], ['inject', 'imagemin'], cb);
 });
 
 // build without optimizing
