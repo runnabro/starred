@@ -94,7 +94,7 @@ gulp.task('inject', function () {
     .pipe(inject(gulp.src(sassDist + 'index-' + currentVersion + '.css', {read: false}), {
       removeTags: true,
       transform: function () {
-        return '<link rel="stylesheet" href="' + 'styles/index-' + currentVersion + '.css">';
+        return '<link rel="stylesheet" href="' + '/styles/index-' + currentVersion + '.css">';
       }
     }))
     .pipe(gulp.dest(htmlDist));
