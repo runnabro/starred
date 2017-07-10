@@ -27,6 +27,7 @@ var sassDir = src +'styles/**/*.scss';
 var sassSrc = src + 'styles/index.scss';
 var jsDir = src + 'js/**/*.**';
 var imgDir = src + 'images/**/*.+(png|jpg|gif|svg)';
+var cnameSrc = src + 'html/CNAME';
 var favIconSrc = src + 'html/favicon.png';
 var robotsSrc = src + 'html/robots.txt';
 var sitemapSrc = src + 'html/sitemap.xml';
@@ -146,7 +147,7 @@ gulp.task('images', function () {
 
 // robots, sitemap, and favicon
 gulp.task('moveMisc', function () {
-  return gulp.src([robotsSrc, sitemapSrc, favIconSrc])
+  return gulp.src([cnameSrc, robotsSrc, sitemapSrc, favIconSrc])
     .pipe(debug({
       title: 'moveMisc'
     }))
