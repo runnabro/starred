@@ -64,29 +64,6 @@
       margin-top: 6px;
     }
 
-    .img-wrapper {
-      border-radius: $radius-sm;
-      box-shadow: 0 3px 9px rgba($black,.03);
-      margin-bottom: $lg;
-      overflow: hidden;
-      position: relative;
-
-      &::after {
-        content: '';
-        height: 100%;
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: 100%;
-      }
-    }
-
-    .img {
-      box-shadow: 0 0 20px rgba($black,.2);
-      height: 100%;
-      width: 100%;
-    }
-
     .btn + .btn {
       margin-left: $xs;
     }

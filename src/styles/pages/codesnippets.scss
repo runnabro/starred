@@ -1,0 +1,36 @@
+.article-codesnippets {
+
+  .h1:first-child + .p {
+    margin-top: 0;
+  }
+}
+
+.img-codesnippets-hero {
+  // scss-lint:disable ColorVariable
+  background: #9a57ba;
+  // scss-lint:enable ColorVariable
+  padding: $lg $lg 0;
+
+  &::after {
+    border-bottom: 1px solid rgba($black,.05);
+  }
+
+  .video {
+    border-radius: $radius-xs $radius-xs 0 0;
+    margin-bottom: -1px;
+  }
+}
+
+.figure-oldsnippets .img {
+  box-shadow: none;
+  width: 450px;
+}
+
+.img-profile,
+.img-runoptions {
+  box-shadow: none;
+}
+
+.figure-profile .img-profile {
+  max-width: 200px;
+}

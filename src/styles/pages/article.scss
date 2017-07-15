@@ -1,6 +1,6 @@
 .article {
 
-  * + * {
+  > * + * {
     margin-top: $md;
   }
 
@@ -22,6 +22,11 @@
     color: $gray;
     font-size: 14px;
     margin-bottom: $md;
+    margin-top: $md;
     text-align: center;
+  }
+
+  .li + .li {
+    margin-top: $sm;
   }
 }
