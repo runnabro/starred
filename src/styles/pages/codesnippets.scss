@@ -22,8 +22,12 @@
 .img-profile,
 .img-runoptions {
   box-shadow: none;
-}
 
-.figure-profile .img-profile {
-  max-width: 200px;
+  &.img-profile {
+    max-width: 200px;
+  }
+
+  &.img-runoptions {
+    max-width: 300px;
+  }
 }
