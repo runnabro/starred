@@ -1,0 +1,38 @@
+// images
+.img-marketing {
+  // scss-lint:disable ColorVariable
+  background: #54559c;
+  // scss-lint:enable ColorVariable
+  padding: $lg $lg 0;
+
+  &::after {
+    border-bottom: 1px solid rgba($black,.05);
+  }
+
+  .img {
+    border-radius: $radius-xs $radius-xs 0 0;
+  }
+}
+
+.figure-onboarding .img {
+  box-shadow: none;
+  margin: 0 auto;
+  width: 300px;
+}
+
+.img-pr,
+.img-jira {
+  // scss-lint:disable ColorVariable
+  background: $white;
+  // scss-lint:enable ColorVariable
+  padding: $lg;
+
+  &.img-jira .img {
+    margin: 0 auto;
+    max-width: 300px;
+  }
+
+  .img {
+    box-shadow: none;
+  }
+}
