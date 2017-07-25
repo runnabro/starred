@@ -8,8 +8,9 @@
       <article class="text-container-lg article article-runnable">
         <h1 class="h1">Runnable</h1>
         <p class="p">Creating environments for every code change.
-        <div>
+        <div class="grid-block">
           <a class="btn btn-primary" href="//runnable.com/"><span class="span">View It Live</span></a>
+          <a class="btn btn-secondary" href="#sausage">Read About Process</a>
         </div>
         <p class="p">I worked on project for most of my time at Runnable. Our priority was to make it as easy for individual developers to use by positioning ourselves as an essential part of their everyday workflow.
         <figure class="grid-block col shrink figure">
@@ -20,6 +21,12 @@
         </figure>
         <h2 class="h2">Product Marketing</h2>
         <p class="p">Before starting with product, prospective users are funneled to our marketing page. It’s one of the best opportunities we have to convince them to give our product a shot! I collaborated with our product manager and <em>the other</em> designer to work on everything design and more; including copywriting and writing Javascript for the interactions we needed. Our current version is the result of dozens of iterations as our product and marketing strategy has evolved.
+        <figure class="grid-block col shrink figure">
+          <div class="grid-block img-wrapper img-product-pages">
+            <img class="img" src="/images/runnable/screenie-7.png">
+          </div>
+          <figcaption class="figcaption">Navigation to our product pages.</figcaption>
+        </figure>
         <h2 class="h2">Working With Code, Not Builds</h2>
         <p class="p">When exploring how to show running code to users we noticed many CI tools listed code by build number, but identifying builds by number makes it hard to identify what code is running. By showing code by the commits and branches a developer creates, we are designing our product for the developer workflows.
         <figure class="grid-block col shrink figure figure-onboarding">
@@ -40,7 +47,22 @@
           <figcaption class="figcaption">A test of our Jira integration.</figcaption>
         </figure>
         <h2 class="h2">Making Docker Easy</h2>
-        <p class="p">Teams trying to get started with Runnable were also just learning Docker. Since Docker is an important part of getting your code running, we wanted to make it easy to define settings specific to the environment our users needed.
+        <p class="p">Teams trying Runnable were also switching to Docker. Since Docker is an important part of getting your code running, we made it easy to define environment. Users who didn’t have a Dockerfile yet, would be able to create a template based on their environment needs.
+        <figure class="grid-block col shrink figure">
+          <div class="grid-block img-wrapper img-simple-mode">
+            <img class="img" src="/images/runnable/screenie-5.png">
+          </div>
+          <figcaption class="figcaption">Setting the base image for an environment.</figcaption>
+        </figure>
+        <p class="p">After making the necessary configuration for their environment, users would have a working Dockerfile.
+        <figure class="grid-block col shrink figure">
+          <div class="grid-block img-wrapper img-dockerfile">
+            <img class="img" src="/images/runnable/screenie-6.png">
+          </div>
+          <figcaption class="figcaption">The Dockerfile defines how an image is built.</figcaption>
+        </figure>
+        <hr class="hr" id="sausage">
+        <h2 class="h2">The Design Process</h2>
       </article>
         <!-- <h1 class="h1">A Use Case in Runnable</h1>
         <h2 class="h2">The spec review.</h2>

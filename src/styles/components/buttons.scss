@@ -4,6 +4,10 @@
   font-size: 16px;
   padding: $xs $sm;
   text-decoration: none;
+
+  + .btn {
+    margin-left: $sm;
+  }
 }
 
 .btn-primary {

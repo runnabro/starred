@@ -14,6 +14,12 @@
   }
 }
 
+.img-product-pages {
+  box-shadow: none;
+  margin: 0 auto;
+  max-width: 300px;
+}
+
 .figure-onboarding .img {
   box-shadow: none;
   margin: 0 auto;
@@ -22,9 +28,7 @@
 
 .img-pr,
 .img-jira {
-  // scss-lint:disable ColorVariable
   background: $white;
-  // scss-lint:enable ColorVariable
   padding: $lg;
 
   &.img-jira .img {
@@ -34,5 +38,29 @@
 
   .img {
     box-shadow: none;
+  }
+}
+
+.img-simple-mode {
+  background: $white;
+  padding: $md;
+
+  .img {
+    box-shadow: none;
+  }
+}
+
+.img-dockerfile {
+  // scss-lint:disable ColorVariable
+  background: #402555;
+  // scss-lint:enable ColorVariable
+  padding: $md 0 $md $md;
+
+  &::after {
+    border-right: 1px solid rgba($black,.05);
+  }
+
+  .img {
+    border-radius: $radius-xs 0 0 $radius-xs;
   }
 }
