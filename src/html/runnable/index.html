@@ -5,30 +5,29 @@
     @@include('html/components/head.html')
   <body>
     <main class="grid-block col main main-landing">
-      <article class="text-container-lg article article-runnable">
-        <h1 class="h1">Runnable</h1>
-        <p class="p">Creating environments for every code change.
-        <div class="grid-block">
+      <article class="article article-runnable">
+        <h1 class="text-container h1">Runnable</h1>
+        <p class="text-container p">Creating environments for every code change.
+        <div class="text-container grid-block">
           <a class="btn btn-primary" href="//runnable.com/"><span class="span">View It Live</span></a>
-          <a class="btn btn-secondary" href="#sausage">Read About Process</a>
         </div>
-        <p class="p">I worked on project for most of my time at Runnable. Our priority was to make it as easy for individual developers to use by positioning ourselves as an essential part of their everyday workflow.
+        <p class="text-container p">I worked on project for most of my time at Runnable. Our priority was to make it as easy for individual developers to use by positioning ourselves as an essential part of their everyday workflow.
         <figure class="grid-block col shrink figure">
           <div class="grid-block img-wrapper img-marketing">
             <img class="img" src="/images/runnable/screenie-1.png">
           </div>
           <figcaption class="figcaption">Our <a href="//runnable.com/how-it-works" class="link"><span class="span">“how it works”</span></a> page.</figcaption>
         </figure>
-        <h2 class="h2">Product Marketing</h2>
-        <p class="p">Before starting with product, prospective users are funneled to our marketing page. It’s one of the best opportunities we have to convince them to give our product a shot! I collaborated with our product manager and <em>the other</em> designer to work on everything design and more; including copywriting and writing Javascript for the interactions we needed. Our current version is the result of dozens of iterations as our product and marketing strategy has evolved.
+        <h2 class="text-container h2">Product Marketing</h2>
+        <p class="text-container p">Before starting with product, prospective users are funneled to our marketing page. It’s one of the best opportunities we have to convince them to give our product a shot! I collaborated with our product manager and <em>the other</em> designer to work on everything design and more; including copywriting and writing Javascript for the interactions we needed. Our current version is the result of dozens of iterations as our product and marketing strategy has evolved.
         <figure class="grid-block col shrink figure">
           <div class="grid-block img-wrapper img-product-pages">
             <img class="img" src="/images/runnable/screenie-7.png">
           </div>
           <figcaption class="figcaption">Navigation to our product pages.</figcaption>
         </figure>
-        <h2 class="h2">Working With Code, Not Builds</h2>
-        <p class="p">When exploring how to show running code to users we noticed many CI tools listed code by build number, but identifying builds by number makes it hard to identify what code is running. By showing code by the commits and branches a developer creates, we are designing our product for the developer workflows.
+        <h2 class="text-container h2">Working With Code, Not Builds</h2>
+        <p class="text-container p">When exploring how to show running code to users we noticed many CI tools listed code by build number, but identifying builds by number makes it hard to identify what code is running. By showing code by the commits and branches a developer creates, we are designing our product for the developer workflows.
         <figure class="grid-block col shrink figure figure-onboarding">
           <img class="img" src="/images/runnable/screenie-2.png">
           <figcaption class="figcaption">Onboarding users to environments per branch.</figcaption>
@@ -39,94 +38,27 @@
           </div>
           <figcaption class="figcaption">“Runnabot” making it easy for developers to access their environments.</figcaption>
         </figure>
-        <p class="p">Our users loved how accessible their environments were with our GitHub integration. We wanted to provide the same benefits for our PM and QA users by creating an integration for Jira as well.
+        <p class="text-container p">Our users loved how accessible their environments were with our GitHub integration. We wanted to provide the same benefits for our PM and QA users by creating an integration for Jira as well.
         <figure class="grid-block col shrink figure">
           <div class="grid-block img-wrapper img-jira">
             <img class="img" src="/images/runnable/screenie-4.png">
           </div>
           <figcaption class="figcaption">A test of our Jira integration.</figcaption>
         </figure>
-        <h2 class="h2">Making Docker Easy</h2>
-        <p class="p">Teams trying Runnable were also switching to Docker. Since Docker is an important part of getting your code running, we made it easy to define environment. Users who didn’t have a Dockerfile yet, would be able to create a template based on their environment needs.
+        <h2 class="text-container h2">Making Docker Easy</h2>
+        <p class="text-container p">Teams trying Runnable were also switching to Docker. Since Docker is an important part of getting your code running, we made it easy to define environment. Users who didn’t have a Dockerfile yet, would be able to create a template based on their environment needs.
         <figure class="grid-block col shrink figure">
           <div class="grid-block img-wrapper img-simple-mode">
             <img class="img" src="/images/runnable/screenie-5.png">
           </div>
           <figcaption class="figcaption">Setting the base image for an environment.</figcaption>
         </figure>
-        <p class="p">After making the necessary configuration for their environment, users would have a working Dockerfile.
+        <p class="text-container p">After making the necessary configuration for their environment, users would have a working Dockerfile.
         <figure class="grid-block col shrink figure">
           <div class="grid-block img-wrapper img-dockerfile">
             <img class="img" src="/images/runnable/screenie-6.png">
           </div>
           <figcaption class="figcaption">The Dockerfile defines how an image is built.</figcaption>
         </figure>
-        <hr class="hr" id="sausage">
-        <h2 class="h2">The Design Process</h2>
       </article>
-        <!-- <h1 class="h1">A Use Case in Runnable</h1>
-        <h2 class="h2">The spec review.</h2>
-        <p class="p">Our product manager wrote a <a class="link" href="//runnable.atlassian.net/wiki/display/GOT/Spec%3A+Auto-launch+branch+environments+from+other+repositories+in+the+compose+file"><span class="span">spec</span></a> based on feedback we were receiving from clients who were having issues setting up Runnable within their organizations. The ability to launch environments across different repositories from a single Compose file is a feature that our clients have requested. Our design team usually gets involved here. We help define specs by writing or expanding on the initial draft, collecting data, and writing proposals.
-        <h2 class="h2">What went wrong?</h2>
-        <p class="p">We always imagined that our product could be enjoyed by everyone at an organization. We assumed that if a developer were working on a project, they would have full access to their code. But our clients had DevOps engineers configure their environments, and they did not always have  access to the code base for the projects that developers were working on. So in order to get set up, they would need to do two things:
-          <ol class="ol">
-            <li class="li">Maintain <strong class="weight-strong">Compose files</strong> per project.
-            <li class="li">And convince project leads to add a configuration file to their repositories.
-          </ol>
-        <p class="p">We found there wasn’t a standard practice for where teams should keep their Compose files. There were two primary methods: keep your files in the same repository, or keep your DevOps files separate. Our current product implementation allowed for the first, but not the latter. We needed a way for our product to work for both methods.
-        <h2 class="h2">Pen, Whiteboards, Sketch 💎</h2>
-        <p class="p">Starting with pen & paper allows me the freedom to explore solutions at a rapid pace. I’m never afraid of trying “dumb” ideas, because my sketchbook is a personal format.
-        <figure class="grid-block col align-center figure">
-          <img class="img" src="/images/runnable/pen-1.jpg">
-          <figcaption class="figcaption">What it might look like for users to choose Compose files.</figcaption>
-        </figure>
-        <p class="p">Once we have working ideas to share, we’ll call our first design critique. Having a whiteboard critique promotes feedback: participants are less shy when discussing work that’s obviously unfinished, and anyone can easily add to or modify work on a whiteboard.
-        <figure class="grid-block col align-center figure">
-          <img class="img" src="/images/runnable/whiteboard-1.jpg">
-          <figcaption class="figcaption">A slightly more refined version of the previous sketches for critique.</figcaption>
-        </figure>
-        <p class="p">After incorporating feedback from our critique, we’ll share wireframes with the team in a Google Drawing. The drawings are meant to help our engineers understand how the feature should work, and for everyone to have an easy way to give feedback. In this wireframe, we wanted to show users a preview of their environments before committing to creating the cluster. We also updated our navigation to accomodate the additional environments we’d need to show users.
-        <figure class="grid-block col align-center figure">
-          <img class="img-lg" src="/images/runnable/sketch-1.png">
-          <figcaption class="figcaption">Early wireframes we shared with our team.</figcaption>
-        </figure>
-        <p class="p">At this point, we felt that what we had would be too ambitious to implement in time. We ended up splitting this project into 2 iterations. For our first iteration, we would reuse our existing onboarding flow, but keep the updates to our navigation.
-        <figure class="grid-block col align-center figure">
-          <img class="img-lg" src="/images/runnable/sketch-2.png">
-          <figcaption class="figcaption">2nd wireframe highlights navigation changes.</figcaption>
-        </figure>
-        <h2 class="h2">🌈 Implementation land.</h2>
-        <p class="p">Our designers help write the front-end for our projects. So once we’re all onboard, I’ll task out the design work in the engineering JIRA board. As we work on each task, we use feature flags to toggle UI changes.
-        <figure class="grid-block col align-center figure">
-          <img class="img-lg" src="/images/runnable/tasking-1.png">
-          <figcaption class="figcaption">Everything is marked as done ‘cause I took this screenshot after we finished.</figcaption>
-        </figure>
-        <p class="p">Users add their Compose file the same way they did before; but now, we’ll parse their Compose file for references to other GitHub repositories and launch environments from those repositories as well.
-        <figure class="grid-block col align-center figure">
-          <img class="img" src="/images/runnable/screenie-1.png">
-          <figcaption class="figcaption">Adding a Compose file.</figcaption>
-        </figure>
-        <figure class="grid-block col align-center figure">
-          <img class="img" src="/images/runnable/screenie-2.png">
-          <figcaption class="figcaption">Updated navigation element accomodates multiple environments.</figcaption>
-        </figure>
-        <figure class="grid-block col align-center figure">
-          <img class="img" src="/images/runnable/screenie-3.png">
-          <figcaption class="figcaption">Notification system so users know if an environment change has been triggered.</figcaption>
-        </figure>
-        <figure class="grid-block col align-center figure">
-          <img class="img" src="/images/runnable/screenie-4.png">
-          <figcaption class="figcaption">Deleting is more powerful with multiple webhooks, so the confirmation reflects the magnitude of the action.</figcaption>
-        </figure>
-        <p class="p">We’ll write the logic for actions, loading states, etc. before testing our UI changes. Then we’ll create a QA checklist that our engineers use as a guide for writing their own tasks and later for bug bashes. We’ll also add handlers for any events that need to be pushed to our analytics setup in MixPanel and setup UserTesting tests.
-        <figure class="grid-block col align-center figure">
-          <img class="img-lg" src="/images/runnable/data-1.png">
-          <figcaption class="figcaption">I didn’t manage to grab a more recent onboarding funnel, but overall they tend to look something like this.</figcaption>
-        </figure>
-        <figure class="grid-block col align-center figure">
-          <img class="img-lg" src="/images/runnable/data-2.png">
-          <figcaption class="figcaption">A user tester attempting to add their Compose file.</figcaption>
-        </figure>
-      </article>
- -->
      </main>
