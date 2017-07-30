@@ -3,6 +3,7 @@
   margin-right: auto;
   max-width: 600px;
 
+  > .text-container > * + *,
   > * + * {
     margin-top: $md;
   }
