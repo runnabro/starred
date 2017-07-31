@@ -1,3 +1,25 @@
+// figure
+.figure {
+  margin: $lg 0;
+
+  &.figure-xl {
+    margin-left: -$xxl;
+    margin-right: -$xxl;
+    margin-top: $lg;
+  }
+}
+
+.figcaption {
+  color: $gray;
+  font-size: 14px;
+  margin-top: $md;
+  text-align: center;
+
+  .link::after {
+    height: 1px;
+  }
+}
+
 .img-wrapper {
   border-radius: $radius-sm;
   box-shadow: 0 3px 9px rgba($black,.03);
@@ -20,6 +42,10 @@
   box-shadow: 0 0 20px rgba($black,.2);
   height: 100%;
   width: 100%;
+
+  &.no-shadow {
+    box-shadow: none;
+  }
 }
 
 .video {

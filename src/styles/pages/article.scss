@@ -2,26 +2,16 @@
   margin-left: auto;
   margin-right: auto;
   max-width: 600px;
+  padding-bottom: $xxl;
 
-  > .text-container > * + *,
-  > * + * {
+  // rhythm
+  > .text-container > * + *:not(.figure),
+  > * + *:not(.figure) {
     margin-top: $md;
   }
 
   .h1:first-child + .p {
     margin-top: 0;
-  }
-
-  .figcaption {
-    color: $gray;
-    font-size: 14px;
-    margin-bottom: $md;
-    margin-top: $md;
-    text-align: center;
-
-    .link::after {
-      height: 1px;
-    }
   }
 
   .img-wrapper + .figcaption {

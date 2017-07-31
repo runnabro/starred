@@ -14,8 +14,19 @@
   }
 }
 
+.img-nodejs {
+  // scss-lint:disable ColorVariable
+  background: #c2e2a0;
+  // scss-lint:enable ColorVariable
+  padding: $lg $lg 0;
+
+  &::after {
+    border-bottom: 1px solid rgba($black,.05);
+  }
+}
+
 .figure-oldsnippets .img {
-  box-shadow: none;
+  border: 1px solid rgba($black,.15);
   width: 450px;
 }
 
@@ -29,5 +40,13 @@
 
   &.img-runoptions {
     max-width: 300px;
+  }
+}
+
+.figure-mobile .img {
+  width: calc(33.3333% - #{$lg});
+
+  + .img {
+    margin-left: $lg;
   }
 }
