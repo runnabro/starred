@@ -1,35 +1,35 @@
 .main-landing {
-  padding-bottom: $lg;
+  padding-top: $xxl;
 
   .container {
     max-width: 600px;
   }
 
   .section + .section {
-    margin-top: $lg;
+    margin-top: $xxl;
   }
 
   .hero {
-    padding-bottom: $lg;
-    padding-top: $lg;
+    padding-top: $xl;
 
     .h1 {
-      line-height: 1.1;
+      line-height: 1.2;
       margin-bottom: $sm;
     }
   }
 
   .emoji-wrapper {
     position: relative;
+    top: -$md;
   }
 
   .emoji {
     animation: emoji 1s infinite linear running;
-    font-size: 36px;
-    left: -45px;
+    font-size: 54px;
+    left: 0;
     opacity: 0;
     position: absolute;
-    top: 3px;
+    top: 0;
 
     @for $i from 0 to 8 {
       &:nth-child(#{$i}) {
@@ -55,7 +55,11 @@
     max-width: 600px;
 
     .li {
-      margin: $xl 0;
+      margin: 0;
+
+      + .li {
+        margin-top: $xl;
+      }
     }
 
     .h2 {
