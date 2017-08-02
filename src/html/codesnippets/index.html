@@ -4,32 +4,43 @@
   <head>
     @@include('html/components/head.html')
   <body>
-    <main class="grid-block col main main-landing">
+    <main class="grid-block col main main-article">
       <article class="article article-codesnippets">
 
-        <section class="text-container">
-          <h1 class="h1">CodeSnippets</h1>
-          <p class="p">Making it easy to run and share code. Work done with Sass, Backbone.js, & Handlebars.</p>
-          <a class="btn btn-primary" href="//code.runnable.com/"><span class="span">View It Live</span></a>
+        <section class="section hero section-intro">
+          <div class="text-container">
+            <h1 class="h1">CodeSnippets</h1>
+            <p class="p">Making it easy to find, run, and share code. Work done with Sass, Backbone.js, & Handlebars.</p>
+            <a class="btn btn-primary" href="//code.runnable.com/"><span class="span">View It Live</span></a>
+          </div>
+          <figure class="figure img-wrapper img-codesnippets-hero">
+            <video class="video" src="/images/codesnippets/video-1.mp4" autoplay loop playsinline></video>
+          </figure>
         </section>
-        <figure class="figure figure-xl img-wrapper img-codesnippets-hero">
-          <video class="video" src="/images/codesnippets/video-1.mp4" autoplay loop playsinline></video>
-        </figure>
+
         <section class="text-container">
+          <p class="p">When I joined the team, Runnable was already a functional product (now CodeSnippets). Our goal was to help developers find, run, and share their code.
           <h2 class="h2">Rethinking Our Homepage</h2>
-          <p class="p">Our homepage was focused on discovering code examples, but it required our users to search, or browse by language (or framework) before being able to see code. We rethought our page with two primary goals:
-          <ol class="ol">
-            <li class="li">
-              <p class="p"><strong class="weight-bold">Acquisition.</strong> In our new design, users would be able to see and start creating new snippets from the hero. Previously, users needed to find the “Create” call-to-action in the header.
-            <li class="li">
-              <p class="p"><strong class="weight-bold">Stickiness.</strong> Below the hero, our page was static, and then two clicks removed from viewing code. We implemented a feed for new and popular content to increase daily usage with content that our users could access in a single click.
-          </ol>
+          <p class="p">Our homepage was focused on helping users discover code, but it required our users to search, or browse by language (or framework) before being able to see code. We went to work redesigning this page with two goals in mind: increasing user created content, and return visits.
+          <figure class="grid-block col align-center figure figure-oldsnippets">
+            <img class="img img-wrapper" src="/images/codesnippets/screenie-1.png">
+            <figcaption class="figcaption">Our homepage at the time I joined.</figcaption>
+          </figure>
         </section>
-        <figure class="grid-block col align-center figure figure-oldsnippets">
-          <img class="img img-wrapper" src="/images/codesnippets/screenie-1.png">
-          <figcaption class="figcaption">Our previous homepage with static content.</figcaption>
-        </figure>
-        <p class="text-container p">In addition to our new homepage, we automatically built feeds for every tag (including user submitted ones!) for better discovery.
+
+        <section class="grid-block section section-callout section-hero">
+          <div class="text-container">
+            <h2 class="h2">Creating Content</h2>
+            <p class="p">On our first homepage, the sole path to creating a code example is with the “Create” button in the header. We were consistently getting feedback that users didn’t know what languages we supported.
+            <p class="p">To make it so users were just one click from getting the code in their language running, we exposed our create flow front and center.
+          </div>
+          <img class="img no-shadow" src="/images/codesnippets/new-hero.png">
+        </section>
+        <section class="text-container">
+          <h2 class="h2">Stickiness</h2>
+          <p class="p">The paths to finding code examples required users to either search or click through categories. We wanted the value we provided the be immediately tangible and feel “fresh”.
+          <p class="p">To encourage return visits and reduce the gap to seeing running code, we implemented a feed for new and popular content. We also generated feed pages for every tag (including user submitted ones!).
+        </section>
         <figure class="grid-block col shrink figure figure-xl">
           <div class="grid-block img-wrapper img-nodejs">
             <img class="img" src="/images/codesnippets/screenie-5.png">
@@ -60,7 +71,7 @@
 
         <section class="text-container">
           <h2 class="h2">Refactoring for Mobile</h2>
-          <p class="p">When I joined the team, our userbase sat at ~70% desktop users. Today, we’re looking at 70%+ mobile users. Throughout the months of active development our pivot, I slowly rewrote CodeSnippets to be more semantic, accessible, and responsive.
+          <p class="p">When I joined the team, our userbase sat at ~70% desktop users. Today, we’re looking at 70%+ mobile users. Throughout the months of active development <a href="/runnable" class="link"><span class="span">our pivot</span></a>, I slowly rewrote CodeSnippets to be more semantic, accessible, and responsive.
         </section>
         <figure class="grid-block figure figure-xl figure-mobile">
           <img class="grid-block img no-shadow" src="/images/codesnippets/mobile/screenie-1.png">

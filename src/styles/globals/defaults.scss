@@ -6,7 +6,7 @@
 }
 
 html {
-  background: $gray-light;
+  background: $gray-lighter;
   color: $black;
   font-family: $sans-serif;
   font-feature-settings: 'kern';
@@ -14,4 +14,17 @@ html {
   line-height: 1.5;
   overflow-x: hidden;
   text-rendering: optimizeLegibility; // kerning magic
+}
+
+// main
+.main-landing {
+  padding-bottom: $lg;
+
+  .container {
+    max-width: 600px;
+  }
+
+  .section + .section {
+    margin-top: $lg;
+  }
 }

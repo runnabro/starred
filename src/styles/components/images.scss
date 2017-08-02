@@ -1,11 +1,10 @@
 // figure
 .figure {
-  margin: $lg 0;
+  margin: $lg auto;
+  max-width: 600px;
 
   &.figure-xl {
-    margin-left: -$xxl;
-    margin-right: -$xxl;
-    margin-top: $lg;
+    max-width: 840px;
   }
 }
 

@@ -1,13 +1,38 @@
 .article {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 600px;
   padding-bottom: $xxl;
 
   // rhythm
-  > .text-container > * + *:not(.figure),
+  .text-container > * + *:not(.figure),
   > * + *:not(.figure) {
     margin-top: $md;
+  }
+
+  .section-callout {
+    justify-content: center;
+    margin-top: $xl;
+    padding: $xxl;
+
+    + *:not(.section-callout) {
+      margin-top: $xl;
+    }
+
+    + .section-callout {
+      margin-top: 0;
+    }
+
+    > .text-container {
+      max-width: 360px;
+
+      &:first-child {
+        margin-left: 0;
+        margin-right: $xl;
+      }
+
+      &:last-child {
+        margin-left: $xl;
+        margin-right: 0;
+      }
+    }
   }
 
   .h1:first-child + .p {
