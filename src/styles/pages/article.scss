@@ -2,15 +2,12 @@
   padding-bottom: $xxl;
 
   // rhythm
-  .text-container > * + *:not(.figure),
-  > * + *:not(.figure) {
+  .text-container > * + *:not(.figure) {
     margin-top: $md;
   }
 
   .section-callout {
     justify-content: center;
-    margin-top: $xl;
-    padding: $xxl;
 
     + *:not(.section-callout) {
       margin-top: $xl;
