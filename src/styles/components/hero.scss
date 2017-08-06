@@ -1,6 +1,12 @@
 .hero,
 .section-callout {
   border-radius: $radius-md;
-  margin: $xl $md $md;
-  padding: $xxl;
+  margin-left: $md;
+  margin-right: $md;
+  margin-top: $md;
+}
+
+.hero {
+  color: $white;
+  overflow: hidden;
 }

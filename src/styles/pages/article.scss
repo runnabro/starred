@@ -2,16 +2,26 @@
   padding-bottom: $xxl;
 
   // rhythm
+  .section:not(.padding-bottom-none) {
+    padding-bottom: $xxl;
+  }
+
+  .section:not(.padding-top-none) {
+    padding-top: $xxl;
+  }
+
   .text-container > * + *:not(.figure) {
     margin-top: $md;
+   }
+
+  // hero
+  .hero {
+    margin-bottom: $xl;
+    overflow: hidden;
   }
 
   .section-callout {
     justify-content: center;
-
-    + *:not(.section-callout) {
-      margin-top: $xl;
-    }
 
     + .section-callout {
       margin-top: 0;

@@ -3,11 +3,6 @@
   // scss-lint:disable ColorVariable
   background: linear-gradient(120deg, #834fab, #475496);
   // scss-lint:enable ColorVariable
-  border-radius: $radius-md;
-  color: $white;
-  margin: $md $md $xl;
-  overflow: hidden;
-  padding-bottom: 0;
 
   .img-marketing {
     border-radius: $radius-md $radius-md 0 0;
@@ -27,7 +22,6 @@
   border-bottom: 1px solid $gray-light;
 
   .figures-marketing {
-    margin-bottom: $xl;
     margin-top: $xl;
   }
 
