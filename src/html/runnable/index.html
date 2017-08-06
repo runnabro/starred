@@ -29,7 +29,7 @@
           </div>
         </section>
 
-        <section class="grid-block col section">
+        <section class="grid-block col section padding-bottom-none">
           <div class="text-container">
             <h2 class="h2">Making Docker Easy</h2>
             <p class="p">Teams trying Runnable were also switching to Docker. Since Docker is an important part of getting your code running, we made it easy to define environment. Users who didn’t have a Dockerfile yet, would be able to create a template based on their environment needs.
@@ -41,37 +41,43 @@
             <figcaption class="figcaption">Setting the base image for an environment.</figcaption>
           </figure>
         </section>
-        <section class="grid-block col section section-callout">
-          <p class="text-container p">After making the necessary configuration for their environment, users would have a working Dockerfile.
-          <figure class="grid-block col shrink figure">
-            <div class="grid-block img-wrapper img-dockerfile">
-              <img class="img" src="/images/runnable/screenie-6.png">
-            </div>
-            <figcaption class="figcaption">The Dockerfile defines how an image is built.</figcaption>
+
+        <section class="grid-block section section-callout section-dockerfile">
+          <p class="text-container p">After making the necessary configuration for their environment, users would have a working Dockerfile.</p>
+          <img class="img" src="/images/runnable/screenie-6.png">
+        </section>
+
+        <section class="grid-block align-center section section-callout section-branches">
+          <div class="grid-block col text-container">
+            <h2 class="h2">Building With Branches</h2>
+            <p class="p">When exploring how to show running code to users we noticed many CI tools listed code by build number, but identifying builds by number makes it hard to identify what code is running. By showing code by the commits and branches a developer creates, we are designing our product for the developer workflows.
+          </div>
+          <figure class="grid-block shrink col align-center figure">
+            <img class="img no-shadow" src="/images/runnable/screenie-2.png">
+            <figcaption class="figcaption">Introducing users to branch based environments.</figcaption>
           </figure>
         </section>
 
-        <section class="text-container">
-          <h2 class="h2">Working With Code, Not Builds</h2>
-          <p class="p">When exploring how to show running code to users we noticed many CI tools listed code by build number, but identifying builds by number makes it hard to identify what code is running. By showing code by the commits and branches a developer creates, we are designing our product for the developer workflows.
+        <section class="grid-block col section section-integrations">
+          <div class="text-container">
+            <h2 class="h2">Bringing Environments to the Users</h2>
+            <p class="p">Our users loved how accessible their environments were with our GitHub integration. We wanted to provide the same benefits for our PM and QA users by creating an integration for Jira as well.
+          </div>
+          <div class="grid-block justify-center">
+            <figure class="grid-block col shrink figure">
+              <div class="grid-block img-wrapper img-pr">
+                <img class="img" src="/images/runnable/screenie-3.png">
+              </div>
+              <figcaption class="figcaption">“Runnabot” making it easy for developers to access their environments.</figcaption>
+            </figure>
+            <figure class="grid-block col shrink figure">
+              <div class="grid-block img-wrapper img-jira">
+                <img class="img" src="/images/runnable/screenie-4.png">
+              </div>
+              <figcaption class="figcaption">A test of our Jira integration.</figcaption>
+            </figure>
+          </div>
         </section>
-        <figure class="grid-block col shrink figure figure-onboarding">
-          <img class="img" src="/images/runnable/screenie-2.png">
-          <figcaption class="figcaption">Onboarding users to environments per branch.</figcaption>
-        </figure>
-        <figure class="grid-block col shrink figure">
-          <div class="grid-block img-wrapper img-pr">
-            <img class="img" src="/images/runnable/screenie-3.png">
-          </div>
-          <figcaption class="figcaption">“Runnabot” making it easy for developers to access their environments.</figcaption>
-        </figure>
-        <p class="p text-container">Our users loved how accessible their environments were with our GitHub integration. We wanted to provide the same benefits for our PM and QA users by creating an integration for Jira as well.
-        <figure class="grid-block col shrink figure">
-          <div class="grid-block img-wrapper img-jira">
-            <img class="img" src="/images/runnable/screenie-4.png">
-          </div>
-          <figcaption class="figcaption">A test of our Jira integration.</figcaption>
-        </figure>
 
       </article>
      </main>

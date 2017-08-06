@@ -39,13 +39,38 @@
   }
 }
 
-// images
-.figure-onboarding .img {
-  box-shadow: none;
-  margin: 0 auto;
+.section-dockerfile {
+  // scss-lint:disable ColorVariable
+  background: linear-gradient(120deg, #475496, #834fab);
+  // scss-lint:enable ColorVariable
+  color: $white;
+  justify-content: flex-end;
+
+  .img {
+    max-width: 750px;
+  }
+}
+
+.section-branches .img {
+  height: auto;
   width: 300px;
 }
 
+.section-integrations {
+  border-radius: 0;
+  border-top: 1px solid $gray-light;
+
+  .figure {
+    margin-left: 0;
+    margin-right: 0;
+
+    + .figure {
+      margin-left: $lg;
+    }
+  }
+}
+
+// images
 .img-pr,
 .img-jira {
   background: $white;
@@ -67,20 +92,5 @@
 
   .img {
     box-shadow: none;
-  }
-}
-
-.img-dockerfile {
-  // scss-lint:disable ColorVariable
-  background: #402555;
-  // scss-lint:enable ColorVariable
-  padding: $md 0 $md $md;
-
-  &::after {
-    border-right: 1px solid rgba($black,.05);
-  }
-
-  .img {
-    border-radius: $radius-xs 0 0 $radius-xs;
   }
 }

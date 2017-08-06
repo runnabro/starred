@@ -20,28 +20,6 @@
     overflow: hidden;
   }
 
-  .section-callout {
-    justify-content: center;
-
-    + .section-callout {
-      margin-top: 0;
-    }
-
-    > .text-container {
-      max-width: 360px;
-
-      &:first-child {
-        margin-left: 0;
-        margin-right: $xl;
-      }
-
-      &:last-child {
-        margin-left: $xl;
-        margin-right: 0;
-      }
-    }
-  }
-
   .h1:first-child + .p {
     margin-top: 0;
   }
@@ -52,5 +30,32 @@
 
   .li + .li {
     margin-top: $sm;
+  }
+}
+
+.section-callout {
+  justify-content: center;
+
+  + .section-callout {
+    margin-top: 0;
+  }
+
+  .text-container {
+    max-width: 360px;
+
+    &:first-child {
+      margin-left: 0;
+      margin-right: $xl;
+    }
+
+    &:last-child {
+      margin-left: $xl;
+      margin-right: 0;
+    }
+  }
+
+  .figure {
+    margin-left: 0;
+    margin-right: 0;
   }
 }
