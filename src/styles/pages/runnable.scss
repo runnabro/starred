@@ -57,15 +57,36 @@
 }
 
 .section-integrations {
+  border-bottom: 1px solid $gray-light;
   border-radius: 0;
   border-top: 1px solid $gray-light;
 
-  .figure {
-    margin-left: 0;
-    margin-right: 0;
+  .figures {
+    margin-bottom: $lg;
 
-    + .figure {
-      margin-left: $lg;
+    .figure {
+      margin-left: 0;
+      margin-right: 0;
+
+      + .figure {
+        margin-left: $lg;
+      }
+    }
+  }
+
+  .figure-app {
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+
+    .img-app {
+      // scss-lint:disable ColorVariable
+      background: #6cda83;
+      // scss-lint:enable ColorVariable
+      border-radius: $radius-sm;
+      margin-bottom: -4px;
+      padding: $lg $lg 0;
     }
   }
 }
