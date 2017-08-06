@@ -23,13 +23,29 @@
   }
 }
 
-// images
-.img-product-pages {
-  box-shadow: none;
-  margin: 0 auto;
-  max-width: 300px;
+.section-marketing {
+  border-bottom: 1px solid $gray-light;
+
+  .figures-marketing {
+    margin-bottom: $xl;
+    margin-top: $xl;
+  }
+
+  .img {
+    max-width: 300px;
+
+    &:first-child {
+      max-height: 325px;
+    }
+
+    &:last-child {
+      margin-left: $lg;
+      max-height: 285px;
+    }
+  }
 }
 
+// images
 .figure-onboarding .img {
   box-shadow: none;
   margin: 0 auto;
