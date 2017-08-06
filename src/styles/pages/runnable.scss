@@ -1,19 +1,29 @@
-// images
-.img-marketing {
+// sections
+.hero-runnable {
   // scss-lint:disable ColorVariable
-  background: #54559c;
+  background: linear-gradient(120deg, #834fab, #475496);
   // scss-lint:enable ColorVariable
-  padding: $lg $lg 0;
+  border-radius: $radius-md;
+  color: $white;
+  margin: $md $md $xl;
+  overflow: hidden;
+  padding-bottom: 0;
 
-  &::after {
-    border-bottom: 1px solid rgba($black,.05);
-  }
+  .img-marketing {
+    border-radius: $radius-md $radius-md 0 0;
+    margin-bottom: 0;
 
-  .img {
-    border-radius: $radius-xs $radius-xs 0 0;
+    &::after {
+      border-bottom: 1px solid rgba($black,.05);
+    }
+
+    .img {
+      display: block;
+    }
   }
 }
 
+// images
 .img-product-pages {
   box-shadow: none;
   margin: 0 auto;
