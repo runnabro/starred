@@ -19,7 +19,6 @@
 }
 
 .section-marketing {
-  border-bottom: 1px solid $gray-light;
 
   .figures-marketing {
     margin-top: $xl;
@@ -39,9 +38,38 @@
   }
 }
 
+.section-blog {
+  border-bottom: 1px solid $gray-light;
+
+  .figure-blog {
+    // scss-lint:disable ColorVariable
+    background: linear-gradient(120deg, #475496, #834fab);
+    // scss-lint:enable ColorVariable
+    border-radius: $radius-md;
+    margin: $md $md $xl;
+    max-width: none;
+    padding-bottom: $xl;
+    position: relative;
+
+    .img:nth-child(1),
+    .img:nth-child(3) {
+      border: 1px solid rgba($black,.05);
+      border-radius: $radius-md;
+      box-shadow: 0 6px 15px rgba($black,.05);
+      margin-top: 128px;
+      max-width: 200px;
+    }
+
+    .img:nth-child(2) {
+      margin: -$lg $md;
+      max-width: 250px;
+    }
+  }
+}
+
 .section-dockerfile {
   // scss-lint:disable ColorVariable
-  background: linear-gradient(120deg, #475496, #834fab);
+  background: linear-gradient(120deg, #311c41, #96627a);
   // scss-lint:enable ColorVariable
   color: $white;
   justify-content: flex-end;
