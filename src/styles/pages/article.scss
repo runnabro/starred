@@ -1,19 +1,6 @@
 .article {
   padding: $md $md $xl;
 
-  // rhythm
-  .section:not(.padding-bottom-none) {
-    padding-bottom: $xl;
-  }
-
-  .section:not(.padding-top-none) {
-    padding-top: $xl;
-  }
-
-  .text-container > * + *:not(.figure) {
-    margin-top: $md;
-   }
-
   // hero
   .hero {
     margin-bottom: $xl;
@@ -32,6 +19,19 @@
     margin-top: $sm;
   }
 }
+
+// rhythm
+.section:not(.padding-bottom-none) {
+  padding-bottom: $xl;
+}
+
+.section:not(.padding-top-none) {
+  padding-top: $xl;
+}
+
+.text-container > * + *:not(.figure) {
+  margin-top: $md;
+ }
 
 .section-callout {
   justify-content: center;

@@ -11,12 +11,46 @@
   // scss-lint:enable ColorVariable
   color: $white;
 
-  .img {
-    max-width: 550px;
+  @media (max-width: 1150px) {
+    align-items: center;
+    // scss-lint:disable ColorVariable
+    background: linear-gradient(150deg, #2e1b3d 60%, #422756);
+    // scss-lint:enable ColorVariable
+    flex-direction: column;
+  }
+
+  @media (max-width: 630px) {
+    padding-left: $lg;
+    padding-right: $lg;
+  }
+
+  .text-container {
+    flex: 0 1 auto;
+    min-width: 300px;
+
+    @media (max-width: 1150px) {
+      max-width: 510px;
+      order: 2;
+
+      &:first-child {
+        margin-right: 0;
+        margin-top: $lg;
+      }
+    }
   }
 
   .p {
     opacity: .75;
+  }
+
+  .img {
+    max-width: 550px;
+    width: calc(100vw - 640px); // .article padding + .text-container width + .callout padding-left/right
+
+    @media (max-width: 1150px) {
+      order: 1;
+      width: 100%;
+    }
   }
 }
 
@@ -25,13 +59,36 @@
   border-top: 1px solid $gray-light;
   margin-top: 0;
 
+  @media (max-width: 920px) {
+    align-items: center;
+    flex-direction: column;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .text-container {
     padding-bottom: $xxl;
+
+    @media (max-width: 920px) {
+      max-width: 510px;
+      padding-bottom: $lg;
+
+      &:first-child {
+        margin-right: 0;
+      }
+    }
   }
 
   .img-profile {
-    align-self: flex-end;
     width: 300px;
+
+    @media (min-width: 921px) {
+      align-self: flex-end;
+    }
+
+    .img {
+      display: block;
+    }
   }
 
   .img-profile-widget {
@@ -42,8 +99,31 @@
 .section-runoptions {
   border-top: 1px solid $gray-light;
 
+  @media (max-width: 920px) {
+    align-items: center;
+    flex-direction: column;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .text-container {
+    @media (max-width: 920px) {
+      max-width: 510px;
+      order: 1;
+
+      &:last-child {
+        margin-bottom: $lg;
+        margin-left: 0;
+      }
+    }
+  }
+
   .img-runoptions {
     max-width: 300px;
+
+    @media (max-width: 920px) {
+      order: 2;
+    }
   }
 }
 
@@ -53,11 +133,32 @@
   .figure-mobile {
     margin-top: $xl;
 
+    @media (max-width: 650px) {
+      flex-wrap: wrap;
+    }
+
     .img {
       width: calc(33.3333% - #{$lg});
 
+      @media (max-width: 650px) {
+        max-width: calc(50% - #{$lg});
+        width: 100%;
+      }
+
       + .img {
         margin-left: $lg;
+
+        @media (max-width: 650px) {
+          margin-left: 0;
+        }
+
+        &:nth-child(2) {
+          margin-left: $lg;
+        }
+
+        &:last-child {
+          margin: $lg auto 0;
+        }
       }
     }
   }
@@ -81,7 +182,7 @@
 
 .figure-oldsnippets .img {
   border: 1px solid rgba($black,.15);
-  width: 450px;
+  max-width: 450px;
 }
 
 .figure-nodejs {
