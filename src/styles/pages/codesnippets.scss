@@ -135,29 +135,30 @@
 
     @media (max-width: 650px) {
       flex-wrap: wrap;
+      justify-content: center;
     }
 
     .img {
       width: calc(33.3333% - #{$lg});
 
       @media (max-width: 650px) {
-        max-width: calc(50% - #{$lg});
+        max-width: calc(50% - #{$sm});
         width: 100%;
       }
 
       + .img {
         margin-left: $lg;
+      }
 
+      &:nth-child(2) {
         @media (max-width: 650px) {
-          margin-left: 0;
+          margin-left: $md;
         }
+      }
 
-        &:nth-child(2) {
-          margin-left: $lg;
-        }
-
-        &:last-child {
-          margin: $lg auto 0;
+      &:last-child {
+        @media (max-width: 650px) {
+          margin: $md auto 0;
         }
       }
     }
