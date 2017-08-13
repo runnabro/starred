@@ -1,13 +1,13 @@
 .article {
-  padding: $md $md $xxl;
+  padding: $md $md $xl;
 
   // rhythm
   .section:not(.padding-bottom-none) {
-    padding-bottom: $xxl;
+    padding-bottom: $xl;
   }
 
   .section:not(.padding-top-none) {
-    padding-top: $xxl;
+    padding-top: $xl;
   }
 
   .text-container > * + *:not(.figure) {
