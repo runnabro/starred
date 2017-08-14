@@ -17,6 +17,7 @@
     background: linear-gradient(150deg, #2e1b3d 60%, #422756);
     // scss-lint:enable ColorVariable
     flex-direction: column;
+    justify-content: flex-start;
   }
 
   @media (max-width: 630px) {
@@ -86,6 +87,12 @@
       align-self: flex-end;
     }
 
+    @media(max-width: 920px) {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: calc(100% - #{$md * 2});
+    }
+
     .img {
       display: block;
     }
@@ -102,6 +109,7 @@
   @media (max-width: 920px) {
     align-items: center;
     flex-direction: column;
+    justify-content: flex-start;
     padding-left: 0;
     padding-right: 0;
   }
@@ -133,32 +141,27 @@
   .figure-mobile {
     margin-top: $xl;
 
-    @media (max-width: 650px) {
-      flex-wrap: wrap;
-      justify-content: center;
+    @media (max-width: 600px) {
+      flex-direction: column;
     }
 
     .img {
       width: calc(33.3333% - #{$lg});
 
-      @media (max-width: 650px) {
-        max-width: calc(50% - #{$sm});
-        width: 100%;
+      @media (max-width: 600px) {
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 250px;
+        width: auto;
       }
 
       + .img {
         margin-left: $lg;
-      }
 
-      &:nth-child(2) {
-        @media (max-width: 650px) {
-          margin-left: $md;
-        }
-      }
-
-      &:last-child {
-        @media (max-width: 650px) {
-          margin: $md auto 0;
+        @media (max-width: 600px) {
+          margin-left: auto;
+          margin-top: $md;
         }
       }
     }
