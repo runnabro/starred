@@ -14,6 +14,10 @@ html {
   line-height: 1.5;
   overflow-x: hidden;
   text-rendering: optimizeLegibility; // kerning magic
+
+  @media (max-width: 320px) {
+    font-size: 19px;
+  }
 }
 
 // main
