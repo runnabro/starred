@@ -29,6 +29,14 @@
 
 .section-codesnippets {
   // scss-lint:disable ColorVariable
-  background: linear-gradient(120deg, #422756, #9a57ba);
+  background: linear-gradient(120deg, #321f43, #2e1b3b);
   // scss-lint:enable ColorVariable
+
+  .img {
+    height: auto;
+    left: -210px;
+    position: absolute;
+    top: 180px;
+    width: 800px;
+  }
 }
