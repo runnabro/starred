@@ -1,42 +1,11 @@
 .section-card {
   border-radius: $radius-md;
   color: $white;
-  margin-top: $xl;
-  max-width: 450px;
-  min-height: 600px;
   overflow: hidden;
   padding: $lg;
   position: relative;
 
   .h2 {
     margin-bottom: $sm;
-  }
-}
-
-.section-runnable {
-  // scss-lint:disable ColorVariable
-  background: linear-gradient(120deg, #475496, #834fab);
-  // scss-lint:enable ColorVariable
-
-  .img {
-    height: auto;
-    left: 30px;
-    position: absolute;
-    top: 290px;
-    width: 900px;
-  }
-}
-
-.section-codesnippets {
-  // scss-lint:disable ColorVariable
-  background: linear-gradient(120deg, #321f43, #2e1b3b);
-  // scss-lint:enable ColorVariable
-
-  .img {
-    height: auto;
-    left: -210px;
-    position: absolute;
-    top: 180px;
-    width: 800px;
   }
 }

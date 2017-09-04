@@ -19,16 +19,3 @@ html {
     font-size: 19px;
   }
 }
-
-// main
-.main-landing {
-  padding-bottom: $lg;
-
-  .container {
-    max-width: 600px;
-  }
-
-  .section + .section {
-    margin-top: $lg;
-  }
-}

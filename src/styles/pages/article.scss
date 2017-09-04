@@ -5,6 +5,8 @@
   .hero {
     margin-bottom: $xl;
     overflow: hidden;
+    padding-left: $lg;
+    padding-right: $lg;
   }
 
   .h1:first-child + .p {
