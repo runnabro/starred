@@ -1,20 +1,51 @@
 .btn {
+  border: 0;
   border-radius: $radius-sm;
   display: inline-block;
   font-weight: $weight-bold;
+  overflow: hidden;
   padding: $sm $md;
+  position: relative;
   text-decoration: none;
 
+  .span {
+    position: relative;
+    z-index: 1;
+  }
+
   + .btn {
-    margin-left: $sm;
+    margin-left: $md;
   }
 }
 
-.btn-primary {
-  border: 0;
+.btn-white {
+  background: rgba($white,.1);
+  box-shadow: 0 0 0 2px rgba($white,.75);
   color: $white;
-  overflow: hidden;
-  position: relative;
+  transform-origin: 50% 0;
+  transition: background .3s cubic-bezier(.22,.61,.36,1),box-shadow .3s cubic-bezier(.22,.61,.36,1);
+
+  &:hover,
+  &:active {
+    background: rgba($white,.15);
+    box-shadow: 0 0 0 2px $white;
+  }
+}
+
+.btn-white-outline {
+  box-shadow: 0 0 0 1px rgba($white,.25);
+  color: rgba($white,.75);
+  transition: box-shadow .3s cubic-bezier(.22,.61,.36,1),color .3s cubic-bezier(.22,.61,.36,1);
+
+  &:hover,
+  &:active {
+    box-shadow: 0 0 0 2px $white;
+    color: $white;
+  }
+}
+
+.btn-orange {
+  color: $white;
 
   &:hover::before,
   &:active::before {
@@ -31,24 +62,19 @@
     top: 0;
     width: 500%;
   }
-
-  .span {
-    position: relative;
-    z-index: 1;
-  }
-
-  @keyframes btn {
-    0% {
-      transform: translateX(0);
-    }
-
-    100% {
-      transform: translateX(-80%);
-    }
-  }
 }
 
-.btn-secondary {
+.btn-outline.btn-orange {
   border: 1px solid $orange;
   color: $orange;
+}
+
+@keyframes btn {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-80%);
+  }
 }
