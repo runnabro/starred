@@ -170,6 +170,9 @@
 // images
 .img-codesnippets-hero {
   border-radius: $radius-sm $radius-sm 0 0;
+  // scss-lint:disable ColorVariable
+  box-shadow: 0 6px 60px rgba(44, 26, 54, .5);
+  // scss-lint:enable ColorVariable
   margin-bottom: 0;
 
   &::after {
@@ -178,8 +181,9 @@
 
   .video {
     border-radius: $radius-sm $radius-sm 0 0;
-    box-shadow: 0 6px 30px rgba($black,.3);
     margin-bottom: -1px;
+    max-width: 100%;
+    width: 800px;
   }
 }
 
@@ -199,5 +203,9 @@
     border-radius: $radius-sm $radius-sm 0 0;
     margin-bottom: 0;
     padding: $lg $lg 0;
+  }
+
+  .img {
+    border-radius: $radius-sm $radius-sm 0 0;
   }
 }
