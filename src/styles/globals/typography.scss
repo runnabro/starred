@@ -17,9 +17,7 @@
 // links
 .link {
   color: currentColor;
-  cursor: pointer;
   display: inline-block;
-  font-weight: $weight-bold;
   line-height: 1;
   position: relative;
   text-decoration: none;
@@ -27,12 +25,13 @@
   &::after {
     background: currentColor;
     background-size: 285% 100%;
-    border-radius: 2px;
+    border-radius: 1px;
     bottom: -1px;
     content: '';
     display: block;
-    height: 2px;
+    height: 1px;
     left: 0;
+    opacity: .4;
     position: absolute;
     right: 0;
     width: 100%;
@@ -51,16 +50,6 @@
       -moz-text-fill-color: transparent;
       -webkit-text-fill-color: transparent;
       text-fill-color: transparent;
-    }
-  }
-
-  @keyframes rainbow {
-    0% {
-      background-position: 0 0;
-    }
-
-    100% {
-      background-position: 100% 0;
     }
   }
 
@@ -90,5 +79,5 @@
 
 // emphasis
 .em {
-  text-decoration: underline;
+  font-weight: $weight-bold;
 }

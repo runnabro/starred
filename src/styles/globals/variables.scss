@@ -32,3 +32,14 @@ $xs: 5px;
 $radius-xs: 2px;
 $radius-sm: 4px;
 $radius-md: 8px;
+
+// animations
+@keyframes rainbow {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 100% 0;
+  }
+}
