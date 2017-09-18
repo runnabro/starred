@@ -10,6 +10,16 @@
   + .btn {
     margin-left: $md;
   }
+
+  .svg {
+    height: 100%;
+    width: $md;
+  }
+
+  .path {
+    fill: currentColor;
+    stroke: none;
+  }
 }
 
 .btn-md {
