@@ -6,6 +6,28 @@
 
 .hero {
   color: $white;
+  position: relative;
+
+  .back-arrow {
+    cursor: pointer;
+    height: 40px;
+    left: $lg;
+    position: absolute;
+    top: $lg;
+    width: 40px;
+
+    &:hover .path,
+    &:active .path {
+      fill: rgba($white,.15);
+      stroke: $white;
+    }
+  }
+
+  .path {
+    fill: rgba($white,.1);
+    stroke: rgba($white,.75);
+    transition: fill .3s cubic-bezier(.22,.61,.36,1),stroke .3s cubic-bezier(.22,.61,.36,1);
+  }
 }
 
 .section-callout {
