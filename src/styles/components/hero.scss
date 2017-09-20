@@ -2,6 +2,11 @@
 .section-callout {
   border-radius: $radius-md;
   overflow: hidden;
+
+  .link .span,
+  .link::after {
+    background-image: linear-gradient(135deg,lighten($purple,20%) 0%,lighten($blue,20%) 12.5%,$green 25%,lighten($orange,5%) 37.5%,lighten($red,10%) 50%,lighten($purple,20%) 62.5%,lighten($blue,20%) 75%,$green 87.5%,lighten($orange,5%) 100%);
+  }
 }
 
 .hero {

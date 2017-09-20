@@ -8,8 +8,7 @@ $card-wrapper-max-width: ($card-max-width * 2) + $lg + ($md * 2);
     margin-top: $lg;
   }
 
-  .hero {
-    color: $black;
+  .section-intro {
     margin-bottom: $xl;
 
     .text-container {
