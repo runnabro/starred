@@ -1,3 +1,6 @@
+$card-max-width: 450px;
+$card-wrapper-max-width: ($card-max-width * 2) + $lg + ($md * 2);
+
 .main-landing {
   padding: $xxl $md;
 
@@ -10,7 +13,7 @@
     margin-bottom: $xl;
 
     .text-container {
-      @media (max-width: 920px) {
+      @media (max-width: $card-wrapper-max-width) {
         padding-left: $lg;
         padding-right: $lg;
       }
@@ -40,24 +43,39 @@
   }
 
   .section-card-wrapper {
-    @media (max-width: 920px) {
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $card-wrapper-max-width;
+
+    @media (max-width: $card-wrapper-max-width) {
       flex-direction: column;
     }
   }
 
-  $card-max-width: 450px;
-
   .section-card {
     max-width: $card-max-width;
 
-    @media (max-width: 920px) {
+    @media (max-width: $card-wrapper-max-width) {
       margin-left: auto;
       margin-right: auto;
       max-width: 510px;
     }
 
+    &:nth-child(2) {
+      @media (min-width: $card-wrapper-max-width + 1px) {
+        margin-left: $lg;
+      }
+    }
+
+    &:nth-child(3) {
+      @media (min-width: $card-wrapper-max-width + 1px) {
+        margin-top: $lg;
+      }
+    }
+
     + .section-card {
-      @media (max-width: 920px) {
+      @media (max-width: $card-wrapper-max-width) {
         margin-top: $md;
       }
     }
@@ -128,22 +146,28 @@
   }
 
   .section-more {
-    margin-left: auto;
-    margin-right: auto;
     margin-top: $xl;
-    max-width: ($card-max-width * 2) + $lg;
 
     .h2 {
       font-size: 22px;
       margin-bottom: $md;
-      margin-left: $lg;
-      margin-right: $lg;
-      max-width: $card-max-width;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: $card-wrapper-max-width;
+      text-indent: $lg;
+
+      @media (max-width: $card-wrapper-max-width) {
+        max-width: 510px;
+      }
     }
 
     .li {
       border: 1px solid $gray-light;
       color: $black;
+
+      @media (max-width: $card-wrapper-max-width) {
+        width: 100%;
+      }
     }
   }
 }
