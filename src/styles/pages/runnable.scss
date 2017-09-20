@@ -1,7 +1,7 @@
 // sections
 .hero-runnable {
   // scss-lint:disable ColorVariable
-  background: linear-gradient(120deg, #834fab, #475496);
+  background: linear-gradient(120deg,#834fab,#475496);
   // scss-lint:enable ColorVariable
 
   .img-marketing {
@@ -70,7 +70,7 @@
 
   .figure-blog {
     // scss-lint:disable ColorVariable
-    background: linear-gradient(120deg, #e6d9d7, #e9eaec);
+    background: linear-gradient(120deg,#e6d9d7,#e9eaec);
     // scss-lint:enable ColorVariable
     border-radius: $radius-md;
     margin: $xl 0;
@@ -116,7 +116,7 @@
 
 .section-dockerfile {
   // scss-lint:disable ColorVariable
-  background: linear-gradient(120deg, #475496, #834fab);
+  background: linear-gradient(120deg,#475496,#834fab);
   // scss-lint:enable ColorVariable
   color: $white;
   padding-right: 0;

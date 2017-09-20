@@ -1,20 +1,20 @@
 // sections
 .hero-codesnippets {
   // scss-lint:disable ColorVariable
-  background: linear-gradient(120deg, #422756, #9a57ba);
+  background: linear-gradient(120deg,#422756,#9a57ba);
   // scss-lint:enable ColorVariable
 }
 
 .section-hero {
   // scss-lint:disable ColorVariable
-  background: linear-gradient(120deg, #422756, #2e1b3d 30%);
+  background: linear-gradient(120deg,#422756,#2e1b3d 30%);
   // scss-lint:enable ColorVariable
   color: $white;
 
   @media (max-width: 1150px) {
     align-items: center;
     // scss-lint:disable ColorVariable
-    background: linear-gradient(150deg, #2e1b3d 60%, #422756);
+    background: linear-gradient(150deg,#2e1b3d 60%,#422756);
     // scss-lint:enable ColorVariable
     flex-direction: column;
     justify-content: flex-start;
@@ -171,7 +171,7 @@
 .img-codesnippets-hero {
   border-radius: $radius-sm $radius-sm 0 0;
   // scss-lint:disable ColorVariable
-  box-shadow: 0 6px 60px rgba(44, 26, 54, .5);
+  box-shadow: 0 6px 60px rgba(44,26,54,.5);
   // scss-lint:enable ColorVariable
   margin-bottom: 0;
 
