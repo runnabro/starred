@@ -4,6 +4,10 @@ $card-wrapper-max-width: ($card-max-width * 2) + $lg + ($md * 2);
 .main-landing {
   padding: $xxl $md;
 
+  @media (max-width: 375px) {
+    padding: $lg $sm;
+  }
+
   .section + .section {
     margin-top: $lg;
   }
@@ -83,6 +87,13 @@ $card-wrapper-max-width: ($card-max-width * 2) + $lg + ($md * 2);
   .section-runnable,
   .section-codesnippets {
     min-height: 600px;
+
+    .img {
+      height: auto;
+      max-width: none;
+      pointer-events: none;
+      position: absolute;
+    }
   }
 
   .section-runnable {
@@ -91,10 +102,7 @@ $card-wrapper-max-width: ($card-max-width * 2) + $lg + ($md * 2);
     // scss-lint:enable ColorVariable
 
     .img {
-      height: auto;
       left: 30px;
-      pointer-events: none;
-      position: absolute;
       top: 290px;
       width: 900px;
 
@@ -110,10 +118,7 @@ $card-wrapper-max-width: ($card-max-width * 2) + $lg + ($md * 2);
     // scss-lint:enable ColorVariable
 
     .img {
-      height: auto;
       left: -210px;
-      pointer-events: none;
-      position: absolute;
       top: 180px;
       width: 800px;
     }

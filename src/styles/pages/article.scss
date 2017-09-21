@@ -5,6 +5,19 @@
   padding: $md $md $xl;
   width: 100%;
 
+  @media (max-width: 375px) {
+    padding-left: $sm;
+    padding-right: $sm;
+    padding-top: $sm;
+  }
+
+  .section:not(.hero):not(.section-callout) {
+    @media (max-width: 375px) {
+      padding-left: $sm;
+      padding-right: $sm;
+    }
+  }
+
   // hero
   .hero {
     margin-bottom: $xl;

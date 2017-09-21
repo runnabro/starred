@@ -44,6 +44,7 @@
   }
 
   .img {
+    height: 100%;
     max-width: 550px;
     width: calc(100vw - 640px); // .article padding + .text-container width + .callout padding-left/right
 
@@ -64,6 +65,11 @@
     flex-direction: column;
     padding-left: 0;
     padding-right: 0;
+  }
+
+  @media (max-width: 375px) {
+    padding-left: $sm;
+    padding-right: $sm;
   }
 
   .text-container {
@@ -113,6 +119,11 @@
     padding-right: 0;
   }
 
+  @media (max-width: 375px) {
+    padding-left: $sm;
+    padding-right: $sm;
+  }
+
   .text-container {
     @media (max-width: 920px) {
       max-width: 510px;
@@ -126,6 +137,7 @@
   }
 
   .img-runoptions {
+    height: 100%;
     max-width: 300px;
 
     @media (max-width: 920px) {
@@ -145,6 +157,7 @@
     }
 
     .img {
+      height: 100%;
       width: calc(33.3333% - #{$lg});
 
       @media (max-width: 600px) {
@@ -189,7 +202,6 @@
 
 .figure-oldsnippets .img {
   border: 1px solid rgba($black,.15);
-  max-width: 450px;
 }
 
 .figure-nodejs {

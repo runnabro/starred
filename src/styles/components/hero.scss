@@ -21,6 +21,16 @@
     top: $lg;
     width: 40px;
 
+    @media (max-width: 850px) and (min-width: 631px) {
+      left: $md;
+      top: $md;
+    }
+
+    @media (max-width: 850px) {
+      height: 30px;
+      width: 30px;
+    }
+
     &:hover .path,
     &:active .path {
       fill: rgba($white,.15);
