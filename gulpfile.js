@@ -8,6 +8,7 @@ var gulp = require('gulp');
 var imagemin = require('gulp-imagemin');
 var inject = require('gulp-inject');
 var minifyInline = require('gulp-minify-inline');
+var minifyHtml = require('gulp-htmlmin');
 var newer = require('gulp-newer');
 var rename = require('gulp-rename');
 var runSequence = require('run-sequence');
@@ -115,6 +116,9 @@ gulp.task('minify', function() {
   gulp.src(dist + '**/*.html')
     .pipe(minifyInline({
       jsSelector: 'script[ugly]'
+    }))
+     .pipe(minifyHtml({
+      collapseWhitespace: true
     }))
     .pipe(gulp.dest(dist));
 });
