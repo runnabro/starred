@@ -58,6 +58,7 @@ $card-wrapper-max-width: ($card-max-width * 2) + $lg + ($md * 2);
 
   .section-card {
     max-width: $card-max-width;
+    width: 100%;
 
     @media (max-width: $card-wrapper-max-width) {
       margin-left: auto;
