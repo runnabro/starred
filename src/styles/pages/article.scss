@@ -56,7 +56,7 @@
   padding-top: $xl;
 }
 
-.text-container > * + *:not(.figure) {
+.text-container > * + *:not(.figure):not(.link) {
   margin-top: $md;
  }
 
