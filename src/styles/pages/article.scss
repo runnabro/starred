@@ -34,6 +34,14 @@
     margin-top: 0;
   }
 
+  .ol,
+  .ul {
+    @media (max-width: 580px) {
+      padding-left: $md;
+      padding-right: $md;
+    }
+  }
+
   .li + .li {
     margin-top: $sm;
   }
