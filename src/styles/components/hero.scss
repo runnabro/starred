@@ -34,7 +34,8 @@
     }
 
     &:hover .path,
-    &:active .path {
+    &:active .path,
+    &:focus .path {
       fill: rgba($white,.15);
       stroke: $white;
     }
