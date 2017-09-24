@@ -23,10 +23,6 @@ $card-wrapper-max-width: ($card-max-width * 2) + $lg + ($md * 2);
     }
   }
 
-  .h1 + .p {
-    margin-top: $sm;
-  }
-
   .the-web {
     display: inline-block;
     font-weight: $weight-bold;
