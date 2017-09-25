@@ -1,7 +1,7 @@
 // California Style Sheets
 // scss-lint:disable StringQuotes
 
-// global
+// globals
 @import "globals/normalize";
 @import "globals/reset";
 @import "globals/variables";
@@ -9,4 +9,14 @@
 @import "globals/grid";
 @import "globals/typography";
 
+// components
+@import "components/card";
+@import "components/hero";
+@import "components/buttons";
+@import "components/images";
+
+// pages
 @import "pages/landing";
+@import "pages/article";
+@import "pages/codesnippets";
+@import "pages/runnable";

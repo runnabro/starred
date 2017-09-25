@@ -8,6 +8,7 @@ var gulp = require('gulp');
 var imagemin = require('gulp-imagemin');
 var inject = require('gulp-inject');
 var minifyInline = require('gulp-minify-inline');
+var minifyHtml = require('gulp-htmlmin');
 var newer = require('gulp-newer');
 var rename = require('gulp-rename');
 var runSequence = require('run-sequence');
@@ -26,7 +27,8 @@ var htmlDir = src + 'html/**/*.html';
 var sassDir = src +'styles/**/*.scss';
 var sassSrc = src + 'styles/index.scss';
 var jsDir = src + 'js/**/*.**';
-var imgDir = src + 'images/**/*.+(png|jpg|gif|svg)';
+var imgDir = src + 'images/**/*.+(png|jpg|gif|svg|mp4)';
+var cnameSrc = src + 'html/CNAME';
 var favIconSrc = src + 'html/favicon.png';
 var robotsSrc = src + 'html/robots.txt';
 var sitemapSrc = src + 'html/sitemap.xml';
@@ -46,23 +48,7 @@ gulp.task('html', function() {
   return gulp.src(htmlDir)
     .pipe(fileinclude({
       prefix: '@@',
-      basepath: src,
-      context: {
-        env: ''
-      }
-    }))
-    .pipe(gulp.dest(htmlDist));
-});
-
-// include files
-gulp.task('html:gh', function() {
-  return gulp.src(htmlDir)
-    .pipe(fileinclude({
-      prefix: '@@',
-      basepath: src,
-      context: {
-        env: 'gh'
-      }
+      basepath: src
     }))
     .pipe(gulp.dest(htmlDist));
 });
@@ -109,7 +95,7 @@ gulp.task('inject', function () {
     .pipe(inject(gulp.src(sassDist + 'index-' + currentVersion + '.css', {read: false}), {
       removeTags: true,
       transform: function () {
-        return '<link rel="stylesheet" href="' + 'styles/index-' + currentVersion + '.css">';
+        return '<link rel="stylesheet" href="' + '/styles/index-' + currentVersion + '.css">';
       }
     }))
     .pipe(gulp.dest(htmlDist));
@@ -131,6 +117,9 @@ gulp.task('minify', function() {
     .pipe(minifyInline({
       jsSelector: 'script[ugly]'
     }))
+     .pipe(minifyHtml({
+      collapseWhitespace: true
+    }))
     .pipe(gulp.dest(dist));
 });
 
@@ -146,7 +135,7 @@ gulp.task('images', function () {
 
 // robots, sitemap, and favicon
 gulp.task('moveMisc', function () {
-  return gulp.src([robotsSrc, sitemapSrc, favIconSrc])
+  return gulp.src([cnameSrc, robotsSrc, sitemapSrc, favIconSrc])
     .pipe(debug({
       title: 'moveMisc'
     }))
@@ -171,7 +160,7 @@ gulp.task('ghPages', function() {
 
 // build and optimize
 gulp.task('build', function(cb) {
-  runSequence('clean', 'html:gh', 'js', ['sass:build', 'images', 'moveMisc', 'minify'], ['inject', 'imagemin'], cb);
+  runSequence('clean', 'html', 'js', ['sass:build', 'images', 'moveMisc', 'minify'], ['inject', 'imagemin'], cb);
 });
 
 // build without optimizing

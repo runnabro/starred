@@ -3,42 +3,60 @@
 
   <head>
     @@include('html/components/head.html')
+    <title>Hi.</title>
   <body>
-    <main class="grid-block grid-container col main main-landing">
-      <section class="hero section">
-        <h1 class="h1 weight-bold">
-          <span class="emoji">👋</span>
-          <br>
-          I’m Tony Li.
-        </h1>
-        <p class="p">My current challenge is to help dev teams @ <a href="//runnable.com">Runnable</a>, and here’s what I’ve been doing there:
+    <main class="grid-block col main main-landing">
+      <section class="grid-block justify-center section section-intro">
+        <div class="text-container">
+          <h1 class="h1 weight-bold">
+            Heya, I’m Tony and I work on <strong class="the-web"><span class="span">the web</span></strong>. My current challenge is to help dev teams at <a class="link" href="//runnable.com/landing"><span class="span">Runnable</span></a>. Here’s what I’ve been doing:
+          </h1>
+        </div>
       </section>
-      <section class="grid-block col section">
-        <ul class="ul ul-work">
-          <li class="grid-block li">
-            <a class="grid-block shrink align-center a" href="//runnable.com/">
-              <img class="grid-block shrink img" src="images/icon-runnable.svg" height="45" width="45">
-              <div class="grid-block col align-start">
-                <p class="p">Unlimited environments for all.
-                <p class="p weight-bold">runnable.com
-              </div>
-            </a>
-          <li class="grid-block li">
-            <a class="grid-block shrink align-center a" href="//code.runnable.com/">
-              <img class="grid-block shrink img" src="images/icon-code-snippets.svg" height="45" width="45">
-              <div class="grid-block shrink col align-start">
-                <p class="p">Run and share code in the browser.
-                <p class="p weight-bold">code.runnable.com
-              </div>
-            </a>
-          <li class="grid-block li">
-            <a class="grid-block shrink align-center a" href="//runnable.com/docker/">
-              <img class="grid-block shrink img" src="images/icon-slash-docker.svg" height="45" width="45">
-              <div class="grid-block col align-start">
-                <p class="p">Docker resources for devs.
-                <p class="p weight-bold">runnable.com/docker
-              </div>
-            </a>
-        </ul>
+      <div class="grid-block justify-center section-card-wrapper">
+        <section class="section-card section-runnable">
+          <h2 class="h2 weight-bold">Runnable</h2>
+          <p class="p">Automatically launching full-stack environments for every branch.
+          <div class="grid-block margin-top-md btn-wrapper">
+            <a class="btn btn-md btn-white" href="/runnable/">Read Details</a>
+            <a class="btn btn-md btn-white-outline" href="//runnable.com/landing"><span class="span">View It Live</span></a>
+          </div>
+          <img class="img" src="/images/runnable/dockerfile.png" alt="">
+        </section>
+        <section class="section-card section-codesnippets">
+          <h2 class="h2 weight-bold">CodeSnippets</h2>
+          <p class="p">Complete environments to run and share code in the browser.
+          <div class="grid-block margin-top-md btn-wrapper">
+            <a class="btn btn-md btn-white" href="/codesnippets/"><span class="span">Read Details</span></a>
+          </div>
+          <img class="img no-shadow" src="/images/codesnippets.svg" alt="">
+        </section>
+      </div>
+      <section class="section section-more">
+        <h2 class="h2 weight-bold">More things I’ve done:</h2>
+        <ol class="grid-block list section-card-wrapper">
+          <li class="grid-block col section-card li">
+            <img class="margin-bottom-sm" src="/images/slash-docker.svg" height="56" width="70" alt="">
+            <p class="p weight-bold">/docker
+            <p class="p">A resource for developers learning Docker and containerization.
+            <div class="grid-block shrink margin-top-sm btn-wrapper">
+              <a class="btn btn-sm btn-blue-outline" href="//github.com/runnable/slash-docker">View Source</a>
+              <a class="btn btn-sm btn-blue-outline" href="//runnable.com/docker/"><span class="span">View It Live</span></a>
+            </div>
+          <li class="grid-block col section-card li">
+            <img class="margin-bottom-sm" src="/images/file-docs.svg" height="56" width="70" alt="">
+            <p class="p weight-bold">Runnable Docs
+            <p class="p">Documentation for getting start with, and troubleshooting Runnable.
+            <div class="grid-block shrink margin-top-sm btn-wrapper">
+              <a class="btn btn-sm btn-blue-outline" href="//github.com/runnable/docs">View Source</a>
+              <a class="btn btn-sm btn-blue-outline" href="//runnable.com/docs/"><span class="span">View It Live</span></a>
+            </div>
+          <li class="grid-block col section-card li">
+            <p class="p weight-bold">starred
+            <p class="p">The source for <em>this</em> site.
+            <div class="grid-block shrink margin-top-sm btn-wrapper">
+              <a class="btn btn-sm btn-blue-outline" href="//github.com/runnabro/starred">View Source</a>
+            </div>
+        </ol>
       </section>
     </main>

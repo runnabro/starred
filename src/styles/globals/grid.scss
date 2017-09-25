@@ -53,13 +53,32 @@
   }
 }
 
-.grid-container {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 960px;
-}
+$size-directions: top right bottom left;
+$size-list: xs sm md lg xl;
+$sizes: $xs,$sm,$md,$lg,$xl;
 
-.section {
-  padding-left: $md;
-  padding-right: $md;
+// default sizes
+@for $i from 1 to 6 {
+
+  // padding
+  .padding-#{nth($size-list,$i)} {
+    padding: nth($sizes,$i);
+  }
+
+  @for $x from 1 to 5 {
+    .padding-#{nth($size-directions,$x)}-#{nth($size-list,$i)} {
+      padding-#{nth($size-directions,$x)}: nth($sizes,$i);
+    }
+  }
+
+  // margin
+  .margin-#{nth($size-list,$i)} {
+    margin: nth($sizes,$i);
+  }
+
+  @for $x from 1 to 5 {
+    .margin-#{nth($size-directions,$x)}-#{nth($size-list,$i)} {
+      margin-#{nth($size-directions,$x)}: nth($sizes,$i);
+    }
+  }
 }
