@@ -1,11 +1,11 @@
 $card-max-width: 450px;
-$card-wrapper-max-width: ($card-max-width * 2) + $lg + ($md * 2);
+$card-wrapper-max-width: ($card-max-width * 2) + $lg;
 
 .main-landing {
   padding: $xxl $md;
 
-  @media (max-width: 375px) {
-    padding: $lg $sm;
+  @media (max-width: 480px) {
+    padding: $md $sm;
   }
 
   .section + .section {
@@ -163,6 +163,7 @@ $card-wrapper-max-width: ($card-max-width * 2) + $lg + ($md * 2);
     }
 
     .li {
+      background: $white;
       border: 1px solid $gray-light;
       color: $black;
 

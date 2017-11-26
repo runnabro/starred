@@ -74,6 +74,11 @@
     padding-bottom: $xl;
     position: relative;
 
+    @media (max-width: 375px) {
+      margin-left: -$sm;
+      margin-right: -$sm;
+    }
+
     .img {
       flex: 0 0 auto;
       height: 100%;
@@ -272,7 +277,10 @@
 
   &.img-jira .img {
     margin: 0 auto;
-    max-width: 300px;
+
+    @media (min-width: 381px) {
+      max-width: 300px;
+    }
   }
 
   .img {
