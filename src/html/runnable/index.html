@@ -48,14 +48,39 @@
         <section class="grid-block col section padding-bottom-none">
           <div class="text-container">
             <h2 class="h2">An Easier Way to Containerize Apps</h2>
-            <p class="p">We needed users to use Docker, but when we were getting started we found out that everyone was new to Docker. Every application needed a Dockerfile that defined the configuration for their environment. So we built a tool that made it easy to set up Dockerfiles. Users would see configuration suggestions based on the language of their project.
+            <p class="p">We needed users to use Docker, but when we were getting started we found that most everyone was new to writing Dockerfiles. Every application needed a Dockerfile that defined the configuration for their environment. In one of our earliest versions of our set up flow, we exposed the Dockerfile directly to users and provided basic syntax validation.
+          </div>
+          <figure class="grid-block col shrink figure figure-xl">
+            <div class="img-wrapper img-simple-mode">
+              <img class="img" src="/images/runnable/simple-configuration-v1.png" width="500">
+            </div>
+          </figure>
+          <div class="text-container">
+            <p class="p">Basic validation was not enough for users to make it to running their projects. We learned that our most successful users were doing well when they had working Dockerfiles that our team was able to build with them.
+          </div>
+          <figure class="grid-block col shrink figure figure-xl">
+            <div class="img-wrapper img-simple-mode">
+              <img class="img" src="/images/runnable/simple-configuration-v2.png" width="500">
+            </div>
+          </figure>
+          <div class="text-container">
+            <p class="p">We took the knowledge that our team learned from helping other orgs make Dockerfiles to build a guided flow. Users would be able to describe their application to us, so we could generate a Dockerfile for them.
           </div>
           <figure class="grid-block col shrink figure figure-xl">
             <div class="img-wrapper img-simple-mode">
               <img class="img" src="/images/runnable/simple-configuration.png" height="461" width="800">
             </div>
-            <figcaption class="figcaption">Setting the base image for an environment.</figcaption>
           </figure>
+        </section>
+
+        <section class="grid-block align-center section section-slash-docker padding-bottom-none padding-top-none">
+          <figure class="grid-block shrink col align-center figure img-wrapper">
+            <img class="img" src="/images/runnable/slash-docker.png" width="250">
+          </figure>
+          <div class="grid-block col text-container">
+            <h2 class="h2">/docker</h2>
+            <p class="p">We started a <a class="link" href="//runnable.com/docker/"><span class="span">Docker resource</span></a> to help developers new to Docker. I worked with one of our PMs to design and build the site for the articles we were planning. We choose to use Jekyll because we needed an easy way to write and edit articles in Markdown; and it worked out so well, we ended up forking the project for our <a class="link" href="//runnable.com/docs"><span class="span">docs</span></a> and <a class="link" href="//runnable.com/blog"><span class="span">blog</span></a>.
+          </div>
         </section>
 
         <section class="grid-block section section-callout section-dockerfile">
