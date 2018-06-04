@@ -11,15 +11,13 @@
     "gulp-cli": "^1.2.1",
     "gulp-debug": "~2.0.1",
     "gulp-file-include": "^0.13.2",
-    "gulp-gh-pages": "^0.5.4",
     "gulp-htmlmin": "^3.0.0",
-    "gulp-imagemin": "~2.4.0",
+    "gulp-imagemin": "^4.1.0",
     "gulp-inject": "^4.1.0",
     "gulp-minify-inline": "^0.2.0",
     "gulp-newer": "~0.5.1",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "~2.3.1",
-    "gulp-webserver": "^0.9.1",
     "run-sequence": "^1.1.5"
   },
   "engine": {
@@ -29,5 +27,9 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/runnabro/portfolio.com.git"
+  },
+  "devDependencies": {
+    "gh-pages": "^1.2.0",
+    "gulp-webserver": "^0.9.1"
   }
 }

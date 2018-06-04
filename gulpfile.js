@@ -3,7 +3,7 @@ var debug = require('gulp-debug');
 var del = require('del');
 var fs = require('fs');
 var fileinclude = require('gulp-file-include');
-var ghPages = require('gulp-gh-pages');
+var ghPages = require('gh-pages');
 var gulp = require('gulp');
 var imagemin = require('gulp-imagemin');
 var inject = require('gulp-inject');
@@ -154,8 +154,7 @@ gulp.task('imagemin', function() {
 
 // deploy /dist to gh pages
 gulp.task('ghPages', function() {
-  return gulp.src(dist + '**/*')
-    .pipe(ghPages());
+  ghPages.publish('dist', function(err) {});
 });
 
 // build and optimize
