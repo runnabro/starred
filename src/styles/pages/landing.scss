@@ -83,6 +83,7 @@ $card-wrapper-max-width: ($card-max-width * 2) + $lg;
 
   .section-runnable,
   .section-codesnippets {
+    box-shadow: 0 6px 30px rgba($black,.2);
     min-height: 600px;
 
     .img {
@@ -95,7 +96,7 @@ $card-wrapper-max-width: ($card-max-width * 2) + $lg;
 
   .section-runnable {
     // scss-lint:disable ColorVariable
-    background: linear-gradient(120deg,#475496,#834fab);
+    background: linear-gradient(120deg,#80accb,#ad60e8);
     // scss-lint:enable ColorVariable
 
     .img {
@@ -111,7 +112,7 @@ $card-wrapper-max-width: ($card-max-width * 2) + $lg;
 
   .section-codesnippets {
     // scss-lint:disable ColorVariable
-    background: linear-gradient(120deg,#321f43,#2e1b3b);
+    background: linear-gradient(120deg,#e8a798,#3d1656);
     // scss-lint:enable ColorVariable
 
     .img {
