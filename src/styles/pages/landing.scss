@@ -1,5 +1,5 @@
 $card-max-width: 450px;
-$card-wrapper-max-width: ($card-max-width * 2) + $lg;
+$card-wrapper-max-width: ($card-max-width * 2) + $lg + ($md * 2);
 
 .main-landing {
   padding: $xxl $md;
@@ -82,7 +82,8 @@ $card-wrapper-max-width: ($card-max-width * 2) + $lg;
   }
 
   .section-runnable,
-  .section-codesnippets {
+  .section-codesnippets,
+  .section-mulequest {
     box-shadow: 0 6px 30px rgba($black,.2);
     min-height: 600px;
 
@@ -119,6 +120,38 @@ $card-wrapper-max-width: ($card-max-width * 2) + $lg;
       left: -210px;
       top: 180px;
       width: 800px;
+    }
+  }
+
+  .section-mulequest {
+
+    &::before {
+      background-image: url(../images/scanlines.svg);
+      content: '';
+      height: 100%;
+      left: 0;
+      opacity: .1;
+      pointer-events: none;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+      z-index: -1;
+    }
+
+    .img {
+      left: 0;
+      top: -80px;
+      width: 100%;
+      z-index: -2;
+
+      @media (max-width: $card-wrapper-max-width) {
+        top: -170px;
+      }
+
+      @media (max-width: 500px) {
+        top: -80px;
+      }
     }
   }
 
