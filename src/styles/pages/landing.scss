@@ -1,5 +1,5 @@
 $card-max-width: 450px;
-$card-wrapper-max-width: ($card-max-width * 2) + $lg;
+$card-wrapper-max-width: ($card-max-width * 2) + $lg + ($md * 2);
 
 .main-landing {
   padding: $xxl $md;
