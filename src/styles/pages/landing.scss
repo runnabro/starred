@@ -124,6 +124,9 @@ $card-wrapper-max-width: ($card-max-width * 2) + $lg + ($md * 2);
   }
 
   .section-mulequest {
+    // scss-lint:disable ColorVariable
+    background: #b5c1c6;
+    // scss-lint:enable ColorVariable
 
     &::before {
       background-image: url(../images/scanlines.svg);
@@ -141,17 +144,8 @@ $card-wrapper-max-width: ($card-max-width * 2) + $lg + ($md * 2);
 
     .img {
       left: 0;
-      top: -80px;
+      bottom: 20px;
       width: 100%;
-      z-index: -2;
-
-      @media (max-width: $card-wrapper-max-width) {
-        top: -170px;
-      }
-
-      @media (max-width: 500px) {
-        top: -80px;
-      }
     }
   }
 
