@@ -38,6 +38,13 @@
   }
 }
 
-.figure-mulequest-ui .img {
-  margin: $sm;
+.figure-mulequest-ui {
+
+  @media (max-width: 990px) {
+    flex-direction: column;
+  }
+
+  .img {
+    margin: $sm;
+  }
 }
