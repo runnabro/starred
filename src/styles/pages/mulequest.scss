@@ -3,6 +3,19 @@
   // scss-lint:disable ColorVariable
   background: linear-gradient(-180deg, #b5c1c6 60%, #e2a788);
   // scss-lint:enable ColorVariable
+
+  &::before {
+    background-image: url(../images/scanlines.svg);
+    content: '';
+    height: 100%;
+    left: 0;
+    opacity: .1;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+  }
 }
 
 // images
