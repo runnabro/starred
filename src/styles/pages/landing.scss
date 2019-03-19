@@ -32,8 +32,6 @@ $card-wrapper-max-width: ($card-max-width * 2) + $lg + ($md * 2);
   .the-web {
     display: inline-block;
     font-weight: $weight-bold;
-    position: relative;
-    white-space: nowrap;
 
     .span {
       animation: rainbow 2s infinite linear;
@@ -46,29 +44,6 @@ $card-wrapper-max-width: ($card-max-width * 2) + $lg + ($md * 2);
       -moz-text-fill-color: transparent;
       -webkit-text-fill-color: transparent;
       text-fill-color: transparent;
-
-      &::after,
-      &::before {
-        background: $gray-lightest;
-        clip:rect(0, 900px, 0, 0);
-        color: $black;
-        content:attr(data-text);
-        overflow: hidden;
-        position:absolute;
-        top: 0;
-      }
-
-      &::after {
-        animation: glitch 2.5s infinite linear alternate-reverse;
-        left: 2px;
-        text-shadow: -1px 0 red;
-      }
-
-      &::before {
-        left:-2px;
-        text-shadow: 1px 0 blue;
-        animation:glitch-2 3.5s infinite linear alternate-reverse;
-      }
     }
   }
 
@@ -205,19 +180,13 @@ $card-wrapper-max-width: ($card-max-width * 2) + $lg + ($md * 2);
   }
 
   .section-more {
-    margin-top: $xl;
 
-    .h2 {
-      font-size: 22px;
-      margin-bottom: $md;
-      margin-left: auto;
-      margin-right: auto;
-      max-width: $card-wrapper-max-width;
-      text-indent: $lg;
+    @media (min-width: $card-wrapper-max-width + 1px) {
+      margin-top: $lg;
+    }
 
-      @media (max-width: $card-wrapper-max-width) {
-        max-width: 510px;
-      }
+    @media (max-width: $card-wrapper-max-width) {
+      margin-top: $md;
     }
 
     .li {
@@ -247,21 +216,5 @@ $card-wrapper-max-width: ($card-max-width * 2) + $lg + ($md * 2);
   .icon {
     height: 30px;
     width: 30px;
-  }
-}
-
-@keyframes glitch {
-  @for $i from 0 through 20{
-    #{percentage($i*(1/20))}{
-      clip:rect(random(100)+px, 9999px, random(100)+px, 0);
-    }
-  }
-}
-
-@keyframes glitch-2{
-  @for $i from 0 through 20{
-    #{percentage($i*(1/20))}{
-      clip:rect(random(100)+px, 9999px, random(100)+px, 0);
-    }
   }
 }

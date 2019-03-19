@@ -11,7 +11,9 @@
     padding-top: $sm;
   }
 
-  .section:not(.hero):not(.section-callout) {
+  .section:not(.hero),
+  .section:not(.section-callout),
+  .section:not(.no-padding) {
     @media (max-width: 375px) {
       padding-left: $sm;
       padding-right: $sm;
