@@ -80,6 +80,13 @@ $card-wrapper-max-width: ($card-max-width * 2) + $lg + ($md * 2);
       }
     }
 
+    &:nth-child(4) {
+      @media (min-width: $card-wrapper-max-width + 1px) {
+        margin-left: $lg;
+        margin-top: $lg;
+      }
+    }
+
     + .section-card {
       @media (max-width: $card-wrapper-max-width) {
         margin-top: $md;
@@ -87,6 +94,7 @@ $card-wrapper-max-width: ($card-max-width * 2) + $lg + ($md * 2);
     }
   }
 
+  .section-notorious,
   .section-runnable,
   .section-codesnippets,
   .section-mulequest {
@@ -152,6 +160,11 @@ $card-wrapper-max-width: ($card-max-width * 2) + $lg + ($md * 2);
       bottom: 20px;
       width: 100%;
     }
+  }
+
+  .section-notorious {
+    background-image: url(../images/notorious.png);
+    background-size: cover;
   }
 
   .btn-wrapper {
