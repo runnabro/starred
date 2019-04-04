@@ -1,0 +1,18 @@
+// sections
+.hero-notoriousapi {
+  // scss-lint:disable ColorVariable
+  background: linear-gradient(-180deg, #251635, #94cbb7);
+  // scss-lint:enable ColorVariable
+}
+
+// images
+.img-notoriousapi-hero {
+  // scss-lint:disable ColorVariable
+  box-shadow: 0 6px 60px rgba(44,26,54,.5);
+  // scss-lint:enable ColorVariable
+  margin-bottom: -5px;
+
+  &::after {
+    border-bottom: 1px solid rgba($black,.05);
+  }
+}
