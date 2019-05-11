@@ -6,18 +6,9 @@
   width: 100%;
 
   @media (max-width: 375px) {
-    padding-left: $sm;
-    padding-right: $sm;
-    padding-top: $sm;
-  }
-
-  .section:not(.hero),
-  .section:not(.section-callout),
-  .section:not(.no-padding) {
-    @media (max-width: 375px) {
-      padding-left: $sm;
-      padding-right: $sm;
-    }
+    padding-left: $md;
+    padding-right: $md;
+    padding-top: $md;
   }
 
   // hero

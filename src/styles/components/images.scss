@@ -53,6 +53,14 @@
   }
 }
 
+.video {
+  border-radius: $radius-sm;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
 .img-lg {
   @media (min-width: 511px + ($md * 2)) {
     max-width: 960px;
