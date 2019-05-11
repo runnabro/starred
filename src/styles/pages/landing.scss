@@ -98,7 +98,7 @@ $card-wrapper-max-width: ($card-max-width * 2) + $lg + ($md * 2);
   .section-runnable,
   .section-codesnippets,
   .section-mulequest {
-    box-shadow: 0 6px 30px rgba($black,.2);
+    box-shadow: 0 9px 30px rgba($black,.3), inset -1px -1px 0 rgba($black, .2), inset 1px 0 0 rgba($black, .1);
     min-height: 600px;
 
     .img {
@@ -204,7 +204,7 @@ $card-wrapper-max-width: ($card-max-width * 2) + $lg + ($md * 2);
 
     .li {
       background: $white;
-      border: 1px solid $gray-light;
+      border: 1px solid rgba(0,0,0,.075);
       color: $black;
 
       @media (max-width: $card-wrapper-max-width) {
