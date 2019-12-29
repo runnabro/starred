@@ -3,6 +3,7 @@
 *.log
 *.orig
 *.rdb
+*.next
 *.sass-cache/
 .DS_Store
 .publish/

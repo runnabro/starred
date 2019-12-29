@@ -143,7 +143,7 @@ $card-wrapper-max-width: ($card-max-width * 2) + $lg + ($md * 2);
     // scss-lint:enable ColorVariable
 
     &::before {
-      background-image: url(../images/scanlines.svg);
+      background-image: url(/static/images/scanlines.svg);
       content: '';
       height: 100%;
       left: 0;
@@ -163,7 +163,7 @@ $card-wrapper-max-width: ($card-max-width * 2) + $lg + ($md * 2);
   }
 
   .section-notorious {
-    background-image: url(../images/notorious.png);
+    background-image: url(/static/images/notorious.png);
     background-size: cover;
   }
 

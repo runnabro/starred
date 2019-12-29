@@ -5,7 +5,7 @@
   // scss-lint:enable ColorVariable
 
   &::before {
-    background-image: url(../images/scanlines.svg);
+    background-image: url(/static/images/scanlines.svg);
     content: '';
     height: 100%;
     left: 0;
