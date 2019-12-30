@@ -1,15 +1,16 @@
 import './../css/index.scss'
 import Head from 'next/head';
 import Layout from '../components/layout.js'
+import Link from 'next/link';
 
-export default function Index() {
+export default function Home() {
   return (
     <Layout>
       <Head>
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" type="image/png" href="/static/favicon.png" />
+        <link rel="icon" type="image/png" href="/favicon.png" />
         <title>Hi.</title>
       </Head>
       <main className="grid-block col main main-landing">
@@ -24,10 +25,12 @@ export default function Index() {
             <h2 className="h2 weight-bold">Runnable</h2>
             <p className="p">Automatically launching full-stack environments for every branch.</p>
             <div className="grid-block margin-top-md btn-wrapper">
-              <a className="btn btn-md btn-white" href="/runnable/">Read Details</a>
+              <Link href="/runnable">
+                <a className="btn btn-md btn-white">Read Details</a>
+              </Link>
               <a className="btn btn-md btn-white-outline" href="//runnable.com/landing"><span className="span">View It Live</span></a>
             </div>
-            <img className="img" src="/static/images/runnable/dockerfile.png" alt="" />
+            <img className="img" src="/images/runnable/dockerfile.png" alt="" />
           </section>
           <section className="section-card section-notorious">
             <h2 className="h2 weight-bold">Notorious A.P.I.</h2>
@@ -43,7 +46,7 @@ export default function Index() {
             <div className="grid-block margin-top-md btn-wrapper">
               <a className="btn btn-md btn-white" href="/codesnippets/"><span className="span">Read Details</span></a>
             </div>
-            <img className="img no-shadow" src="/static/images/codesnippets.svg" alt="" />
+            <img className="img no-shadow" src="/images/codesnippets.svg" alt="" />
           </section>
           <section className="section-card section-mulequest">
             <h2 className="h2 weight-bold">MuleQuest</h2>
@@ -51,13 +54,13 @@ export default function Index() {
             <div className="grid-block margin-top-md btn-wrapper">
               <a className="btn btn-md btn-white" href="/mulequest/"><span className="span">Read Details</span></a>
             </div>
-            <img className="img no-shadow" src="/static/images/mulequest.gif" alt="" />
+            <img className="img no-shadow" src="/images/mulequest.gif" alt="" />
           </section>
         </div>
         <section className="section padding-top-none section-more">
           <ol className="grid-block list section-card-wrapper">
             <li className="grid-block col section-card li">
-              <img className="margin-bottom-sm" src="/static/images/slash-docker.svg" height="56" width="70" alt="" />
+              <img className="margin-bottom-sm" src="/images/slash-docker.svg" height="56" width="70" alt="" />
               <p className="p weight-bold">/docker</p>
               <p className="p">A resource for developers learning Docker and containerization.</p>
               <div className="grid-block shrink margin-top-sm btn-wrapper">
@@ -66,7 +69,7 @@ export default function Index() {
               </div>
             </li>
             <li className="grid-block col section-card li">
-              <img className="margin-bottom-sm" src="/static/images/file-docs.svg" height="56" width="70" alt="" />
+              <img className="margin-bottom-sm" src="/images/file-docs.svg" height="56" width="70" alt="" />
               <p className="p weight-bold">Runnable Docs</p>
               <p className="p">Documentation for getting start with, and troubleshooting Runnable.</p>
               <div className="grid-block shrink margin-top-sm btn-wrapper">
@@ -75,7 +78,7 @@ export default function Index() {
               </div>
             </li>
             <li className="grid-block col section-card li">
-              <img className="margin-bottom-sm" src="/static/images/co2flights.png" height="56" width="70" alt="" />
+              <img className="margin-bottom-sm" src="/images/co2flights.png" height="56" width="70" alt="" />
               <p className="p weight-bold">CO<sup>2</sup> Flight Calculator</p>
               <p className="p">A simple way to calculate the CO<sup>2</sup> cost of a flight.</p>
               <div className="grid-block shrink margin-top-sm btn-wrapper">
