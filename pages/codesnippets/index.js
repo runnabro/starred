@@ -1,23 +1,18 @@
-import './../../css/index.scss'
-import Head from 'next/head';
-import Layout from '../../components/layout.js'
+import BackLink from '../../components/BackLink.js'
+import HomeLink from '../../components/HomeLink.js'
+import Head from 'next/head'
+import Layout from '../../components/Layout.js'
 
 export default function CodeSnippets() {
   return (
     <Layout>
       <Head>
-        <meta charSet="utf-8" />
-        <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" type="image/png" href="/favicon.png" />
         <title>Hey, tell me about CodeSnippets.</title>
       </Head>
       <main className="grid-block col main">
         <article className="article article-codesnippets">
           <section className="grid-block col section padding-bottom-none hero hero-codesnippets">
-            <a className="back-arrow" href="/">
-              @@include('images/back-arrow.svg')
-            </a>
+            <BackLink />
             <div className="text-container">
               <h1 className="h1">Code<wbr />Snippets</h1>
               <p className="p">Environments to run and share your code with. Designed with Sass, Backbone.js, & Handlebars.</p>
@@ -90,10 +85,7 @@ export default function CodeSnippets() {
               Thanks for reading. Runnable has since been acquired. We’ve open sourced <a className="link" href="//github.com/codenow/runnable-web"><span className="span">our code</span></a> and CodeSnippets has been shutdown. 🙁
             </p>
             <div className="margin-top-md text-container">
-              <a className="btn btn-md btn-blue-outline" href="/">
-                @@include('images/back-arrow.svg')
-                Go Home
-              </a>
+              <HomeLink />
             </div>
           </section>
         </article>

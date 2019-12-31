@@ -1,23 +1,18 @@
-import './../../css/index.scss'
-import Head from 'next/head';
-import Layout from '../../components/layout.js'
+import BackLink from '../../components/BackLink.js'
+import HomeLink from '../../components/HomeLink.js'
+import Head from 'next/head'
+import Layout from '../../components/Layout.js'
 
 export default function Runnable() {
   return (
     <Layout>
       <Head>
-        <meta charSet="utf-8" />
-        <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" type="image/png" href="/favicon.png" />
         <title>Hey, tell me about Runnable.</title>
       </Head>
       <main className="grid-block col main">
         <article className="article article-runnable">
           <section className="section padding-bottom-none hero hero-runnable">
-            <a className="back-arrow" href="/">
-              @@include('images/back-arrow.svg')
-            </a>
+            <BackLink />
             <div className="text-container">
               <h1 className="h1">Runnable</h1>
               <p className="p">Environments that fit your developer workflow. Featured on <a className="link" href="//nicelydone.club/products/runnable/"><span className="span">Nicely done</span></a>. Designed with Sass, Angular, and Pug.</p>
@@ -27,7 +22,6 @@ export default function Runnable() {
               <img className="img" src="/images/runnable/howitworks.png" height="416" width="840" />
             </figure>
           </section>
-
           <section className="grid-block col section padding-top-none section-marketing">
             <div className="text-container">
               <h2 className="h2">First Impressions</h2>
@@ -38,7 +32,6 @@ export default function Runnable() {
               <img className="img no-shadow" src="/images/runnable/marketing-menu.png" height="285" width="300" />
             </figure>
           </section>
-
           <section className="section section-blog padding-top-none">
             <figure className="grid-block justify-center figure figure-xl figure-blog">
               <img className="img no-shadow" src="/images/runnable/blog-1.png" height="254" width="200" />
@@ -50,7 +43,6 @@ export default function Runnable() {
               <p className="p">Building <a className="link" href="//runnable.com/blog"><span className="span">our blog</span></a> was a new challenge for me. Working with our engineers to write posts helped me realize how important writing is in the products we design. When looking at the tone of what we’ve written to users, I’ve learned to ask myself how our users are feeling; “Are you eager to get started now, or are you feeling frustrated?”.</p>
             </div>
           </section>
-
           <section className="grid-block col section padding-bottom-none">
             <div className="text-container">
               <h2 className="h2">An Easier Way to Containerize Apps</h2>
@@ -78,7 +70,6 @@ export default function Runnable() {
               </div>
             </figure>
           </section>
-
           <section className="grid-block align-center section section-slash-docker padding-bottom-none padding-top-none">
             <figure className="grid-block shrink col align-center figure img-wrapper">
               <img className="img" src="/images/runnable/slash-docker.png" width="250" />
@@ -88,7 +79,6 @@ export default function Runnable() {
               <p className="p">We started a <a className="link" href="//runnable.com/docker/"><span className="span">Docker resource</span></a> to help developers new to Docker. I worked with one of our PMs to design and build the site for the articles we were planning. We choose to use Jekyll because we needed an easy way to write and edit articles in Markdown; and it worked out so well, we ended up forking the project for our <a className="link" href="//runnable.com/docs"><span className="span">docs</span></a> and <a className="link" href="//runnable.com/blog"><span className="span">blog</span></a>.</p>
             </div>
           </section>
-
           <section className="grid-block section section-callout section-dockerfile">
             <div className="text-container">
               <h2 className="h2">The Dockerfile</h2>
@@ -98,7 +88,6 @@ export default function Runnable() {
               <img className="img" src="/images/runnable/dockerfile.png" height="485" width="880" />
             </div>
           </section>
-
           <section className="grid-block align-center col section section-branches">
             <div className="grid-block align-center section-callout">
               <div className="grid-block col text-container">
@@ -117,7 +106,6 @@ export default function Runnable() {
               <p className="p">We extended our user philosophy to our onboarding strategy by using real GitHub projects to demo the value we add to developers.</p>
             </div>
           </section>
-
           <section className="grid-block col section padding-bottom-none section-integrations">
             <div className="text-container">
               <h2 className="h2">Deeper Workflow Integration</h2>
@@ -144,16 +132,12 @@ export default function Runnable() {
               </div>
             </figure>
           </section>
-
           <section className="grid-block col section margin-top-none">
             <p className="text-container p">
               Thanks for reading! Runnable has since <a className="link" href="//runnable.com"><span className="span">been acquired</span></a>, so we were able to make the source for our <a className="link" href="//github.com/codenow/runnable.com"><span className="span">marketing pages</span></a> and <a className="link" href="//github.com/codenow/runnable-angular"><span className="span">product</span></a> public.
             </p>
             <div className="margin-top-md text-container">
-              <a className="btn btn-md btn-blue-outline" href="/">
-                @@include('images/back-arrow.svg')
-                Go Home
-              </a>
+              <HomeLink />
             </div>
           </section>
         </article>

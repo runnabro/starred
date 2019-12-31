@@ -17,11 +17,9 @@
 
   .back-arrow {
     cursor: pointer;
-    height: 40px;
     left: $lg;
     position: absolute;
     top: $lg;
-    width: 40px;
 
     @media (max-width: 850px) and (min-width: 631px) {
       left: $md;
@@ -38,6 +36,11 @@
     &:focus .path {
       fill: rgba($white,.15);
       stroke: $white;
+    }
+
+    .svg {
+      height: 40px;
+      width: 40px;
     }
   }
 
