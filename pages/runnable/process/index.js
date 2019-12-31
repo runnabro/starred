@@ -1,6 +1,6 @@
 import './../../../css/index.scss'
 import Head from 'next/head';
-import Layout from '../../../components/layout.js'
+import Layout from '../../../components/Layout.js'
 
 export default function RunnableProcess() {
   return (
