@@ -30,7 +30,7 @@ export default class extends React.Component {
           <Project
             description="Complete environments to run and share code in the browser."
             detailsHref="/codesnippets"
-            imgSrc="/images/runnable/codesnippets.svg"
+            imgSrc="/images/codesnippets.svg"
             title="CodeSnippets"
           />
         </section>
@@ -38,7 +38,7 @@ export default class extends React.Component {
           <Project
             description="Introducing users to a new product with a game."
             detailsHref="/mulequest"
-            imgSrc="/images/runnable/mulequest.gif"
+            imgSrc="/images/mulequest.gif"
             title="MuleQuest"
           />
         </section>
