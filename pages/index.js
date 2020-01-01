@@ -13,6 +13,7 @@ export default class extends React.Component {
             description="Automatically launching full-stack environments for every branch."
             detailsHref="/runnable"
             liveHref="//runnable.com/landing"
+            imgShadow
             imgSrc="/images/runnable/dockerfile.png"
             title="Runnable"
           />
@@ -22,7 +23,6 @@ export default class extends React.Component {
             description="API response codes and latency represented in visual and audio form."
             detailsHref="/notoriousapi"
             liveHref="//mulesoft-labs.github.io/notoriousapi/"
-            imgSrc="/images/runnable/notorious.png"
             title="Notorious A.P.I."
           />
         </section>

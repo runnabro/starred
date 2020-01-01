@@ -14,7 +14,19 @@ export default class Project extends React.Component {
 
   renderLiveButton = () => {
     if (this.props.liveHref) {
-      return <a className="btn btn-md btn-white-outline" href={this.props.liveHref}><span className="span">View It Live</span></a>
+      return (
+        <a className="btn btn-md btn-white-outline" href={this.props.liveHref}>
+          <span className="span">View It Live</span>
+        </a>
+      )
+    }
+    return
+  }
+
+  renderImage = () => {
+    if (this.props.imgSrc) {
+      let imgClassNames = this.props.imgShadow ? 'img' : 'img no-shadow'
+      return <img className={imgClassNames} src={this.props.imgSrc} alt="" />
     }
     return
   }
@@ -28,7 +40,7 @@ export default class Project extends React.Component {
           {this.renderDetailButton()}
           {this.renderLiveButton()}
         </div>
-        <img className="img" src={this.props.imgSrc} alt="" />
+        {this.renderImage()}
       </>
     )
   }
