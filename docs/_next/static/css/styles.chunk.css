@@ -649,6 +649,10 @@ html {
   .video:focus {
     outline: 0; }
 
+.video-wrapper {
+  border-radius: 4px;
+  overflow: hidden; }
+
 @media (min-width: 551px) {
   .img-lg {
     max-width: 960px; } }
