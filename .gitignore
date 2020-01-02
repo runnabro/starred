@@ -3,10 +3,10 @@
 *.log
 *.orig
 *.rdb
+*.next
 *.sass-cache/
 .DS_Store
 .publish/
-dist/
 node_modules/
 *_BACKUP_*
 *_BASE_*
