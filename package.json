@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "next build",
-    "deploy": "npm run now-build && cd dist && git add --all && git commit -m 'deploy to gh-pages' && git push origin gh-pages && cd ../ && rm -r dist/ && git worktree prune",
+    "deploy": "npm run now-build && git add dist && git commit -m 'deploy to gh-pages' && git subtree push --prefix dist origin gh-pages && rm -r dist/",
     "dev": "next",
     "now-build": "next build && next export -o dist",
     "start": "next start -p $PORT"
