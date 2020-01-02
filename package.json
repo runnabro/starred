@@ -5,9 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "next build",
-    "deploy": "npm run now-build && git add dist && git commit -m 'deploy to gh-pages' && git subtree push --prefix dist origin gh-pages && rm -r dist/",
     "dev": "next",
-    "now-build": "next build && next export -o dist",
+    "now-build": "next build && next export -o docs",
     "start": "next start -p $PORT"
   },
   "keywords": [],
