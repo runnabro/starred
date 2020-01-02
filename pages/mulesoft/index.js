@@ -3,21 +3,21 @@ import HomeLink from '../../components/HomeLink.js'
 import Head from 'next/head'
 import Layout from '../../components/Layout.js'
 
-export default function MuleQuest() {
+export default function MuleSoft() {
   return (
     <Layout>
       <Head>
-        <title>Hey, tell me about MuleQuest.</title>
+        <title>Hey, tell me about MuleSoft.</title>
       </Head>
       <main className="grid-block col main">
-        <article className="article article-mulequest">
-          <section className="grid-block col section padding-bottom-none hero hero-mulequest">
+        <article className="article article-mulesoft">
+          <section className="grid-block col section padding-bottom-none hero hero-mulesoft">
             <BackLink />
             <div className="text-container">
-              <h1 className="h1">MuleQuest</h1>
-              <p className="p">We built a game to introduce users to MuleSoft’s latest product.</p>
+              <h1 className="h1">MuleSoft</h1>
+              <p className="p">?</p>
             </div>
-            <figure className="figure figure-xl img-wrapper img-mulequest-hero">
+            <figure className="figure figure-xl img-wrapper img-mulesoft-hero">
               <video
                 autoPlay
                 className="video"
@@ -25,16 +25,16 @@ export default function MuleQuest() {
                 loop
                 muted
                 playsInline
-                src="/images/mulequest/mulequest-mov.mp4"
+                src=""
                 width="840"
               />
             </figure>
           </section>
           <section className="grid-block col section text-container padding-bottom-none padding-top-none">
-            <p className="p">A small team of engineers and designers teamed up to build MuleQuest in a 48-hour hackathon project. MuleQuest takes users through 3 obstacles that users need to solve by using Flow Designer to transform data.</p>
+            <p className="p">When I joined MuleSoft, I had the opportunity to work on its design system. It was loosely organized, and lacked guidance for what it should be. I focused on how a design system could be used to influence MuleSoft’s design sensibilites to the benefit of our users.</p>
             <figure className="grid-block col align-center figure">
-              <img className="img img-wrapper no-shadow" src="/images/mulequest.gif" height="343" width="450" />
-              <figcaption className="figcaption">Sprites for the pixelized version of “Max the Mule”.</figcaption>
+              <img className="img img-wrapper no-shadow" src="" height="100" width="100" />
+              <figcaption className="figcaption">MuleSoft’s Design System when we started</figcaption>
             </figure>
           </section>
           <section className="grid-block col section">

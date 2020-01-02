@@ -61,6 +61,12 @@
   }
 }
 
+// fixes Safari video bug
+.video-wrapper {
+  border-radius: $radius-sm;
+  overflow: hidden;
+}
+
 .img-lg {
   @media (min-width: 511px + ($md * 2)) {
     max-width: 960px;

@@ -25,11 +25,25 @@ export default function NotoriousApi() {
           <section className="grid-block col section text-container padding-bottom-none padding-top-none">
             <p className="p">Notorious API was built as part of a 24-hour hackathon project. Teaming up with 3 others, we built an audio-based monitoring experience. We wanted to do something different 🌈 and have fun with it!</p>
             <figure className="grid-block col align-center figure">
-              <video className="video" src="/images/notoriousapi/state-normal.mp4" controls playsinline></video>
+              <div className="video-wrapper">
+                <video
+                  className="video"
+                  controls
+                  playsInline
+                  src="/images/notoriousapi/state-normal.mp4"
+                />
+              </div>
               <figcaption className="figcaption">For 200 responses, latency affects the size of the visual representation.</figcaption>
             </figure>
             <figure className="grid-block col align-center figure">
-              <video className="video" src="/images/notoriousapi/state-threshold.mp4" controls playsinline></video>
+              <div className="video-wrapper">
+                <video
+                  className="video"
+                  controls
+                  playsInline
+                  src="/images/notoriousapi/state-threshold.mp4"
+                />
+              </div>
               <figcaption className="figcaption">We layered a new audio track and visuals once the amount of 400 and 500 status codes exceeded a preset threshold.</figcaption>
             </figure>
           </section>
