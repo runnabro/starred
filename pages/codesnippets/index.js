@@ -18,7 +18,16 @@ export default function CodeSnippets() {
               <p className="p">Environments to run and share your code with. Designed with Sass, Backbone.js, & Handlebars.</p>
             </div>
             <figure className="figure figure-xl img-wrapper img-codesnippets-hero">
-              <video className="video" src="/images/codesnippets/new-code-hero.mp4" autoplay loop muted playsinline height="483" width="800"></video>
+              <video
+                autoPlay
+                className="video"
+                height="483"
+                loop
+                muted
+                playsInline
+                src="/images/codesnippets/new-code-hero.mp4"
+                width="800"
+              />
             </figure>
           </section>
           <section className="grid-block col section text-container padding-bottom-none padding-top-none">

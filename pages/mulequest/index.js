@@ -18,7 +18,16 @@ export default function CodeSnippets() {
               <p className="p">We built a game to introduce users to MuleSoft’s latest product.</p>
             </div>
             <figure className="figure figure-xl img-wrapper img-mulequest-hero">
-              <video className="video" src="/images/mulequest/mulequest-mov.mp4" autoplay loop muted playsinline height="424" width="840"></video>
+              <video
+                autoPlay
+                className="video"
+                height="424"
+                loop
+                muted
+                playsInline
+                src="/images/mulequest/mulequest-mov.mp4"
+                width="840"
+              />
             </figure>
           </section>
           <section className="grid-block col section text-container padding-bottom-none padding-top-none">

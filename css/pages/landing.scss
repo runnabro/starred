@@ -153,6 +153,13 @@ $card-wrapper-max-width: ($card-max-width * 2) + $lg + ($md * 2);
       right: 0;
       top: 0;
       width: 100%;
+      z-index: 0;
+    }
+
+    .h2,
+    .p {
+      position: relative;
+      z-index: 1;
     }
 
     .img {
