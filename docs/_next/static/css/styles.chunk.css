@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap);
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -245,7 +246,7 @@ p {
 html {
   background: #fafafa;
   color: #333;
-  font-family: -apple-system, "BlinkMacSystemFont", "Helvetica Neue", "Segoe UI", sans-serif;
+  font-family: "Inter", -apple-system, "BlinkMacSystemFont", "Helvetica Neue", "Segoe UI", sans-serif;
   font-feature-settings: 'kern';
   font-size: 22px;
   line-height: 1.5;
