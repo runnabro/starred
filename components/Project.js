@@ -4,7 +4,7 @@ export default class Project extends React.Component {
   renderDetailButton = () => {
     if (this.props.detailsHref) {
       return (
-        <Link href={this.props.detailsHref}>
+        <Link href={this.props.detailsHref} as={this.props.detailsHref}>
           <a className="btn btn-md btn-white">Read Details</a>
         </Link>
       )
