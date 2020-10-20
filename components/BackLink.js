@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 const BackLink = () => (
-  <Link href="/" as="/">
+  <Link href="/">
     <a className="back-arrow">
       <svg className="svg">
         <use href="#back-arrow-outline" />

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 const HomeLink = () => (
-  <Link href="/" as="/">
+  <Link href="/">
     <a className="btn btn-md btn-blue-outline">
       <svg className="svg">
         <use href="#back-arrow-filled" />
