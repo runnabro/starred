@@ -21,6 +21,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 var BackLink = function BackLink() {
   return __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/",
+    as: "/",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 4
@@ -75,6 +76,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 var HomeLink = function HomeLink() {
   return __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/",
+    as: "/",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 4
@@ -10112,7 +10114,7 @@ function Runnable() {
 
 /***/ }),
 
-/***/ 2:
+/***/ 3:
 /*!*********************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Frunnable&absolutePagePath=%2FUsers%2Ftonybert%2FGitHub%2Fstarred%2Fpages%2Frunnable%2Findex.js ***!
   \*********************************************************************************************************************************************/
@@ -10135,5 +10137,5 @@ module.exports = dll_5f137288facb1107b491;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js","styles"]]]);
+},[[3,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=runnable.js.map

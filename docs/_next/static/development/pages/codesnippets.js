@@ -21,6 +21,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 var BackLink = function BackLink() {
   return __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/",
+    as: "/",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 4
@@ -75,6 +76,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 var HomeLink = function HomeLink() {
   return __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/",
+    as: "/",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 4
