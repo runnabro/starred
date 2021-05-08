@@ -1,0 +1,223 @@
+// sections
+.hero-codesnippets {
+  // scss-lint:disable ColorVariable
+  background: linear-gradient(120deg,#e8a798,#3d1656);
+  // scss-lint:enable ColorVariable
+}
+
+.section-hero {
+  // scss-lint:disable ColorVariable
+  background: linear-gradient(120deg,#422756,#2e1b3d 30%);
+  // scss-lint:enable ColorVariable
+  color: $white;
+
+  @media (max-width: 1150px) {
+    align-items: center;
+    // scss-lint:disable ColorVariable
+    background: linear-gradient(150deg,#2e1b3d 60%,#422756);
+    // scss-lint:enable ColorVariable
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  @media (max-width: 630px) {
+    padding-left: $lg;
+    padding-right: $lg;
+  }
+
+  .text-container {
+    flex: 0 1 auto;
+
+    @media (max-width: 1150px) {
+      max-width: 510px;
+      order: 2;
+
+      &:first-child {
+        margin-right: 0;
+        margin-top: $lg;
+      }
+    }
+  }
+
+  .p {
+    opacity: .75;
+  }
+
+  .img {
+    height: 100%;
+    max-width: 550px;
+    width: calc(100vw - 640px); // .article padding + .text-container width + .callout padding-left/right
+
+    @media (max-width: 1150px) {
+      order: 1;
+      width: 100%;
+    }
+  }
+}
+
+.section-profiles {
+  border-radius: 0;
+  border-top: 1px solid $gray-light;
+  margin-top: 0;
+
+  @media (max-width: 920px) {
+    align-items: center;
+    flex-direction: column;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @media (max-width: 375px) {
+    padding-left: $sm;
+    padding-right: $sm;
+  }
+
+  .text-container {
+    padding-bottom: $xxl;
+
+    @media (max-width: 920px) {
+      max-width: 510px;
+      padding-bottom: $lg;
+
+      &:first-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .img-profile {
+    width: 300px;
+
+    @media (min-width: 921px) {
+      align-self: flex-end;
+    }
+
+    @media(max-width: 920px) {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: calc(100% - #{$md * 2});
+    }
+
+    .img {
+      display: block;
+    }
+  }
+
+  .img-profile-widget {
+    max-width: 200px;
+  }
+}
+
+.section-runoptions {
+  border-top: 1px solid $gray-light;
+
+  @media (max-width: 920px) {
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @media (max-width: 375px) {
+    padding-left: $sm;
+    padding-right: $sm;
+  }
+
+  .text-container {
+    @media (max-width: 920px) {
+      max-width: 510px;
+      order: 1;
+
+      &:last-child {
+        margin-bottom: $lg;
+        margin-left: 0;
+      }
+    }
+  }
+
+  .img-runoptions {
+    height: 100%;
+    max-width: 300px;
+
+    @media (max-width: 920px) {
+      order: 2;
+    }
+  }
+}
+
+.section-mobile {
+  border-top: 1px solid $gray-light;
+
+  .figure-mobile {
+    margin-top: $xl;
+
+    @media (max-width: 600px) {
+      flex-direction: column;
+    }
+
+    .img {
+      height: 100%;
+      width: calc(33.3333% - #{$lg});
+
+      @media (max-width: 600px) {
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 250px;
+        width: auto;
+      }
+
+      + .img {
+        margin-left: $lg;
+
+        @media (max-width: 600px) {
+          margin-left: auto;
+          margin-top: $md;
+        }
+      }
+    }
+  }
+}
+
+// images
+.img-codesnippets-hero {
+  border-radius: $radius-sm $radius-sm 0 0;
+  // scss-lint:disable ColorVariable
+  box-shadow: 0 6px 60px rgba(44,26,54,.5);
+  // scss-lint:enable ColorVariable
+  margin-bottom: 0;
+
+  &::after {
+    border-bottom: 1px solid rgba($black,.05);
+  }
+
+  .video {
+    border-radius: $radius-sm $radius-sm 0 0;
+    height: 100%;
+    margin-bottom: -1px;
+    max-width: 100%;
+  }
+}
+
+.figure-oldsnippets .img {
+  border: 1px solid rgba($black,.15);
+}
+
+.figure-nodejs {
+  margin-bottom: 0;
+  overflow: hidden;
+
+  .img-nodejs {
+    // scss-lint:disable ColorVariable
+    background: #c2e2a0;
+    // scss-lint:enable ColorVariable
+    border-radius: $radius-sm $radius-sm 0 0;
+    margin-bottom: 0;
+    padding: $lg $lg 0;
+  }
+
+  .img {
+    border-radius: $radius-sm $radius-sm 0 0;
+  }
+}
