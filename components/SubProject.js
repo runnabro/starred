@@ -1,3 +1,5 @@
+import React from 'react';
+
 export default function SubProject(props) {
   const imgAlt = props.imgAlt || ''
 

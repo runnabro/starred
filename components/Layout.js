@@ -1,4 +1,3 @@
-import './../css/index.scss'
 import Head from 'next/head'
 import Icons from './Icons.js'
 
