@@ -96,7 +96,7 @@ export default function Home() {
       </Head>
       <main className={`${styles.Home} ${garamond.variable}`}>
         <h1 className={styles['Home-heading']}>
-          I’m Tony. I build for the <span className={styles['Home-heading-web']}>web</span> & this my work, so far.
+          I’m Tony. I build for the <span className={styles['Home-heading-web']}>web</span> & this my journey, so far.
         </h1>
         <HomeWork />
       </main>
