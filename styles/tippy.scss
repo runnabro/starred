@@ -3,7 +3,7 @@
 }
 
 .tippy-box {
-  background: var(--theme-bg);
+  background: var(--tippy-bg);
   border-radius: 2px;
   color: var(--theme-text-minimum);
   font-family: sans-serif;
@@ -72,7 +72,7 @@
 }
 
 .tippy-arrow {
-  color: var(--theme-bg);
+  color: var(--tippy-bg);
   height: 16px;
   width: 16px;
 }

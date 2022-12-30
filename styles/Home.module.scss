@@ -5,15 +5,13 @@
   gap: var(--xl);
   margin: auto;
   min-height: 100vh;
-  padding-left: var(--md);
-  padding-right: var(--md);
+  padding: 10vh var(--md);
 
   &-heading {
     font-size: 4em;
     font-weight: var(--weight-normal);
     letter-spacing: -0.2rem;
     line-height: 0.9em;
-    margin-top: 10vh;
     max-width: 500px;
     text-align: center;
 
@@ -54,7 +52,9 @@
 
   &Work {
     display: flex;
+    flex-wrap: wrap;
     gap: var(--md);
+    justify-content: center;
     list-style: none;
 
     &-link {
