@@ -69,6 +69,11 @@
       }
     }
 
+    &-arrow {
+      margin-right: -10px;
+      opacity: 0.5;
+    }
+
     &-badge {
       background: var(--theme-bg);
       border-radius: 8px;

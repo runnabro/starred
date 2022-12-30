@@ -1,9 +1,10 @@
-import localFont from '@next/font/local'
+import localFont from '@next/font/local';
+import Head from 'next/head';
+import Image from 'next/image';
+import { ArrowUpRight } from 'lucide-react';
+import Tippy from '@tippyjs/react';
 
-import Head from 'next/head'
-import Image from 'next/image'
-
-import styles from '../styles/Home.module.scss'
+import styles from '../styles/Home.module.scss';
 
 const garamond = localFont({
   src: [{
@@ -44,31 +45,41 @@ const work = [
     src: '/runnable.png',
     srcBadge: '/runnable-badge.svg',
   },
-]
+];
 
 const HomeWork = () => {
   return (
     <ol className={styles['HomeWork']}>
       {work.map(({ alt, background, href, label, src, srcBadge }) => (
         <li key={src}>
-          <a className={styles['HomeWork-link']} href={href} rel="noopener" target="_blank">
-            <Image
-              alt={alt}
-              height={50}
-              priority
-              src={src}
-              width={50}
-            />
-            <Image
-              alt={`${label} logo`}
-              className={styles['HomeWork-badge']}
-              height={20}
-              priority
-              src={srcBadge}
-              style={{ background }}
-              width={20}
-            />
-          </a>
+          <Tippy
+            content={
+              <>
+                {label}
+                <ArrowUpRight className={styles['HomeWork-arrow']} size={12} />
+              </>
+            }
+            placement="bottom"
+          >
+            <a className={styles['HomeWork-link']} href={href} rel="noopener" target="_blank">
+              <Image
+                alt={alt}
+                height={50}
+                priority
+                src={src}
+                width={50}
+              />
+              <Image
+                alt={`${label} logo`}
+                className={styles['HomeWork-badge']}
+                height={20}
+                priority
+                src={srcBadge}
+                style={{ background }}
+                width={20}
+              />
+            </a>
+          </Tippy>
         </li>
       ))}
     </ol>
@@ -90,5 +101,5 @@ export default function Home() {
         <HomeWork />
       </main>
     </>
-  )
-}
+  );
+};
