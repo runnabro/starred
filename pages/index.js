@@ -1,9 +1,7 @@
 import localFont from '@next/font/local'
-import Tippy from '@tippyjs/react';
 
 import Head from 'next/head'
 import Image from 'next/image'
-import { ArrowUpRight } from 'lucide-react';
 
 import styles from '../styles/Home.module.scss'
 
@@ -24,49 +22,53 @@ const garamond = localFont({
 const work = [
   {
     alt: 'ReadMe’s Owlbert',
+    background: '#018ef5',
     href: '//readme.com',
     label: 'ReadMe',
     src: '/readme.png',
+    srcBadge: '/readme-badge.svg',
   },
   {
     alt: 'MuleSoft’s Muley',
+    background: '#479fda',
     href: '//mulesoft.com',
     label: 'MuleSoft',
     src: '/mulesoft.png',
+    srcBadge: '/mulesoft-badge.svg',
   },
   {
     alt: 'Runnable’s bear',
+    background: '#c7aecf',
     href: '//runnable.com/landing',
     label: 'Runnable',
     src: '/runnable.png',
+    srcBadge: '/runnable-badge.svg',
   },
 ]
 
 const HomeWork = () => {
   return (
     <ol className={styles['HomeWork']}>
-      {work.map(({ alt, href, label, src }) => (
+      {work.map(({ alt, background, href, label, src, srcBadge }) => (
         <li key={src}>
-          <Tippy
-            arrow={false}
-            content={
-              <>
-                {label}
-                <ArrowUpRight className="tippy-link" size={14} />
-              </>
-            }
-            placement="bottom"
-          >
-            <a className={styles['HomeWork-link']} href={href} rel="noopener" target="_blank">
-              <Image
-                alt={alt}
-                height={50}
-                priority
-                src={src}
-                width={50}
-              />
-            </a>
-          </Tippy>
+          <a className={styles['HomeWork-link']} href={href} rel="noopener" target="_blank">
+            <Image
+              alt={alt}
+              height={50}
+              priority
+              src={src}
+              width={50}
+            />
+            <Image
+              alt={`${label} logo`}
+              className={styles['HomeWork-badge']}
+              height={20}
+              priority
+              src={srcBadge}
+              style={{ background }}
+              width={20}
+            />
+          </a>
         </li>
       ))}
     </ol>

@@ -56,5 +56,26 @@
     display: flex;
     gap: var(--md);
     list-style: none;
+
+    &-link {
+      display: block;
+      position: relative;
+      transition: transform 0.15s var(--timing);
+
+      &:hover,
+      &:active,
+      &:focus {
+        transform: translateY(2px);
+      }
+    }
+
+    &-badge {
+      background: var(--theme-bg);
+      border-radius: 8px;
+      bottom: -2px;
+      padding: 3px;
+      position: absolute;
+      right: -2px;
+    }
   }
 }
