@@ -1,0 +1,58 @@
+.Home {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--xl);
+  margin: auto;
+  min-height: 100vh;
+
+  &-heading {
+    font-size: 4em;
+    font-weight: var(--weight-normal);
+    letter-spacing: -0.2rem;
+    line-height: 0.9em;
+    margin-top: 10vh;
+    max-width: 500px;
+    text-align: center;
+
+    &-web {
+      animation: rainbow 5s infinite linear;
+      display: inline-block;
+      -webkit-background-clip: text;
+      background-clip: text;
+      background-image: linear-gradient(
+        135deg,
+        var(--purple) 0%,
+        var(--blue) 12.5%,
+        var(--green) 25%,
+        var(--orange) 37.5%,
+        var(--red) 50%,
+        var(--purple) 62.5%,
+        var(--blue) 75%,
+        var(--green) 87.5%,
+        var(--orange) 100%
+      );
+      background-size: 285% 100%;
+      letter-spacing: -0.04rem;
+      -moz-text-fill-color: transparent;
+      -webkit-text-fill-color: transparent;
+      text-fill-color: transparent;
+
+      @keyframes rainbow {
+        0% {
+          background-position: 0 0;
+        }
+
+        100% {
+          background-position: 100% 0;
+        }
+      }
+    }
+  }
+
+  &Work {
+    display: flex;
+    gap: var(--md);
+    list-style: none;
+  }
+}

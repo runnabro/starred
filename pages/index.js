@@ -1,112 +1,92 @@
-import React from 'react';
+import localFont from '@next/font/local'
+import Tippy from '@tippyjs/react';
+
 import Head from 'next/head'
-import Layout from '../components/Layout.js'
-import Link from 'next/link'
-import Project from '../components/Project.js'
-import SubProject from '../components/SubProject.js'
+import Image from 'next/image'
+import { ArrowUpRight } from 'lucide-react';
 
-export default class extends React.Component {
-  renderProjects = () => {
-    return (
-      <div className="grid-block section-card-wrapper">
-        <section className="section-card section-runnable">
-          <Project
-            description="Automatically launching full-stack environments for every branch."
-            detailsHref="/runnable"
-            liveHref="//runnable.com/landing"
-            imgShadow
-            imgSrc="/images/runnable/dockerfile.png"
-            title="Runnable"
-          />
-        </section>
-        <section className="section-card section-notorious">
-          <Project
-            description="API response codes and latency represented in visual and audio form."
-            detailsHref="/notoriousapi"
-            liveHref="//mulesoft-labs.github.io/notoriousapi/"
-            title="Notorious A.P.I."
-          />
-        </section>
-        <section className="section-card section-codesnippets">
-          <Project
-            description="Complete environments to run and share code in the browser."
-            detailsHref="/codesnippets"
-            imgSrc="/images/codesnippets.svg"
-            title="CodeSnippets"
-          />
-        </section>
-        <section className="section-card section-mulequest">
-          <Project
-            description="Introducing users to a new product with a game."
-            detailsHref="/mulequest"
-            imgSrc="/images/mulequest.gif"
-            title="MuleQuest"
-          />
-        </section>
-      </div>
-    )
-  };
+import styles from '../styles/Home.module.scss'
 
-  renderSubProjects = () => {
-    return (
-      <section className="section padding-top-none section-more">
-        <ol className="grid-block list section-card-wrapper">
-          <li className="grid-block col section-card li">
-            <SubProject
-              description="A resource for developers learning Docker and containerization."
-              imgSrc="/images/slash-docker.svg"
-              sourceHref="//github.com/runnable/slash-docker"
-              liveHref="//runnable.com/docker/"
-              title="/docker"
-            />
-          </li>
-          <li className="grid-block col section-card li">
-            <SubProject
-              description="Documentation for getting start with, and troubleshooting Runnable."
-              imgSrc="/images/file-docs.svg"
-              sourceHref="//github.com/runnable/docs"
-              liveHref="//runnable.com/docs/"
-              title="Runnable Docs"
-            />
-          </li>
-          <li className="grid-block col section-card li">
-            <SubProject
-              description="A simple way to calculate the CO² cost of a flight."
-              imgSrc="/images/co2flights.png"
-              sourceHref="//github.com/runnabro/offset"
-              liveHref="//ohgodhelp.us/"
-              title="CO² Flight Calculator"
-            />
-          </li>
-        </ol>
-      </section>
-    )
-  };
+const garamond = localFont({
+  src: [{
+    path: '../fonts/Garamond.ttf',
+    style: 'normal',
+    weight: '400',
+  },
+  {
+    path: '../fonts/Garamond-Bold.ttf',
+    style: 'normal',
+    weight: '700',
+  }],
+  variable: '--garamond',
+});
 
-  render() {
-    return (
-      <Layout>
-        <Head>
-          <title>Hi.</title>
-        </Head>
-        <main className="grid-block col main main-landing">
-          <section className="grid-block justify-center section section-intro">
-            <div className="text-container">
-              <h1 className="h1 weight-bold">Heya, I’m Tony.</h1>
-              <h1 className="h1 weight-bold">I work on <strong className="the-web"><span className="span" data-text="the web">the web</span></strong> & here’s some of what I’ve been up to:</h1>
-            </div>
-          </section>
-          {this.renderProjects()}
-          {this.renderSubProjects()}
-          <footer className="grid-block justify-center footer">
-            <a className="link-icon" href="//github.com/runnabro/">
-              <svg className="svg">
-                <use href="#github" />
-              </svg>
+const work = [
+  {
+    alt: 'ReadMe’s Owlbert',
+    href: '//readme.com',
+    label: 'ReadMe',
+    src: '/readme.png',
+  },
+  {
+    alt: 'MuleSoft’s Muley',
+    href: '//mulesoft.com',
+    label: 'MuleSoft',
+    src: '/mulesoft.png',
+  },
+  {
+    alt: 'Runnable’s bear',
+    href: '//runnable.com/landing',
+    label: 'Runnable',
+    src: '/runnable.png',
+  },
+]
+
+const HomeWork = () => {
+  return (
+    <ol className={styles['HomeWork']}>
+      {work.map(({ alt, href, label, src }) => (
+        <li key={src}>
+          <Tippy
+            arrow={false}
+            content={
+              <>
+                {label}
+                <ArrowUpRight className="tippy-link" size={14} />
+              </>
+            }
+            placement="bottom"
+          >
+            <a className={styles['HomeWork-link']} href={href} rel="noopener" target="_blank">
+              <Image
+                alt={alt}
+                height={50}
+                priority
+                src={src}
+                width={50}
+              />
             </a>
-          </footer>
-        </main>
-      </Layout>
-    )
-  }
+          </Tippy>
+        </li>
+      ))}
+    </ol>
+  )
+}
+
+export default function Home() {
+  return (
+    <>
+      <Head>
+        <title>Hi.</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.png" />
+      </Head>
+      <main className={`${styles.Home} ${garamond.variable}`}>
+        <h1 className={styles['Home-heading']}>
+          I’m Tony. I build for the <span className={styles['Home-heading-web']}>web</span> & this my work, so far.
+        </h1>
+        <HomeWork />
+      </main>
+    </>
+  )
 }
