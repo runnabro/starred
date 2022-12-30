@@ -1,5 +1,6 @@
 {
   "rewrites": [
-    { "source": "/v3", "destination": "https://starred-v3.vercel.app/" }
+    { "source": "/v3", "destination": "https://starred-v3.vercel.app/" },
+    { "source": "/v3/(.*)", "destination": "https://starred-v3.vercel.app/(.*)" }
   ]
 }
