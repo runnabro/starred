@@ -5,6 +5,8 @@
   gap: var(--xl);
   margin: auto;
   min-height: 100vh;
+  padding-left: var(--md);
+  padding-right: var(--md);
 
   &-heading {
     font-size: 4em;
