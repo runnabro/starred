@@ -26,7 +26,7 @@ const work = [
     background: '#018ef5',
     href: '//readme.com',
     label: 'ReadMe',
-    src: '/readme.png',
+    src: '/readme-owl.png',
     srcBadge: '/readme-badge.svg',
   },
   {
@@ -43,7 +43,7 @@ const work = [
     background: '#479fda',
     href: '//mulesoft.com',
     label: 'MuleSoft',
-    src: '/mulesoft.png',
+    src: '/mulesoft-mule.png',
     srcBadge: '/mulesoft-badge.svg',
   },
   {
@@ -51,7 +51,7 @@ const work = [
     background: '#c7aecf',
     href: '//runnable.com/landing',
     label: 'Runnable',
-    src: '/runnable.png',
+    src: '/runnable-bear.png',
     srcBadge: '/runnable-badge.svg',
   },
 ];
@@ -73,19 +73,19 @@ const HomeWork = () => {
             <a className={styles['HomeWork-link']} href={href} rel="noopener" target="_blank">
               <Image
                 alt={alt}
-                height={50}
+                height={70}
                 priority
                 src={src}
-                width={50}
+                width={70}
               />
               <Image
                 alt={`${label} logo`}
                 className={`${styles['HomeWork-badge']} ${styles['HomeWork-badge_border']}`}
-                height={20}
+                height={25}
                 priority
                 src={srcBadge}
                 style={{ background }}
-                width={20}
+                width={25}
               />
             </a>
           </Tippy>
