@@ -30,6 +30,15 @@ const work = [
     srcBadge: '/readme-badge.svg',
   },
   {
+    alt: 'Salesforce’s Saasy',
+    background: '#fff',
+    border: true,
+    href: '//salesforce.com',
+    label: 'Salesforce',
+    src: '/salesforce.png',
+    srcBadge: '/salesforce-badge.svg',
+  },
+  {
     alt: 'MuleSoft’s Muley',
     background: '#479fda',
     href: '//mulesoft.com',
@@ -50,7 +59,7 @@ const work = [
 const HomeWork = () => {
   return (
     <ol className={styles['HomeWork']}>
-      {work.map(({ alt, background, href, label, src, srcBadge }) => (
+      {work.map(({ alt, background, border, href, label, src, srcBadge }) => (
         <li key={src}>
           <Tippy
             content={
@@ -71,7 +80,7 @@ const HomeWork = () => {
               />
               <Image
                 alt={`${label} logo`}
-                className={styles['HomeWork-badge']}
+                className={`${styles['HomeWork-badge']} ${styles['HomeWork-badge_border']}`}
                 height={20}
                 priority
                 src={srcBadge}
