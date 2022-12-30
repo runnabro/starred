@@ -1,5 +1,6 @@
 {
   "rewrites": [
-    { "source": "/v3/:asset*", "destination": "https://starred-v3.vercel.app/:asset*" }
+    { "source": "/v3/:asset*", "destination": "https://starred-v3.vercel.app/:asset*" },
+    { "source": "/(.*)", "destination": "/" }
   ]
 }
