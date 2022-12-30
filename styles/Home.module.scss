@@ -57,6 +57,11 @@
     justify-content: center;
     list-style: none;
 
+    @media (max-width: 390px) {
+      flex-direction: column;
+      gap: 50px;
+    }
+
     &-link {
       display: block;
       position: relative;
