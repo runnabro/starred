@@ -1,7 +1,7 @@
 import localFont from '@next/font/local';
 import Head from 'next/head';
 import Image from 'next/image';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, ArrowRight } from 'lucide-react';
 import Tippy from '@tippyjs/react';
 
 import styles from '../styles/Home.module.scss';
@@ -95,6 +95,21 @@ const HomeWork = () => {
   )
 }
 
+const Footer = () => {
+
+  return (
+    <footer className={styles['Footer']}>
+      {/* <div>
+        Made with <span aria-label="keyboard" className={styles['Footer-emoji']}>⌨️</span> at my desk.
+      </div> */}
+      <a className={styles['Footer-link']} href="//offset.tonyli.com">
+        <span aria-label="plane" className={styles['Footer-emoji']}>🛩️</span>My flight emissions calculator
+        <ArrowRight className={styles['Footer-link-arrow']} size="12" />
+      </a>
+    </footer>
+  )
+};
+
 export default function Home() {
   return (
     <>
@@ -103,12 +118,15 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.png" />
       </Head>
-      <main className={`${styles.Home} ${garamond.variable}`}>
-        <h1 className={styles['Home-heading']}>
-          I’m Tony. I build for the <span className={styles['Home-heading-web']}>web</span> & this my journey, so far.
-        </h1>
-        <HomeWork />
-      </main>
+      <div className={styles.Home}>
+        <main className={`${styles.Main} ${garamond.variable}`}>
+          <h1 className={styles['Main-heading']}>
+            I’m Tony. I build for the <span className={styles['Main-heading-web']}>web</span> & this my journey, so far.
+          </h1>
+          <HomeWork />
+        </main>
+        <Footer />
+      </div>
     </>
   );
 };

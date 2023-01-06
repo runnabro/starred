@@ -1,4 +1,6 @@
 :root {
+  --sans: -apple-system, "BlinkMacSystemFont", "Helvetica Neue", "Segoe UI",
+    sans-serif;
   --weight-bold: 700;
   --weight-normal: 400;
 
@@ -17,6 +19,7 @@
   --white: #fff;
 
   --theme-bg: var(--white);
+  --theme-border: #{rgba(black, 0.1)};
   --theme-text-default: var(--black);
   --theme-text-minimum: var(--gray);
   --tippy-bg: transparent;
@@ -40,6 +43,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --theme-bg: var(--black);
+    --theme-border: #{rgba(white, 0.1)};
     --theme-text-default: var(--white);
   }
 }
@@ -47,8 +51,6 @@
 body {
   background: var(--theme-bg);
   color: var(--theme-text-default);
-  font-family: var(--garamond);
-  letter-spacing: -0.05em;
 }
 
 @import "./normalize.scss";
