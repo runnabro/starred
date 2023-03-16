@@ -95,20 +95,17 @@ const HomeWork = () => {
   )
 }
 
-const Footer = () => {
-
-  return (
-    <footer className={styles['Footer']}>
-      {/* <div>
+const Footer = () => (
+  <footer className={styles['Footer']}>
+    {/* <div>
         Made with <span aria-label="keyboard" className={styles['Footer-emoji']}>⌨️</span> at my desk.
       </div> */}
-      <a className={styles['Footer-link']} href="//offset.tonyli.com">
-        <span aria-label="plane" className={styles['Footer-emoji']}>🛩️</span>My flight emissions calculator
-        <ArrowRight className={styles['Footer-link-arrow']} size="12" />
-      </a>
-    </footer>
-  )
-};
+    <a className={styles['Footer-link']} href="//offset.tonyli.com">
+      A flight emissions calculator
+      <ArrowRight className={styles['Footer-link-arrow']} size="12" />
+    </a>
+  </footer>
+);
 
 export default function Home() {
   return (

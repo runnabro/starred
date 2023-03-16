@@ -110,8 +110,8 @@
 
 .Footer {
   display: flex;
+  font-family: var(--sans);
   font-weight: var(--weight-normal);
-  letter-spacing: -0.025rem;
   margin-top: auto;
   max-width: 1600px;
   padding: 0 var(--sm);
@@ -123,6 +123,7 @@
     border: 1px solid var(--theme-border);
     border-radius: 30px;
     display: flex;
+    font-size: 12px;
     gap: var(--xs);
     height: 30px;
     padding: 0 var(--sm);
