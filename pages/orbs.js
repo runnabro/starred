@@ -5,6 +5,9 @@ export default function Orbs() {
 
   return (
     <>
+      <main className={`${styles.Main}`}>
+
+      </main>
     </>
   );
 };

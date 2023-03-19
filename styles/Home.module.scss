@@ -2,7 +2,6 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  font-family: var(--garamond);
   gap: var(--xl);
   margin: auto;
   min-height: 100vh;
@@ -13,10 +12,10 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  font-family: var(--garamond);
   gap: var(--xl);
 
   &-heading {
+    font-family: var(--garamond);
     font-size: 4em;
     font-weight: var(--weight-bold);
     letter-spacing: -0.25rem;

@@ -1,4 +1,3 @@
-import localFont from '@next/font/local';
 import Head from 'next/head';
 import Image from 'next/image';
 import { ArrowUpRight } from 'lucide-react';
@@ -7,20 +6,6 @@ import Tippy from '@tippyjs/react';
 import Footer from '/components/Footer';
 
 import styles from '/styles/Home.module.scss';
-
-const garamond = localFont({
-  src: [{
-    path: '../fonts/Garamond.woff2',
-    style: 'normal',
-    weight: '400',
-  },
-  {
-    path: '../fonts/Garamond-Bold.woff2',
-    style: 'normal',
-    weight: '700',
-  }],
-  variable: '--garamond',
-});
 
 const work = [
   {
@@ -106,7 +91,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.png" />
       </Head>
       <div className={styles.Home}>
-        <main className={`${styles.Main} ${garamond.variable}`}>
+        <main className={styles.Main}>
           <h1 className={styles['Main-heading']}>
             I’m Tony. I build for the <span className={styles['Main-heading-web']}>web</span> & this is my journey, so far.
           </h1>
