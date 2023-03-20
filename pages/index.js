@@ -1,24 +1,11 @@
-import localFont from '@next/font/local';
 import Head from 'next/head';
 import Image from 'next/image';
-import { ArrowUpRight, ArrowRight } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import Tippy from '@tippyjs/react';
 
-import styles from '../styles/Home.module.scss';
+import Footer from '/components/Footer';
 
-const garamond = localFont({
-  src: [{
-    path: '../fonts/Garamond.woff2',
-    style: 'normal',
-    weight: '400',
-  },
-  {
-    path: '../fonts/Garamond-Bold.woff2',
-    style: 'normal',
-    weight: '700',
-  }],
-  variable: '--garamond',
-});
+import styles from '/styles/Home.module.scss';
 
 const work = [
   {
@@ -95,18 +82,6 @@ const HomeWork = () => {
   )
 }
 
-const Footer = () => (
-  <footer className={styles['Footer']}>
-    {/* <div>
-        Made with <span aria-label="keyboard" className={styles['Footer-emoji']}>⌨️</span> at my desk.
-      </div> */}
-    <a className={styles['Footer-link']} href="//offset.tonyli.com">
-      A flight emissions calculator
-      <ArrowRight className={styles['Footer-link-arrow']} size="12" />
-    </a>
-  </footer>
-);
-
 export default function Home() {
   return (
     <>
@@ -116,7 +91,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.png" />
       </Head>
       <div className={styles.Home}>
-        <main className={`${styles.Main} ${garamond.variable}`}>
+        <main className={styles.Main}>
           <h1 className={styles['Main-heading']}>
             I’m Tony. I build for the <span className={styles['Main-heading-web']}>web</span> & this is my journey, so far.
           </h1>
