@@ -11,7 +11,7 @@ const Footer = () => (
       <ArrowRight className={styles["Footer-link-arrow"]} size="12" />
     </a>
     <Link className={styles["Footer-link"]} href="/orbs">
-      AI Orbs
+      CSS Orbs
       <ArrowRight className={styles["Footer-link-arrow"]} size="12" />
     </Link>
   </footer>
