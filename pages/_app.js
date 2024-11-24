@@ -16,7 +16,7 @@ const Garamond = localFont({
   variable: '--garamond',
 });
 
-export default function App({ Component, pageProps }) {
+const App = ({ Component, pageProps }) => {
   return (
     <>
       <style jsx global>
@@ -30,3 +30,5 @@ export default function App({ Component, pageProps }) {
     </>
   );
 };
+
+export default App;

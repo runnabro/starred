@@ -13,15 +13,12 @@
 
   &-link {
     align-items: center;
-    border: 1px solid var(--theme-border);
-    border-radius: 30px;
     display: flex;
-    font-size: 12px;
+    font-size: 1em;
     gap: var(--xs);
     height: 30px;
     padding: 0 var(--sm);
     text-decoration: none;
-    transition: box-shadow 0.3s var(--timing);
 
     &-arrow {
       opacity: 0.5;
@@ -30,8 +27,7 @@
     &:hover,
     &:active,
     &:focus {
-      border-color: blue;
-      box-shadow: 0 0 0 3px rgba(blue, 0.15);
+      color: blue;
 
       @media (prefers-color-scheme: dark) {
         box-shadow: 0 0 0 3px rgba(blue, 0.5);

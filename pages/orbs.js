@@ -1,6 +1,6 @@
 import styles from '/styles/Orbs.module.scss';
 
-export default function Orbs() {
+const Orbs = () => {
   const files = {};
 
   return (
@@ -30,3 +30,5 @@ export default function Orbs() {
     </>
   );
 };
+
+export default Orbs;

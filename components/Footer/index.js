@@ -6,10 +6,14 @@ import styles from './index.module.scss';
 
 const Footer = () => (
   <footer className={styles["Footer"]}>
-    <a className={styles["Footer-link"]} href="//offset.tonyli.com">
+    <Link className={styles["Footer-link"]} href="/notebook">
+      My digital notebook
+      <ArrowRight className={styles["Footer-link-arrow"]} size="12" />
+    </Link>
+    <Link className={styles["Footer-link"]} href="https://offset.tonyli.com">
       A flight emissions calculator
       <ArrowRight className={styles["Footer-link-arrow"]} size="12" />
-    </a>
+    </Link>
     <Link className={styles["Footer-link"]} href="/orbs">
       CSS Orbs
       <ArrowRight className={styles["Footer-link-arrow"]} size="12" />
