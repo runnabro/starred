@@ -1,0 +1,36 @@
+.Jumping {
+  $block: &;
+
+  white-space: nowrap;
+
+  &_animation span {
+    animation: jump 1s alternate;
+  }
+
+  span {
+    animation-play-state: paused;
+    display: inline-block;
+  }
+
+  &_onScreen span {
+    animation-play-state: running;
+
+    @media (prefers-reduced-motion) {
+      animation-play-state: paused;
+    }
+  }
+
+  @keyframes jump {
+    0% {
+      transform: none;
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
+
+    100% {
+      transform: none;
+    }
+  }
+}
