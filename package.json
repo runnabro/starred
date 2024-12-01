@@ -9,14 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@codesandbox/sandpack-react": "^2.19.10",
     "@tippyjs/react": "^4.2.6",
     "clsx": "^2.1.1",
     "eslint-config-next": "^15.0.3",
     "lucide-react": "^0.105.0",
     "next": "^15.0.3",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-runner": "^1.0.5"
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "sass": "^1.81.0"
