@@ -5,10 +5,10 @@ import Jumping from "../components/Jumping";
 
 const Notebook = () => {
   return (
-    <div>
+    <main>
       <Jumping>hello</Jumping>
       <Sandpack />
-    </div>
+    </main>
   );
 };
 

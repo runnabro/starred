@@ -1,0 +1,23 @@
+.LinkItem {
+  border-radius: 0.5em;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--garamond);
+  font-size: 18px;
+  padding: 1em;
+  text-decoration: none;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background: rgba(black, 0.04);
+
+    @media (prefers-color-scheme: dark) {
+      background: rgba(white, 0.1);
+    }
+  }
+
+  &-title {
+    font-weight: var(--weight-bold);
+  }
+}
