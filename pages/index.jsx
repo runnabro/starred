@@ -1,16 +1,21 @@
 import Head from "next/head";
-import Link from "next/link";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import Tippy from "@tippyjs/react";
 
 import Footer from "/components/Footer";
+import Jumping from "../components/Jumping";
 import LinkItem from "../components/LinkItem";
 
 import styles from "/styles/Home.module.scss";
 
 const links = [
   {
+    children: (
+      <>
+        <Jumping className={styles["Main-list-preview"]}>Hello World</Jumping>
+      </>
+    ),
     description: "It’s text, that jumps!",
     href: "",
     title: "Jumping Text",
@@ -118,9 +123,11 @@ const Home = () => {
           </h1>
           <HomeWork />
           <ul className={styles["Main-list"]}>
-            {links.map(({ description, href, title }) => (
+            {links.map(({ children, description, href, title }) => (
               <li key={href}>
-                <LinkItem description={description} href={href} title={title} />
+                <LinkItem description={description} href={href} title={title}>
+                  {children}
+                </LinkItem>
               </li>
             ))}
           </ul>

@@ -3,7 +3,6 @@
   display: flex;
   flex-direction: column;
   font-family: var(--garamond);
-  font-size: 18px;
   padding: 1em;
   text-decoration: none;
 
@@ -15,6 +14,24 @@
     @media (prefers-color-scheme: dark) {
       background: rgba(white, 0.1);
     }
+  }
+
+  &-preview {
+    background: var(--theme-bg);
+    border: 1px solid var(--theme-border);
+    border-radius: 0.5em;
+    box-shadow: 0 1px 3px rgba(black, 0.05);
+    color: var(--theme-text-minimum);
+    font-family: var(--sans);
+    font-size: 0.75em;
+    margin-bottom: 1em;
+    padding: var(--md);
+    text-align: center;
+  }
+
+  &-title,
+  &-description {
+    padding: 0 var(--sm);
   }
 
   &-title {
