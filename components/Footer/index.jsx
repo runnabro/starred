@@ -1,7 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
-import styles from "./index.module.scss";
+import styles from "./style.module.scss";
 
 const Footer = () => (
   <footer className={styles["Footer"]}>

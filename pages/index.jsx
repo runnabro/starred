@@ -5,6 +5,7 @@ import Tippy from "@tippyjs/react";
 
 import Footer from "/components/Footer";
 import Flex from "../components/Flex";
+import Gradient from "../components/Gradient";
 import Jumping from "../components/Jumping";
 import LinkItem from "../components/LinkItem";
 import Orb from "../components/Orb";
@@ -37,6 +38,15 @@ const links = [
     description: "A flight emissions calculator",
     href: "https://offset.tonyli.com",
     title: "Flight CO2 Calculator",
+  },
+  {
+    children: (
+      <Flex gap="1em" justify="center">
+        <Gradient>Gradient</Gradient>
+      </Flex>
+    ),
+    href: "",
+    title: "Gradient Text",
   },
 ];
 
@@ -126,8 +136,8 @@ const Home = () => {
         <main className={styles.Main}>
           <h1 className={styles["Main-heading"]}>
             I’m Tony. I build for the{" "}
-            <span className={styles["Main-heading-web"]}>web</span> & this is my
-            journey, so far.
+            <Gradient className={styles["Main-heading-web"]}>web</Gradient> &
+            this is my journey, so far.
           </h1>
           <HomeWork />
           <ul className={styles["Main-list"]}>

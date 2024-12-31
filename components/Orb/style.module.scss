@@ -1,6 +1,7 @@
 .Orb {
   --Orb-shadow: #{inset 0 -1px 0.5em rgba(black, 0.15),
     inset 0 1px 1em rgba(white, 0.75), 0 1em 3em rgba(black, 0.05)};
+  --Orb-size: 35px;
 
   --green: #12ca93;
   --yellow: #f7c543;
@@ -12,20 +13,23 @@
       0 1em 3em rgba(black, 0.1)};
   }
 
-  &-blob {
+  &-blob,
+  &-spinner {
     border: 1px solid rgba(black, 0.1);
     border-left-color: rgba(black, 0.075);
     border-right-color: rgba(black, 0.075);
     border-top-color: rgba(black, 0.05);
-    border-radius: 10em;
+    border-radius: var(--Orb-size);
     box-shadow: var(--Orb-shadow);
+    height: var(--Orb-size);
+    width: var(--Orb-size);
+  }
+
+  &-blob {
     box-sizing: content-box;
-    font-size: 2.5px;
-    height: 10em;
     isolation: isolate;
-    padding: 2em;
+    font-size: 2.5px;
     position: relative;
-    width: 10em;
 
     &-green,
     &-yellow,
@@ -33,14 +37,14 @@
       border-radius: 50%;
       bottom: 0;
       filter: blur(2.5em) contrast(3);
-      height: 7em;
+      height: 5em;
       left: 0;
       margin: auto;
       mix-blend-mode: screen;
       position: absolute;
       right: 0;
       top: 0;
-      width: 7em;
+      width: 5em;
     }
 
     &-green {
@@ -101,7 +105,6 @@
     }
   }
 
-  // https://codepen.io/FacepalmRobot/pen/dyMMZRm
   &-spinner {
     --color-1: var(--yellow);
     --color-2: var(--green);
@@ -111,19 +114,10 @@
     --scale: 5em;
 
     align-items: center;
-    border: 1px solid rgba(black, 0.1);
-    border-left-color: rgba(black, 0.075);
-    border-right-color: rgba(black, 0.075);
-    border-top-color: rgba(black, 0.05);
-    border-radius: 10em;
-    box-shadow: var(--Orb-shadow);
-    border-radius: 50%;
     display: flex;
     font-size: 2px;
     justify-content: center;
-    height: 40px;
     overflow: hidden;
-    width: 40px;
 
     &-child {
       border-right: var(--scale) solid transparent;

@@ -2,7 +2,7 @@ import { forwardRef } from "react";
 
 import clsx from "clsx";
 
-import styles from "./index.module.scss";
+import styles from "./style.module.scss";
 
 const Flex = (
   {
