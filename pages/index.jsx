@@ -4,6 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 import Tippy from "@tippyjs/react";
 
 import Footer from "/components/Footer";
+import Flex from "../components/Flex";
 import Jumping from "../components/Jumping";
 import LinkItem from "../components/LinkItem";
 import Orb from "../components/Orb";
@@ -23,10 +24,10 @@ const links = [
   },
   {
     children: (
-      <>
+      <Flex gap="1em" justify="center">
         <Orb kind="blob" />
         <Orb kind="spinner" />
-      </>
+      </Flex>
     ),
     description: "Just orbs.",
     href: "",
