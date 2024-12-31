@@ -6,6 +6,7 @@ import Tippy from "@tippyjs/react";
 import Footer from "/components/Footer";
 import Jumping from "../components/Jumping";
 import LinkItem from "../components/LinkItem";
+import Orb from "../components/Orb";
 
 import styles from "/styles/Home.module.scss";
 
@@ -16,12 +17,18 @@ const links = [
         <Jumping className={styles["Main-list-preview"]}>Hello World</Jumping>
       </>
     ),
-    description: "It’s text, that jumps!",
+    description: "It’s text & it jumps.",
     href: "",
     title: "Jumping Text",
   },
   {
-    description: "They’re just some orbs man.",
+    children: (
+      <>
+        <Orb kind="blob" />
+        <Orb kind="spinner" />
+      </>
+    ),
+    description: "Just orbs.",
     href: "",
     title: "CSS Orbs",
   },
