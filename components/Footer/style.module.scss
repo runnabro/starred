@@ -1,5 +1,6 @@
 .Footer {
   align-items: center;
+  color: var(--theme-text-minimum);
   display: flex;
   flex-direction: column;
   font-family: var(--sans);
@@ -10,41 +11,4 @@
   padding: 0 var(--sm);
   justify-content: center;
   width: 100%;
-
-  &-link {
-    align-items: center;
-    display: flex;
-    font-size: 1em;
-    gap: var(--xs);
-    height: 30px;
-    padding: 0 var(--sm);
-    text-decoration: none;
-
-    &-arrow {
-      opacity: 0.5;
-    }
-
-    &:hover,
-    &:active,
-    &:focus {
-      color: blue;
-
-      @media (prefers-color-scheme: dark) {
-        box-shadow: 0 0 0 3px rgba(blue, 0.5);
-
-        .Footer-link-arrow {
-          opacity: 1;
-        }
-      }
-
-      .Footer-link-arrow {
-        color: blue;
-      }
-    }
-  }
-
-  &-emoji {
-    display: inline-block;
-    font-size: 1.2em;
-  }
 }

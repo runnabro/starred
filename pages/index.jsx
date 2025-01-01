@@ -30,7 +30,7 @@ const links = [
       </Flex>
     ),
     description: "CSS-only orbs",
-    href: "",
+    href: "/orbs",
   },
   {
     children: (
@@ -139,8 +139,8 @@ const Home = () => {
           </h1>
           <HomeWork />
           <ul className={styles["Main-list"]}>
-            {links.map(({ children, description, href, title }) => (
-              <li key={href}>
+            {links.map(({ children, description, href, title }, i) => (
+              <li key={`link-${i}`}>
                 <LinkItem description={description} href={href} title={title}>
                   {children}
                 </LinkItem>
