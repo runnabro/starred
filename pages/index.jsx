@@ -19,9 +19,8 @@ const links = [
         <Jumping className={styles["Main-list-preview"]}>Hello World</Jumping>
       </>
     ),
-    description: "It’s text & it jumps.",
+    description: "Jumping text",
     href: "",
-    title: "Jumping Text",
   },
   {
     children: (
@@ -30,14 +29,8 @@ const links = [
         <Orb kind="spinner" />
       </Flex>
     ),
-    description: "Just orbs.",
+    description: "CSS-only orbs",
     href: "",
-    title: "CSS Orbs",
-  },
-  {
-    description: "A flight emissions calculator",
-    href: "https://offset.tonyli.com",
-    title: "Flight CO2 Calculator",
   },
   {
     children: (
@@ -45,8 +38,13 @@ const links = [
         <Gradient>Gradient</Gradient>
       </Flex>
     ),
+    description: "CSS gradient text",
     href: "",
-    title: "Gradient Text",
+  },
+  {
+    children: <Image fill src="/co2-preview.webp" />,
+    description: "Flight CO₂ calculator",
+    href: "https://offset.tonyli.com",
   },
 ];
 

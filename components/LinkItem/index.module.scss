@@ -17,16 +17,25 @@
   }
 
   &-preview {
+    align-items: center;
     background: var(--theme-bg);
     border: 1px solid var(--theme-border);
     border-radius: 0.5em;
     box-shadow: 0 1px 3px rgba(black, 0.05);
     color: var(--theme-text-minimum);
+    display: flex;
     font-family: var(--sans);
     font-size: 0.75em;
+    height: 80px;
+    justify-content: center;
     margin-bottom: 1em;
-    padding: var(--md);
+    overflow: hidden;
+    position: relative;
     text-align: center;
+
+    img {
+      object-fit: cover;
+    }
   }
 
   &-title,
