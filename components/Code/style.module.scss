@@ -1,0 +1,57 @@
+.Code {
+  border: 1px solid var(--theme-border);
+  border-radius: 0.5em;
+  box-shadow: 0 1px 3px rgba(black, 0.025);
+  max-width: 100%;
+  overflow: hidden;
+  width: 100%;
+
+  &-caption {
+    background: rgba(black, 0.025);
+    border-bottom: 1px solid var(--theme-border);
+    color: var(--theme-text-minimum);
+    font-family: var(--sans);
+    font-size: 0.75em;
+    padding: 0.5em;
+
+    @media (prefers-color-scheme: dark) {
+      background: transparent;
+    }
+
+    &-icon {
+      height: 12px;
+      opacity: 0.5;
+      width: 12px;
+    }
+
+    &-copy {
+      background: none;
+      border: 0;
+      color: var(--theme-text-minimum);
+      cursor: pointer;
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: var(--theme-text-default);
+      }
+    }
+  }
+
+  &-highlight {
+    background: var(--theme-bg) !important;
+    font-family: var(--mono);
+    font-size: 12px;
+    font-weight: var(--weight-normal);
+    line-height: 1.4;
+    margin: 0;
+    overflow-x: auto;
+    padding: 1em;
+  }
+
+  /* line numbers */
+  &-linenumber {
+    color: var(--theme-text-minimum);
+    margin-right: 1em;
+  }
+}
