@@ -40,6 +40,7 @@ const Code = ({ className, code, label, language, lineNumbers = false }) => {
           {label}
         </Flex>
         <button
+          aria-label="Copy code"
           className={styles["Code-caption-copy"]}
           onClick={() => copyCode()}
           type="button"

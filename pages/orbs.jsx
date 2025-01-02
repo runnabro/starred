@@ -1,7 +1,9 @@
 import clsx from "clsx";
 
 import Code from "/components/Code";
+import Flex from "/components/Flex";
 import Orb from "/components/Orb";
+import Preview from "/components/Preview";
 
 import styles from "/styles/Orbs.module.scss";
 
@@ -193,14 +195,34 @@ const Orbs = () => {
   return (
     <>
       <article className={styles.Orbs}>
-        <div className={styles["Orbs-preview"]}>
-          <Orb />
-          <Orb kind="spinner" />
-        </div>
-        <div className={clsx(styles["Orbs-preview"], "dark")}>
-          <Orb />
-          <Orb kind="spinner" />
-        </div>
+        <Preview>
+          <Flex gap="2em">
+            <Flex align="center" gap="1em" layout="column">
+              <Orb />
+              <figcaption className={styles["Orbs-caption"]}>Blob</figcaption>
+            </Flex>
+            <Flex align="center" gap="1em" layout="column">
+              <Orb kind="spinner" />
+              <figcaption className={styles["Orbs-caption"]}>
+                Spinner
+              </figcaption>
+            </Flex>
+          </Flex>
+        </Preview>
+        <Preview dark>
+          <Flex gap="2em">
+            <Flex align="center" gap="1em" layout="column">
+              <Orb />
+              <figcaption className={styles["Orbs-caption"]}>Blob</figcaption>
+            </Flex>
+            <Flex align="center" gap="1em" layout="column">
+              <Orb kind="spinner" />
+              <figcaption className={styles["Orbs-caption"]}>
+                Spinner
+              </figcaption>
+            </Flex>
+          </Flex>
+        </Preview>
         <Code code={orbHtml} label="JSX" language="html" />
         <Code code={orbScss} label="SCSS" language="scss" />
       </article>
