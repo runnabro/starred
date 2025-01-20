@@ -1,9 +1,11 @@
+import Head from "next/head";
+
 import Code from "/components/Code";
 import Flex from "/components/Flex";
 import Orb from "/components/Orb";
 import Preview from "/components/Preview";
 
-import { orbHtml, orbJsx, orbScss } from "/pages/orbCode";
+import { orbHtml, orbJsx, orbScss } from "/pages/code";
 
 import styles from "/styles/Orbs.module.scss";
 
@@ -31,8 +33,11 @@ const Orbs = () => {
 
   return (
     <>
-      <article className={styles.Orbs}>
-        <Preview>
+      <Head>
+        <title>CSS Orbs</title>
+      </Head>
+      <article>
+        <Preview light>
           <Flex gap="2em">
             <Flex align="center" gap="1em" layout="column">
               <Orb />

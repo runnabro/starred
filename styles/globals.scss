@@ -1,3 +1,7 @@
+@import "./normalize.scss";
+@import "./reset.scss";
+@import "./tippy.scss";
+
 :root {
   --mono: "SF Mono", sfmono-regular, ui-monospace, "DejaVu Sans Mono", menlo,
     consolas, monospace;
@@ -47,14 +51,24 @@
     --theme-bg: var(--black);
     --theme-border: #{rgba(white, 0.1)};
     --theme-text-default: var(--white);
+    --theme-text-minimum: #ccc;
   }
 }
 
 body {
   background: var(--theme-bg);
   color: var(--theme-text-default);
+  -webkit-font-smoothing: antialiased;
 }
 
-@import "./normalize.scss";
-@import "./reset.scss";
-@import "./tippy.scss";
+article {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--md);
+  height: 100%;
+  margin: 0 auto;
+  max-width: 700px;
+  padding: var(--lg);
+  width: 100%;
+}

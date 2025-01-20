@@ -1,11 +1,29 @@
 .Preview {
-  background: white;
+  background: var(--theme-bg);
   border: 1px solid var(--theme-border);
   border-radius: var(--radius-sm);
   display: flex;
   padding: 3em;
 
+  figcaption {
+    color: var(--theme-text-minimum);
+    font-family: var(--sans);
+    font-size: 0.75em;
+  }
+
   &_dark {
     background: var(--black);
+
+    figcaption {
+      color: white;
+    }
+  }
+
+  &_light {
+    background: white;
+
+    figcaption {
+      color: #999;
+    }
   }
 }

@@ -3,7 +3,6 @@ import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import Tippy from "@tippyjs/react";
 
-import Footer from "/components/Footer";
 import Flex from "../components/Flex";
 import Gradient from "../components/Gradient";
 import Jumping from "../components/Jumping";
@@ -20,7 +19,7 @@ const links = [
       </>
     ),
     description: "Jumping text",
-    href: "",
+    href: "/jumping",
   },
   {
     children: (
@@ -39,10 +38,16 @@ const links = [
       </Flex>
     ),
     description: "CSS gradient text",
-    href: "",
+    href: "/gradient",
   },
   {
-    children: <Image fill src="/co2-preview.webp" />,
+    children: (
+      <Image
+        alt="Screen shot of the CO₂ calculator"
+        fill
+        src="/co2-preview.webp"
+      />
+    ),
     description: "Flight CO₂ calculator",
     href: "https://offset.tonyli.com",
   },
@@ -148,7 +153,6 @@ const Home = () => {
             ))}
           </ul>
         </main>
-        <Footer />
       </div>
     </>
   );

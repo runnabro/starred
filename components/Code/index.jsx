@@ -34,6 +34,17 @@ const Code = ({ className, code, lineNumbers = false }) => {
     return () => clearTimeout(timer);
   }, [copied]);
 
+  const [isDarkMode, setIsDarkMode] = useState();
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    const handleChange = (e) => setIsDarkMode(e.matches);
+
+    setIsDarkMode(mediaQuery.matches);
+    mediaQuery.addEventListener("change", handleChange);
+
+    return () => mediaQuery.removeEventListener("change", handleChange);
+  }, []);
+
   return (
     <figure className={clsx(styles.Code, className)}>
       <Flex
@@ -80,7 +91,7 @@ const Code = ({ className, code, lineNumbers = false }) => {
               key={name}
               code={code}
               language={language}
-              theme={themes.github}
+              theme={isDarkMode ? themes.dracula : themes.github}
             >
               {({ getLineProps, getTokenProps, style, tokens }) => (
                 <pre className={styles["Code-highlight"]} style={style}>
