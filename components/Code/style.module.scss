@@ -24,6 +24,16 @@
       width: 12px;
     }
 
+    &-select {
+      background: none;
+      border: 0;
+      color: var(--theme-text-minimum);
+
+      &:focus {
+        outline: 0;
+      }
+    }
+
     &-copy {
       background: none;
       border: 0;

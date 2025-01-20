@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef } from "react";
 import clsx from "clsx";
 
 import useOnScreen from "../../hooks/useOnScreen";
@@ -10,7 +10,6 @@ const Orb = ({ children, className, kind = "blob", speed = 50 }) => {
   const isOnScreen = useOnScreen(ref);
 
   const Blob = ({ kind }) => {
-    console.log(kind);
     if (kind === "spinner") {
       return (
         <div className={styles["Orb-spinner"]}>

@@ -10,12 +10,20 @@ await import("prismjs/components/prism-scss");
 import Flex from "/components/Flex";
 import styles from "./style.module.scss";
 
-const Code = ({ className, code, label, language, lineNumbers = false }) => {
+const Code = ({ className, code, lineNumbers = false }) => {
+  const [tab, setTab] = useState(code[0].name);
+  const changeTab = (tabName) => {
+    setTab(tabName);
+  };
+
   const [copied, setCopied] = useState(false);
   const copyCode = () => {
     if (!copied) {
+      let copyCode = code.find(({ name }) => name === tab);
+
+      console.log(copyCode);
       setCopied(true);
-      navigator.clipboard.writeText(code);
+      navigator.clipboard.writeText(copyCode.code);
     }
   };
 
@@ -37,7 +45,20 @@ const Code = ({ className, code, label, language, lineNumbers = false }) => {
       >
         <Flex align="center">
           <CodeXml className={styles["Code-caption-icon"]} />
-          {label}
+          {code.length > 1 ? (
+            <select
+              className={styles["Code-caption-select"]}
+              onChange={(e) => changeTab(e.target.value)}
+            >
+              {code.map(({ name }) => (
+                <option key={name} value={name}>
+                  {name}
+                </option>
+              ))}
+            </select>
+          ) : (
+            code[0].name
+          )}
         </Flex>
         <button
           aria-label="Copy code"
@@ -52,22 +73,35 @@ const Code = ({ className, code, label, language, lineNumbers = false }) => {
           )}
         </button>
       </Flex>
-      <Highlight code={code} language={language} theme={themes.github}>
-        {({ getLineProps, getTokenProps, style, tokens }) => (
-          <pre className={styles["Code-highlight"]} style={style}>
-            {tokens.map((line, i) => (
-              <figure key={i} {...getLineProps({ line })}>
-                {lineNumbers && (
-                  <span className={styles["Code-linenumber"]}>{i + 1}</span>
-                )}
-                {line.map((token, key) => (
-                  <span key={key} {...getTokenProps({ token })} />
-                ))}
-              </figure>
-            ))}
-          </pre>
-        )}
-      </Highlight>
+      {code.map(({ code, language, name }) => {
+        if (name === tab) {
+          return (
+            <Highlight
+              key={name}
+              code={code}
+              language={language}
+              theme={themes.github}
+            >
+              {({ getLineProps, getTokenProps, style, tokens }) => (
+                <pre className={styles["Code-highlight"]} style={style}>
+                  {tokens.map((line, i) => (
+                    <figure key={i} {...getLineProps({ line })}>
+                      {lineNumbers && (
+                        <span className={styles["Code-linenumber"]}>
+                          {i + 1}
+                        </span>
+                      )}
+                      {line.map((token, key) => (
+                        <span key={key} {...getTokenProps({ token })} />
+                      ))}
+                    </figure>
+                  ))}
+                </pre>
+              )}
+            </Highlight>
+          );
+        }
+      })}
     </figure>
   );
 };

@@ -29,7 +29,7 @@ const links = [
         <Orb kind="spinner" />
       </Flex>
     ),
-    description: "CSS-only orbs",
+    description: "CSS orbs",
     href: "/orbs",
   },
   {
