@@ -138,9 +138,9 @@ const Home = () => {
       <div className={styles.Home}>
         <main className={styles.Main}>
           <h1 className={styles["Main-heading"]}>
-            I’m Tony. I build for the{" "}
-            <Gradient className={styles["Main-heading-web"]}>web</Gradient> &
-            this is my journey, so far.
+            I’m Tony & I make{" "}
+            <Gradient className={styles["Main-heading-web"]}>websites</Gradient>
+            .
           </h1>
           <HomeWork />
           <ul className={styles["Main-list"]}>

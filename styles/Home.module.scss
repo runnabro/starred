@@ -11,7 +11,7 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  gap: var(--xl);
+  gap: var(--lg);
 
   &-heading {
     font-family: var(--garamond);
@@ -19,7 +19,7 @@
     font-weight: var(--weight-bold);
     letter-spacing: -0.25rem;
     line-height: 0.9em;
-    max-width: 500px;
+    max-width: 400px;
     text-align: center;
 
     &-web {
@@ -32,7 +32,7 @@
     gap: 1em;
     grid-template-columns: 1fr 1fr;
     list-style: none;
-    margin: 0;
+    margin: 5em 0 0;
     max-width: 400px;
     padding: 0;
 
