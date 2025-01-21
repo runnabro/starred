@@ -5,7 +5,7 @@ import Flex from "/components/Flex";
 import Jumping from "/components/Jumping";
 import Preview from "/components/Preview";
 
-import { jumpingJsx, jumpingScss } from "/pages/code";
+import { jumpingJsx, jumpingScss } from "/lib/code";
 
 const JumpingPage = () => {
   const jumpingHtmlTabs = [

@@ -5,7 +5,7 @@ import Flex from "/components/Flex";
 import Gradient from "/components/Gradient";
 import Preview from "/components/Preview";
 
-import { gradientJsx, gradientScss } from "/pages/code";
+import { gradientJsx, gradientScss } from "/lib/code";
 
 const GradientPage = () => {
   const gradientHtmlTabs = [

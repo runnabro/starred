@@ -5,7 +5,7 @@ import Flex from "/components/Flex";
 import Orb from "/components/Orb";
 import Preview from "/components/Preview";
 
-import { orbHtml, orbJsx, orbScss } from "/pages/code";
+import { orbHtml, orbJsx, orbScss } from "/lib/code";
 
 import styles from "/styles/Orbs.module.scss";
 
