@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Check, CodeXml, Copy } from "lucide-react";
+import { Check, ChevronDown, CodeXml, Copy } from "lucide-react";
 import { Highlight, Prism, themes } from "prism-react-renderer";
 import clsx from "clsx";
 
