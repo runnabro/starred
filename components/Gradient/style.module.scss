@@ -1,0 +1,19 @@
+.Gradient {
+  animation: gradient 5s infinite linear;
+  display: inline-block;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -moz-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+
+  @keyframes gradient {
+    0% {
+      background-position: 0 0;
+    }
+
+    100% {
+      background-position: 100% 0;
+    }
+  }
+}

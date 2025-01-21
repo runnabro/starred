@@ -1,0 +1,49 @@
+.LinkItem {
+  border-radius: 0.5em;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--garamond);
+  padding: 1em;
+  text-decoration: none;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background: rgba(black, 0.04);
+
+    @media (prefers-color-scheme: dark) {
+      background: rgba(white, 0.1);
+    }
+  }
+
+  &-preview {
+    align-items: center;
+    background: var(--theme-bg);
+    border: 1px solid var(--theme-border);
+    border-radius: 0.5em;
+    box-shadow: 0 1px 3px rgba(black, 0.05);
+    color: var(--theme-text-minimum);
+    display: flex;
+    font-family: var(--sans);
+    font-size: 0.75em;
+    height: 80px;
+    justify-content: center;
+    margin-bottom: 1em;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  &-title,
+  &-description {
+    padding: 0 var(--sm);
+  }
+
+  &-title {
+    font-weight: var(--weight-bold);
+  }
+}
