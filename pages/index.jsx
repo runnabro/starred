@@ -42,11 +42,17 @@ const links = [
   },
   {
     children: (
-      <Image
-        alt="Screen shot of the CO₂ calculator"
-        fill
-        src="/co2-preview.webp"
-      />
+      <picture>
+        <source
+          srcSet="/co2-preview_dark.webp"
+          media="(prefers-color-scheme: dark)"
+        />
+        <Image
+          alt="Screen shot of the CO₂ calculator"
+          fill
+          src="/co2-preview.webp"
+        />
+      </picture>
     ),
     description: "Flight CO₂ calculator",
     href: "https://offset.tonyli.com",
