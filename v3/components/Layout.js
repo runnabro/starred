@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Icons from './Icons.js'
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export default function Layout(props) {
   return (
@@ -11,8 +12,8 @@ export default function Layout(props) {
         <link rel="icon" type="image/png" href="/favicon.png" />
       </Head>
       {props.children}
+      <SpeedInsights/>
       <Icons />
     </>
   )
 }
-

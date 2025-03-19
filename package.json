@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@tippyjs/react": "^4.2.6",
+    "@vercel/speed-insights": "^1.2.0",
     "clsx": "^2.1.1",
     "eslint-config-next": "^15.0.3",
     "lucide-react": "^0.469.0",
