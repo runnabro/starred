@@ -14,6 +14,24 @@ import styles from "/styles/Home.module.scss";
 const links = [
   {
     children: (
+      <picture>
+        <Image
+          alt="Screen shot of the glomojis site"
+          fill
+          src="/glomojis-banner.webp"
+        />
+      </picture>
+    ),
+    description: (
+      <Flex align="center" gap="0.25em">
+        <Image alt="" height={15} src="/glomojis.png" width={15} />
+        <span>glomojis</span>
+      </Flex>
+    ),
+    href: "https://glomojis.com",
+  },
+  {
+    children: (
       <>
         <Jumping className={styles["Main-list-preview"]}>Hello World</Jumping>
       </>
